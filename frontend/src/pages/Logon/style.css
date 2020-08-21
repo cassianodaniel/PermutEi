@@ -1,0 +1,29 @@
+.logon-container{
+    background-color: white;
+    max-width: 100%;
+    height: 45vh;
+    margin-top: 80px;
+    margin-left:10%;
+    margin-right:10%;
+    border-radius: 8px;
+}
+
+.logon{
+    background-color: #3636;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.title{
+    margin-left: 40%;
+    font-size: 18px;
+}
+
+.open{
+    margin-left: 20px;
+    margin-right: 20px;
+    min-height: 40px;
+    width: 94%
+}
