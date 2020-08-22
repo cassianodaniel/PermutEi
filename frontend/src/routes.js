@@ -7,6 +7,7 @@ import Register from './pages/Register';
 import RegisterSecondStep from './pages/Register/RegisterSecondStep';
 import RegisterThirdStep from './pages/Register/RegisterThirdStep';
 import HomeUser from './pages/Home User';
+import Hall from './pages/Hall';
 
 export default function Routes()  {
     return(
@@ -18,7 +19,8 @@ export default function Routes()  {
                 <Route path="/registersecondstep" exact component={RegisterSecondStep} />
                 <Route path="/registerthirdstep" exact component={RegisterThirdStep} />
                 <Route path="/homeuser" exact component={HomeUser} />
-                
+                <Route path="/hall" exact component={Hall} />
+
             </Switch>
         </BrowserRouter>
     );

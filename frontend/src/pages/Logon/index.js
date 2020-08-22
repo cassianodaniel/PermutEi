@@ -10,7 +10,7 @@ export default function Logon(){
                 <h1 className="title">Faça seu logon</h1>
                 <input className="user" placeholder="Nome de usuário" />
                 <input className="password" placeholder="Senha" type="password" />
-                <Link to="homeuser" style={{width: '100%'}}>
+                <Link to="homeuser">
                     <button className="open" onClick={() => {}}>Entrar</button>
                 </Link>
             </form>

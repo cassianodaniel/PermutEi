@@ -1,17 +1,14 @@
 div .formRegisterContainer{
-    background-color: green;
     height: 650px;
 }
 
 div .placeholderContainer{
     max-width: 600px;
-    background-color: #ececec;
     margin-left: 400px;
     height: 650px;
 }
 
 div .formPlaceholderContainer{
-    background-color: red;
     max-width: 400px;
     height: 650px;
     display:flex;
@@ -45,4 +42,14 @@ button .submit{
 
 button .submit:hover{
     filter: brightness(90%);
+}
+
+.leftball{
+    background-color: white;
+    width: 800px;
+    height: 750px;
+    border-radius: 360px;
+    position: absolute;
+    bottom: 450px;
+    right: 1150px;
 }

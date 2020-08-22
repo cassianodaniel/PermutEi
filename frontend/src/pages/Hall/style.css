@@ -1,0 +1,58 @@
+tr{
+    display: flex;
+    flex-direction: row;
+    font-weight: 500;
+    background-color: white;
+    border-radius: 14px;
+}
+
+tr div{
+    margin-left: 8vh; 
+    color: black;
+    margin-top: 3vh;
+    position: relative;
+    bottom: 1vh;
+}
+
+div .headerrowstitle{
+    background-color: yellow;
+    font-weight: bold;
+    position: relative;
+}
+div .headerrowscolumn{
+    color: white;
+    margin-top: 1vh;
+}
+
+.break{
+    position: relative;
+    right: 3.7vh;
+}
+
+.secondbreak{
+    position: relative;
+    right: 5.0vh;
+}
+
+.thirdbreak{
+    position:relative;
+    left: 1.3vh;
+}
+
+.perfil{
+    width: 100px;
+    height: 25px;
+    margin-left: 4px;
+    font-weight: bold;
+    color: rgb(95, 95, 250);
+    margin-bottom: 6px;
+}
+
+.cadastrarpermuta{
+    width: 200px;
+    height: 25px;
+    margin-left: 4px;
+    font-weight: bold;
+    color: rgb(95, 95, 250);
+    margin-bottom: 6px;
+}

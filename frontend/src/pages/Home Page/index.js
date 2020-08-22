@@ -6,35 +6,20 @@ export default function HomePage(){
 
     return(
         <>
-            <div className="label">Permutas Policiais</div>
+            <div className="leftball"/>
+            <div className="label">Facilite as suas permutas já!</div>
                 <div className="container">
-                    <div className="textoesquerda">
-                        Acredito que aqui seria um bom local para introduzir 
-                        a essência do website, com informações mais técnicas e 
-                        específicas sobre o funcionamento geral da interface. 
-                        Ressaltando as dificuldades das permutas de uma maneira 
-                        arcaica e manual e detalhando os principais pontos de acessibilidade 
-                        a serem facilitados no desenvolvimento do website.
-                    </div>
-
                     <div className="buttonContainer"> 
                         <div className="buttons">
                             <Link to="/logon">
-                                <button>Login</button>
+                                <button style={{width:'100px', fontSize: '20px', color:'black', fontFamily:'PMingLiU-ExtB', position:'absolute'}}>Login</button>
                             </Link>
                             <Link to ="/register">
-                                <button>Cadastro</button>
+                                <button style={{width:'100px', fontSize: '20px', color:'black', fontFamily:'PMingLiU-ExtB', position:'absolute', marginLeft:'100px'}}>Cadastro</button>
                             </Link>
                         </div>
-                        <div className="icone"/>
-                    </div>  
-
-                    <div className="textodireita">
-                        Acredito que aqui seria um bom local para introduzir a essência do website, 
-                        com informações mais técnicas e específicas sobre o funcionamento geral da 
-                        interface. Ressaltando as dificuldades das permutas de uma maneira arcaica e manual e detalhando os principais pontos de acessibilidade a serem facilitados no desenvolvimento do website.
-                    </div> 
-                </div> 
+                    </div>
+                </div>
     </>
     )
 }

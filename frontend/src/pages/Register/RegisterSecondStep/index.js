@@ -6,6 +6,11 @@ import './style.css';
 export default function RegisterSecondStep(){
 
     return(
+        <>
+        <div className="leftball"/>
+        <Link to="/register">
+            <button style={{width:'100px', marginLeft:'20px', fontSize: '20px', color:'black', fontFamily:'PMingLiU-ExtB', position:'absolute'}}>Voltar</button>
+        </Link>
         <div className="registerContainer">
             <div className="formRegisterContainer">
                 <div className="placeholderContainer">
@@ -22,5 +27,6 @@ export default function RegisterSecondStep(){
                 </div>
             </div>
         </div>
+        </>
     );
 }

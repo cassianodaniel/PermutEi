@@ -5,9 +5,11 @@ import './styles.css'
 export default function HomeUser(){
     return (
         <div className="main">
-            <Link to="/register">
-                <div className="navigation">Página inicial</div>
-            </Link>
+                <div className="navigation">
+                <Link to="/" style={{marginLeft: '10px', marginTop:'5px'}}>
+                    Página inicial
+                </Link>
+                </div>
             <div className="header">
                 <form className="headerContainerProfile">
                     <div className="headerContainerProfilePicture"></div>
@@ -15,10 +17,10 @@ export default function HomeUser(){
                 </form>
             </div>
             <div className="headerContainerProfileDataNav">
-                <div className ="headerContainerProfileDataNav1">Dados Pessoais</div>
+                <div className ="headerContainerProfileDataNav1">Dados Pessoais da Minha Conta</div>
             </div>
             <div className="body">
-                <div className="infoContainer">Informações do Meu Perfil
+                <div className="infoContainer">
                             <div className="dataContainer">
                                     <div className="data">Nome: DANIEL SILVA ALVES</div>
                                     <div className="data">Sexo: MASCULINO </div>

@@ -1,39 +1,46 @@
+html,body{
+    height: 100%;
+}
+
 div .navigation{
-    background-color: blue;
     height: 30px;
+    background-color: whitesmoke;
+    border-radius: 14px;
+    display: flex;
+    flex-direction: row;
 }
 
 div .header{
-    background-color: yellow;
-    height: 250px;
+    height: 200px;
 }
 
 .headerContainerProfile{
-    background-color: red;
-    height: 180px;
+    background-color: whitesmoke;
+    border-radius: 14px;
+    height: 140px;
     margin-left: 20%;
     max-width: 900px;
     position: absolute;
     left: 0%;
     right: 0%;
-    top: 14.30%;
+    top: 9.9%;
     display: flex;
     flex-direction: row;
 }
 
 .headerContainerProfilePicture{
-    background-color: white;
+    background-image: url("./../../images/perfil.jpg");
+    background-size: cover;
     height: 100px;
     width: 150px;
     border: 0;
     border-radius: 8px;
     padding: 10px;
-    margin-top: 5px;
-    margin-left: 5px;
+    margin-top: 8px;
+    margin-left: 8px;
 }
 
 .headerContainerProfileData{
-    background-color: green;
     height: 100px;
     width: 690px;
     border: 0;
@@ -44,7 +51,6 @@ div .header{
 }
 
 .headerContainerProfileDataNav{
-    background-color: brown;
     height: 30px;
     position: relative;
     max-width: 900px;
@@ -61,13 +67,11 @@ div .headerContainerProfileDataNav1{
 }
 
 div .body{
-    background-color: pink;
     height: 430px;
 }
 
 div .infoContainer{
-    background-color: rgb(6, 199, 224);
-    margin-top: -15px;
+    margin-top: -30px;
     height: 430px;
     margin-left:19.7%;
     margin-right:20.6%;
@@ -77,14 +81,17 @@ div .infoContainer{
 }
 
 div .dataContainer{
-    display:flex;
-    align-items:center;
-    flex-direction: column;
+    display:grid;
+    grid-template-columns: 2fr 2fr;
+    gap: 10px;
     margin-top: 20px;
 }
 
 div .data{
     margin-top: 10px;
+    background-color: white;
+    padding: 12px;
+    border-radius: 6px;
 }
 
 

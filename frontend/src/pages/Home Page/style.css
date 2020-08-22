@@ -1,6 +1,6 @@
 html, body{
     background-color: #000000;
-    background-image: linear-gradient(300deg, #000000 10%, #414141 73%);
+    background-image: linear-gradient(to right bottom, #1E1E6A, #515151);
     height: 100%;
 }
 
@@ -9,7 +9,9 @@ html, body{
     text-align: center;
     font-size: 60px;
     padding: 30px;
-    font-family: 'Courier New', Courier, monospace
+    font-family: 'PMingLiU-ExtB';
+    position: relative;
+    top: 40vh;
 }
 
 div .icone{
@@ -24,26 +26,7 @@ div .icone{
     margin-left: 45%;
 }
 
-div .textoesquerda{
-    color: white;
-    width: 20%;
-    margin-left: 40px;
-    margin-right: 40px;
-    margin-top: 35px;
-    font-size: 20px;
-}
-
-div .textodireita{
-    color: white;
-    width: 20%;
-    margin-right: 40px;
-    margin-left: 40px;
-    margin-top: 35px;
-    font-size: 20px;
-}
-
 .login{
-    margin-left: 35%;
     color: black;
     width: 200px;
     height: 50px;
@@ -58,7 +41,6 @@ div .textodireita{
 }
 
 .cadastro{
-    margin-right: 35%;
     color: black;
     width: 200px;
     height: 50px;
@@ -72,36 +54,22 @@ div .textodireita{
     filter: brightness(90%);
 }
 
-section{
-    background-color: black;
-    height: 200px;
-    position: relative;
-    bottom: 470px;
-}
-
-footer{
-    margin-left: 40.5%;
-    color: white;
-    font-family: sans-serif;
-    position: absolute;
-    bottom: 25px;
-}
-
-div .container{
-    max-width: 100%;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-}
-
-.buttonContainer{
-    width: 60%;
-    
-}
-
 div .buttons{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    margin-top: 20%; 
+    gap: 20px;
+    margin-top: -8vh;
+    margin-left: 2vh;
+    border: 1;
+    border-color: black;
+}
+
+.leftball{
+    background-color: white;
+    width: 800px;
+    height: 750px;
+    border-radius: 360px;
+    position: absolute;
+    bottom: 450px;
+    right: 1150px;
 }

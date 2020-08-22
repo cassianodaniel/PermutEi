@@ -6,6 +6,7 @@ button{
     border-radius: 8px;
     font-weight: 300;
     transition: filter 0.2s;
+    font-family: 'PMingLiU-ExtB'
 }
 
 button:hover{
@@ -15,8 +16,10 @@ button:hover{
 input{
     margin-left: 20px;
     margin-right: 20px;
-    margin-bottom: 20px;;
+    margin-bottom: 20px;
     min-height: 40px;
     border-radius: 8px;
     border: none;
+    font-family: 'PMingLiU-ExtB';
+    font-size: larger;
 }
