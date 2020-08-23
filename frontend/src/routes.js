@@ -8,6 +8,7 @@ import RegisterSecondStep from './pages/Register/RegisterSecondStep';
 import RegisterThirdStep from './pages/Register/RegisterThirdStep';
 import HomeUser from './pages/Home User';
 import Hall from './pages/Hall';
+import ConfirmarPermuta from './pages/ConfirmarPermuta';
 
 export default function Routes()  {
     return(
@@ -20,7 +21,7 @@ export default function Routes()  {
                 <Route path="/registerthirdstep" exact component={RegisterThirdStep} />
                 <Route path="/homeuser" exact component={HomeUser} />
                 <Route path="/hall" exact component={Hall} />
-
+                <Route path="/confirmarpermuta" exact component={ConfirmarPermuta} />
             </Switch>
         </BrowserRouter>
     );

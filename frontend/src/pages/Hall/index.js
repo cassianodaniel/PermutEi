@@ -9,9 +9,6 @@ export default function HomePage(){
             <Link to="/homeuser">
                 <button className="perfil">Meu perfil</button>
             </Link>
-            <Link to="/homeuser">
-                <button className="cadastrarpermuta">Cadastrar nova permuta</button>
-            </Link>
             <tr className="headerrowstitle">
                 <div>Nome</div>
                 <div>Matrícula</div>
@@ -28,7 +25,7 @@ export default function HomePage(){
                 <div>Estado Ceará</div>
                 <div>8ª Batalhão da Polícia</div>
                 <div>Mato Grosso do Sul</div>
-                <Link to="/">
+                <Link to="/confirmarpermuta">
                     <div>Combinar permuta + </div>
                 </Link>
             </tr>
@@ -39,7 +36,7 @@ export default function HomePage(){
                 <div>Estado Ceará</div>
                 <div>8ª Batalhão da Polícia</div>
                 <div>Mato Grosso do Sul</div>
-                <Link to="/">
+                <Link to="/confirmarpermuta">
                     <div>Combinar permuta + </div>
                 </Link>
             </tr>
@@ -50,7 +47,7 @@ export default function HomePage(){
                 <div>Estado Ceará</div>
                 <div>8ª Batalhão da Polícia</div>
                 <div>Mato Grosso do Sul</div>
-                <Link to="/">
+                <Link to="/confirmarpermuta">
                     <div>Combinar permuta + </div>
                 </Link>
             </tr>
@@ -61,7 +58,7 @@ export default function HomePage(){
                 <div>Estado Ceará</div>
                 <div>8ª Batalhão da Polícia</div>
                 <div>Mato Grosso do Sul</div>
-                <Link to="/">
+                <Link to="/confirmarpermuta">
                     <div>Combinar permuta + </div>
                 </Link>
             </tr>
@@ -72,7 +69,7 @@ export default function HomePage(){
                 <div>Estado Ceará</div>
                 <div>8ª Batalhão da Polícia</div>
                 <div>Mato Grosso do Sul</div>
-                <Link to="/">
+                <Link to="/confirmarpermuta">
                     <div>Combinar permuta + </div>
                 </Link>
             </tr>
@@ -83,7 +80,7 @@ export default function HomePage(){
                 <div>Estado Ceará</div>
                 <div>8ª Batalhão da Polícia</div>
                 <div>Mato Grosso do Sul</div>
-                <Link to="/">
+                <Link to="/confirmarpermuta">
                     <div>Combinar permuta + </div>
                 </Link>
             </tr>
@@ -94,7 +91,7 @@ export default function HomePage(){
                 <div>Estado Ceará</div>
                 <div>8ª Batalhão da Polícia</div>
                 <div>Mato Grosso do Sul</div>
-                <Link to="/">
+                <Link to="/confirmarpermuta">
                     <div>Combinar permuta + </div>
                 </Link>
             </tr>
@@ -105,7 +102,7 @@ export default function HomePage(){
                 <div>Estado Ceará</div>
                 <div>8ª Batalhão da Polícia</div>
                 <div>Mato Grosso do Sul</div>
-                <Link to="/">
+                <Link to="/confirmarpermuta">
                     <div>Combinar permuta + </div>
                 </Link>
             </tr>
@@ -116,7 +113,7 @@ export default function HomePage(){
                 <div>Estado Ceará</div>
                 <div>8ª Batalhão da Polícia</div>
                 <div>Mato Grosso do Sul</div>
-                <Link to="/">
+                <Link to="/confirmarpermuta">
                     <div>Combinar permuta + </div>
                 </Link>
             </tr>
@@ -127,7 +124,7 @@ export default function HomePage(){
                 <div>Estado Ceará</div>
                 <div>8ª Batalhão da Polícia</div>
                 <div>Mato Grosso do Sul</div>
-                <Link to="/">
+                <Link to="/confirmarpermuta">
                     <div>Combinar permuta + </div>
                 </Link>
             </tr>
@@ -138,7 +135,7 @@ export default function HomePage(){
                 <div>Estado Ceará</div>
                 <div>8ª Batalhão da Polícia</div>
                 <div>Mato Grosso do Sul</div>
-                <Link to="/">
+                <Link to="/confirmarpermuta">
                     <div>Combinar permuta + </div>
                 </Link>
             </tr>
@@ -149,7 +146,7 @@ export default function HomePage(){
                 <div>Estado Ceará</div>
                 <div>8ª Batalhão da Polícia</div>
                 <div>Mato Grosso do Sul</div>
-                <Link to="/">
+                <Link to="/confirmarpermuta">
                     <div>Combinar permuta + </div>
                 </Link>
             </tr>
@@ -160,7 +157,7 @@ export default function HomePage(){
                 <div>Estado Ceará</div>
                 <div>8ª Batalhão da Polícia</div>
                 <div>Mato Grosso do Sul</div>
-                <Link to="/">
+                <Link to="/confirmarpermuta">
                     <div>Combinar permuta + </div>
                 </Link>
             </tr>

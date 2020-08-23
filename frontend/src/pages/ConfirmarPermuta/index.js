@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './styles.css'
+import './style.css'
 
 export default function HomeUser(){
     return (
@@ -31,6 +31,18 @@ export default function HomeUser(){
                             </div>
                 </div>
             </div>
+            <button 
+            style={{
+            fontSize: '24px',
+            backgroundColor:'yellow',
+            color:'red',
+            fontStyle:'bold',
+            marginLeft:'42.5%',
+            position: 'absolute',
+            bottom: '80px'
+            }}>
+                PermutEi!
+            </button>
         </div>
     )
 }
