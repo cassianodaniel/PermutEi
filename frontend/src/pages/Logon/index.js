@@ -5,11 +5,6 @@ import { Link } from "react-router-dom";
 import { useLog } from "./../../contexts/LoggedContext";
 
 export default function Logon() {
-  function handleSubmit(event) {
-    event.preventDefault();
-    setLog(event.target.value);
-  }
-
   const { setLog } = useLog();
   return (
     <>
@@ -33,7 +28,7 @@ export default function Logon() {
           <div className="placeholderContainer">
             <div className="formPlaceholderContainer">
               <input
-                onBlur={handleSubmit}
+                onBlur={(e) => setLog(e.target.value)}
                 className="placeholder"
                 placeholder="Login"
               ></input>
