@@ -1,168 +1,84 @@
 import React from "react";
 import "./style.css";
+import { Table } from "reactstrap";
 import { Link } from "react-router-dom";
 
-import Logged from "./../../components/Logged";
-
-export default function HomePage() {
+const Hall = () => {
+  var personalData = JSON.parse(localStorage.getItem("stepone"));
+  var tecnicalData = JSON.parse(localStorage.getItem("steptwo"));
+  var loginData = JSON.parse(localStorage.getItem("stepthree"));
   return (
-    <div className="main">
-      <Logged />
-      <Link to="/homeuser">
-        <button className="perfil">Meu perfil</button>
-      </Link>
-      <tr className="headerrowstitle">
-        <div>Nome</div>
-        <div>Matrícula</div>
-        <div>Batalhão Atual</div>
-        <div className="break">Estado Atual</div>
-        <div className="break">Batalhão de Interesse</div>
-        <div className="secondbreak">Estado de Interesse</div>
-        <div className="secondbreak">Combinar permuta</div>
-      </tr>
-      <tr className="headerrowscolumn">
-        <div>Daniel</div>
-        <div>1234567</div>
-        <div className="thirdbreak">134ª Batalhão</div>
-        <div>Estado Ceará</div>
-        <div>8ª Batalhão da Polícia</div>
-        <div>Mato Grosso do Sul</div>
-        <Link to="/confirmarpermuta">
-          <div>Combinar permuta + </div>
-        </Link>
-      </tr>
-      <tr className="headerrowscolumn">
-        <div>Daniel</div>
-        <div>1234567</div>
-        <div className="thirdbreak">134ª Batalhão</div>
-        <div>Estado Ceará</div>
-        <div>8ª Batalhão da Polícia</div>
-        <div>Mato Grosso do Sul</div>
-        <Link to="/confirmarpermuta">
-          <div>Combinar permuta + </div>
-        </Link>
-      </tr>
-      <tr className="headerrowscolumn">
-        <div>Daniel</div>
-        <div>1234567</div>
-        <div className="thirdbreak">134ª Batalhão</div>
-        <div>Estado Ceará</div>
-        <div>8ª Batalhão da Polícia</div>
-        <div>Mato Grosso do Sul</div>
-        <Link to="/confirmarpermuta">
-          <div>Combinar permuta + </div>
-        </Link>
-      </tr>
-      <tr className="headerrowscolumn">
-        <div>Daniel</div>
-        <div>1234567</div>
-        <div className="thirdbreak">134ª Batalhão</div>
-        <div>Estado Ceará</div>
-        <div>8ª Batalhão da Polícia</div>
-        <div>Mato Grosso do Sul</div>
-        <Link to="/confirmarpermuta">
-          <div>Combinar permuta + </div>
-        </Link>
-      </tr>
-      <tr className="headerrowscolumn">
-        <div>Daniel</div>
-        <div>1234567</div>
-        <div className="thirdbreak">134ª Batalhão</div>
-        <div>Estado Ceará</div>
-        <div>8ª Batalhão da Polícia</div>
-        <div>Mato Grosso do Sul</div>
-        <Link to="/confirmarpermuta">
-          <div>Combinar permuta + </div>
-        </Link>
-      </tr>
-      <tr className="headerrowscolumn">
-        <div>Daniel</div>
-        <div>1234567</div>
-        <div className="thirdbreak">134ª Batalhão</div>
-        <div>Estado Ceará</div>
-        <div>8ª Batalhão da Polícia</div>
-        <div>Mato Grosso do Sul</div>
-        <Link to="/confirmarpermuta">
-          <div>Combinar permuta + </div>
-        </Link>
-      </tr>
-      <tr className="headerrowscolumn">
-        <div>Daniel</div>
-        <div>1234567</div>
-        <div className="thirdbreak">134ª Batalhão</div>
-        <div>Estado Ceará</div>
-        <div>8ª Batalhão da Polícia</div>
-        <div>Mato Grosso do Sul</div>
-        <Link to="/confirmarpermuta">
-          <div>Combinar permuta + </div>
-        </Link>
-      </tr>
-      <tr className="headerrowscolumn">
-        <div>Daniel</div>
-        <div>1234567</div>
-        <div className="thirdbreak">134ª Batalhão</div>
-        <div>Estado Ceará</div>
-        <div>8ª Batalhão da Polícia</div>
-        <div>Mato Grosso do Sul</div>
-        <Link to="/confirmarpermuta">
-          <div>Combinar permuta + </div>
-        </Link>
-      </tr>
-      <tr className="headerrowscolumn">
-        <div>Daniel</div>
-        <div>1234567</div>
-        <div className="thirdbreak">134ª Batalhão</div>
-        <div>Estado Ceará</div>
-        <div>8ª Batalhão da Polícia</div>
-        <div>Mato Grosso do Sul</div>
-        <Link to="/confirmarpermuta">
-          <div>Combinar permuta + </div>
-        </Link>
-      </tr>
-      <tr className="headerrowscolumn">
-        <div>Daniel</div>
-        <div>1234567</div>
-        <div className="thirdbreak">134ª Batalhão</div>
-        <div>Estado Ceará</div>
-        <div>8ª Batalhão da Polícia</div>
-        <div>Mato Grosso do Sul</div>
-        <Link to="/confirmarpermuta">
-          <div>Combinar permuta + </div>
-        </Link>
-      </tr>
-      <tr className="headerrowscolumn">
-        <div>Daniel</div>
-        <div>1234567</div>
-        <div className="thirdbreak">134ª Batalhão</div>
-        <div>Estado Ceará</div>
-        <div>8ª Batalhão da Polícia</div>
-        <div>Mato Grosso do Sul</div>
-        <Link to="/confirmarpermuta">
-          <div>Combinar permuta + </div>
-        </Link>
-      </tr>
-      <tr className="headerrowscolumn">
-        <div>Daniel</div>
-        <div>1234567</div>
-        <div className="thirdbreak">134ª Batalhão</div>
-        <div>Estado Ceará</div>
-        <div>8ª Batalhão da Polícia</div>
-        <div>Mato Grosso do Sul</div>
-        <Link to="/confirmarpermuta">
-          <div>Combinar permuta + </div>
-        </Link>
-      </tr>
-      <tr className="headerrowscolumn">
-        <div>Daniel</div>
-        <div>1234567</div>
-        <div className="thirdbreak">134ª Batalhão</div>
-        <div>Estado Ceará</div>
-        <div>8ª Batalhão da Polícia</div>
-        <div>Mato Grosso do Sul</div>
-        <Link to="/confirmarpermuta">
-          <div>Combinar permuta + </div>
-        </Link>
-      </tr>
-    </div>
+    <Table responsive hover bordered className="bg-light">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Nome</th>
+          <th>Matrícula</th>
+          <th>Batalhão Atual</th>
+          <th>Estado Atual</th>
+          <th>Batalhão de Interesse</th>
+          <th>Estado de Interesse</th>
+          <th>Combinar permuta </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>DANIEL CASSIANO CHAVES</td>
+          <td>48934-32</td>
+          <td>13º BATALHÃO DA P.M.</td>
+          <td>PARAÍBA</td>
+          <td>14º BATALHÃO DA P.M.</td>
+          <td>PERNAMBUCO</td>
+          <td>
+            <Link to="/confirmarpermuta">Combinar permuta +</Link>
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <th scope="row">2</th>
+          <td>DANIEL CASSIANO CHAVES</td>
+          <td>48934-32</td>
+          <td>13º BATALHÃO DA P.M.</td>
+          <td>PARAÍBA</td>
+          <td>14º BATALHÃO DA P.M.</td>
+          <td>PERNAMBUCO</td>
+          <td>
+            <Link to="/confirmarpermuta">Combinar permuta +</Link>
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <th scope="row">3</th>
+          <td>DANIEL CASSIANO CHAVES</td>
+          <td>48934-32</td>
+          <td>13º BATALHÃO DA P.M.</td>
+          <td>PARAÍBA</td>
+          <td>14º BATALHÃO DA P.M.</td>
+          <td>PERNAMBUCO</td>
+          <td>
+            <Link to="/confirmarpermuta">Combinar permuta +</Link>
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <th scope="row">3</th>
+          <td>{JSON.stringify(personalData)}</td>
+          <td>{JSON.stringify(tecnicalData)}</td>
+          <td>{JSON.stringify(loginData)}</td>
+          <td>LOCALSTORAGEEE</td>
+          <td>LOCALSTORAGEEE</td>
+          <td>LOCALSTORAGEEE</td>
+          <td>
+            <Link to="/confirmarpermuta">Combinar permuta +</Link>
+          </td>
+        </tr>
+      </tbody>
+    </Table>
   );
-}
+};
+
+export default Hall;

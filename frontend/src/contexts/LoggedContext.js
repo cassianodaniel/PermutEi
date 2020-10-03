@@ -3,9 +3,9 @@ import React, { createContext, useState, useContext } from "react";
 const LoggedContext = createContext();
 
 export default function LoggedProvider({ children }) {
-  const [log, setLog] = useState("Inicial state");
+  const [logados, setLogados] = useState("Inicial state");
   return (
-    <LoggedContext.Provider value={{ log, setLog }}>
+    <LoggedContext.Provider value={{ logados, setLogados }}>
       {children}
     </LoggedContext.Provider>
   );
@@ -14,6 +14,6 @@ export default function LoggedProvider({ children }) {
 export function useLog() {
   const context = useContext(LoggedContext);
   if (!context) throw new Error("useCount must be used within a CountProvider");
-  const { log, setLog } = context;
-  return { log, setLog };
+  const { logados, setLogados } = context;
+  return { logados, setLogados };
 }

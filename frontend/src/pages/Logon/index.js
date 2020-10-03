@@ -1,14 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
+
 import "./style.css";
+
 import { Link } from "react-router-dom";
 
-import { useLog } from "./../../contexts/LoggedContext";
-
 export default function Logon() {
-  const { setLog } = useLog();
+  const [login, setLogin] = useState([]);
+  const [password, setPassword] = useState([]);
+
   return (
     <>
-      <div className="leftball" />
+      <div className="leftball" style={{ fontFamily: "PMingLiU-ExtB" }} />
       <Link to="/">
         <button
           style={{
@@ -28,11 +30,18 @@ export default function Logon() {
           <div className="placeholderContainer">
             <div className="formPlaceholderContainer">
               <input
-                onBlur={(e) => setLog(e.target.value)}
+                onChange={
+                  /* (e) => setLogados(e.target.value) */ (e) =>
+                    setLogin(...login, e.target.value)
+                }
                 className="placeholder"
                 placeholder="Login"
               ></input>
-              <input className="placeholder" placeholder="Senha"></input>
+              <input
+                onChange={(e) => setPassword(...password, e.target.value)}
+                className="placeholder"
+                placeholder="Senha"
+              ></input>
               <Link to="/hall">
                 <button className="submit" type="submit">
                   Próximo
