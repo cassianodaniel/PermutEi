@@ -7,6 +7,7 @@ const Hall = () => {
   var personalData = JSON.parse(localStorage.getItem("stepone"));
   var tecnicalData = JSON.parse(localStorage.getItem("steptwo"));
   var loginData = JSON.parse(localStorage.getItem("stepthree"));
+
   return (
     <Table responsive hover bordered className="bg-light">
       <thead>

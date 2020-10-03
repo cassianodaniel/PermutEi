@@ -15,7 +15,7 @@ export default function RegisterThirdStep() {
       senha: senha,
     };
 
-    localStorage.setItem("steptwo", JSON.stringify(object));
+    localStorage.setItem("stepthree", JSON.stringify(object));
   }
 
   return (
