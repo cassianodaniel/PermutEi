@@ -4,7 +4,7 @@ import "./style.css";
 
 import { Link } from "react-router-dom";
 
-export default function RegisterSecondStep() {
+export default function EditarPerfilSecondStep() {
   function handleSubmit(e) {
     const object = {
       matricula: matricula,
@@ -46,7 +46,7 @@ export default function RegisterSecondStep() {
           </ul>
         </div>
         <div class="card-body">
-          <h5 class="card-title">Registro</h5>
+          <h5 class="card-title">Editar cadastro atual</h5>
           <div class="form-col">
             <div class="mt-4">
               <label for="validationServer01">Matrícula</label>
@@ -124,7 +124,7 @@ export default function RegisterSecondStep() {
               Anterior
             </button>
           </Link>
-          <Link to="/registerthirdstep" onClick={(e) => handleSubmit(e)}>
+          <Link to="/editarcadastrothirdstep" onClick={(e) => handleSubmit(e)}>
             <button class="btn btn-primary ml-3" type="submit">
               Próximo
             </button>

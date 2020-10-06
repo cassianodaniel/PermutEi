@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import "./style.css";
 
-export default function RegisterThirdStep() {
+export default function EditarPerfilThirdStep() {
   const [login, setLogin] = useState("");
   const [senha, setSenha] = useState("");
 
@@ -38,7 +38,7 @@ export default function RegisterThirdStep() {
           </ul>
         </div>
         <div class="card-body">
-          <h5 class="card-title">Registro</h5>
+          <h5 class="card-title">Editar cadastro atual</h5>
           <div class="form-col">
             <div class="mt-4">
               <label for="validationServer01">Login</label>
@@ -86,7 +86,7 @@ export default function RegisterThirdStep() {
               </div>
             </div>
           </div>
-          <Link to="/registersecondstep">
+          <Link to="/hall">
             <button class="btn btn-primary" type="submit">
               Anterior
             </button>

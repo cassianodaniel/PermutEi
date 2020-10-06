@@ -9,48 +9,48 @@ export default function Logon() {
   const [password, setPassword] = useState([]);
 
   return (
-    <>
-      <div className="leftball" style={{ fontFamily: "PMingLiU-ExtB" }} />
-      <Link to="/">
-        <button
-          style={{
-            width: "100px",
-            marginLeft: "20px",
-            fontSize: "20px",
-            color: "black",
-            fontFamily: "PMingLiU-ExtB",
-            position: "absolute",
-          }}
-        >
-          Voltar
-        </button>
-      </Link>
-      <div className="registerContainer">
-        <div className="formRegisterContainer">
-          <div className="placeholderContainer">
-            <div className="formPlaceholderContainer">
+    <form>
+      <div class="card text-center m-3">
+        <div class="card-header">
+          <ul class="nav nav-tabs card-header-tabs">
+            <li class="nav-item">
+              <text class="nav-link active">
+                <text className="smallertextsizing">Login</text>
+              </text>
+            </li>
+          </ul>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Acesso ao PermutEi!</h5>
+          <div class="form-col">
+            <div class="mt-4">
+              <label for="validationServer01">Login</label>
               <input
-                onChange={
-                  /* (e) => setLogados(e.target.value) */ (e) =>
-                    setLogin(...login, e.target.value)
-                }
-                className="placeholder"
+                type="text"
+                class="form-control is-valid"
+                id="validationServer01"
                 placeholder="Login"
-              ></input>
+                required
+              />
+            </div>
+            <div class="mt-4 mb-4">
+              <label for="validationServer02">Senha</label>
               <input
-                onChange={(e) => setPassword(...password, e.target.value)}
-                className="placeholder"
+                type="text"
+                class="form-control is-valid"
+                id="validationServer02"
                 placeholder="Senha"
-              ></input>
-              <Link to="/hall">
-                <button className="submit" type="submit">
-                  Próximo
-                </button>
-              </Link>
+                required
+              />
             </div>
           </div>
+          <Link to="/hall">
+            <button class="btn btn-primary" type="submit">
+              Próximo
+            </button>
+          </Link>
         </div>
       </div>
-    </>
+    </form>
   );
 }
