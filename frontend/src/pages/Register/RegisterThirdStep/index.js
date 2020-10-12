@@ -1,21 +1,49 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-
+import api from '../../../services/api';
 import "./style.css";
 
 export default function RegisterThirdStep() {
   const [login, setLogin] = useState("");
   const [senha, setSenha] = useState("");
 
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     console.log("SECOND STEP");
 
-    const object = {
+    /*const object = {
       login: login,
       senha: senha,
     };
 
-    localStorage.setItem("stepthree", JSON.stringify(object));
+    localStorage.setItem("stepthree", JSON.stringify(object));*/
+
+    const stepone = localStorage.getItem("stepone");
+    const steptwo = localStorage.getItem("steptwo");
+
+    const data = {
+      nome: stepone.nome,
+      sexo: stepone.sexo,
+      datanasc: stepone.dataNascimento,
+      endereco: stepone.endereco,
+      cpf: parseInt(stepone.cpf),
+      numero: parseInt(stepone.whatsapp),
+      matricula: parseInt(steptwo.matricula),
+      batalhao: steptwo.batalhaoAtual,
+      batalhaointeresse: steptwo.batalhaoInteresse,
+      disponibilidade: true,
+      orgao: steptwo.orgao,
+      comportamento: steptwo.comportamento,
+      login: login,
+      senha: senha
+    };
+
+    try {
+      await api.post('users', data);
+      alert("Cadastro realizado")
+    } catch (error) {
+      alert(error)
+    }
+
   }
 
   return (
@@ -49,7 +77,7 @@ export default function RegisterThirdStep() {
                 placeholder="Senha"
                 onChange={(e) => setSenha(e.target.value)}
               ></input>
-              <Link to="/hall" onClick={(e) => handleSubmit(e)}>
+              <Link to="/" onClick={(e) => handleSubmit(e)}>
                 <button className="submit" type="submit">
                   Registrar
                 </button>

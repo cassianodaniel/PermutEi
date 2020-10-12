@@ -10,6 +10,7 @@ export default function RegisterSecondStep() {
       matricula: matricula,
       batalhaoAtual: batalhaoAtual,
       batalhaoInteresse: batalhaoInteresse,
+      orgao: orgao,
       comportamento: comportamento,
     };
 
@@ -19,6 +20,7 @@ export default function RegisterSecondStep() {
   const [matricula, setMatricula] = useState("");
   const [batalhaoAtual, setBatalhaoAtual] = useState("");
   const [batalhaoInteresse, setBatalhaoInteresse] = useState("");
+  const [orgao, setOrgao] = useState("");
   const [comportamento, setComportamento] = useState("");
 
   return (
@@ -57,7 +59,11 @@ export default function RegisterSecondStep() {
                 placeholder="Batalhão de Interesse"
                 onChange={(e) => setBatalhaoInteresse(e.target.value)}
               ></input>
-              <input className="placeholder" placeholder="Órgão"></input>
+              <input 
+                className="placeholder"
+                placeholder="Orgão"
+                onChange={(e) => setOrgao(e.target.value)}
+              ></input>
               <input
                 className="placeholder"
                 placeholder="Comportamento"
