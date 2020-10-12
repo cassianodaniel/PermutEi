@@ -1,0 +1,5 @@
+@media only screen and (max-width: 260px) {
+  .smallertextsizing {
+    font-size: smaller;
+  }
+}

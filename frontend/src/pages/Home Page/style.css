@@ -1,75 +1,31 @@
-html, body{
-    background-color: #000000;
-    background-image: linear-gradient(to right bottom, #1E1E6A, #515151);
-    height: 100%;
+html,
+body {
+  height: 100%;
+  width: 100%;
+
+  background-image: linear-gradient(to right bottom, #03032b, #3f3e3e);
 }
 
-.label{
-    color: white;
-    text-align: center;
-    font-size: 60px;
-    padding: 30px;
-    font-family: 'PMingLiU-ExtB';
-    position: relative;
-    top: 40vh;
+.label {
+  color: white;
+  text-align: center;
+  font-size: 60px;
+  padding: 30px;
+  font-family: "PMingLiU-ExtB";
+  position: relative;
+  top: 40vh;
 }
 
-div .icone{
-    height: 148px;
-    width: 150px;
-    background-image: url("../../images/icone.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 170px 150px;
-    border: 1px solid black;
-    border-radius: 999em;
-    margin-left: 45%;
+.buttons {
+  color: white;
+  text-align: center;
+  font-size: 60px;
+  padding: 30px;
+  font-family: "PMingLiU-ExtB";
+  position: relative;
+  top: 40vh;
 }
 
-.login{
-    color: black;
-    width: 200px;
-    height: 50px;
-    border: 0;
-    border-radius: 8px;
-    font-weight: 300;
-    transition: filter 0.2s;
-}
-
-.login:hover{
-    filter: brightness(90%);
-}
-
-.cadastro{
-    color: black;
-    width: 200px;
-    height: 50px;
-    border: 0;
-    border-radius: 8px;
-    font-weight: 300;
-    transition: filter 0.2s;
-}
-
-.cadastro:hover{
-    filter: brightness(90%);
-}
-
-div .buttons{
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-    margin-top: -8vh;
-    margin-left: 2vh;
-    border: 1;
-    border-color: black;
-}
-
-.leftball{
-    background-color: white;
-    width: 800px;
-    height: 750px;
-    border-radius: 360px;
-    position: absolute;
-    bottom: 450px;
-    right: 1150px;
+.loginButton {
+  margin-right: 3vh;
 }

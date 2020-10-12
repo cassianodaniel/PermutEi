@@ -4,13 +4,12 @@ import "./style.css";
 
 import { Link } from "react-router-dom";
 
-export default function RegisterSecondStep() {
+export default function EditarPerfilSecondStep() {
   function handleSubmit(e) {
     const object = {
       matricula: matricula,
       batalhaoAtual: batalhaoAtual,
       batalhaoInteresse: batalhaoInteresse,
-      orgao: orgao,
       comportamento: comportamento,
       postograduacao: postograduacao,
     };
@@ -21,7 +20,6 @@ export default function RegisterSecondStep() {
   const [matricula, setMatricula] = useState("");
   const [batalhaoAtual, setBatalhaoAtual] = useState("");
   const [batalhaoInteresse, setBatalhaoInteresse] = useState("");
-  const [orgao, setOrgao] = useState("");
   const [comportamento, setComportamento] = useState("");
   const [postograduacao, setPostograduacao] = useState("");
 
@@ -48,7 +46,7 @@ export default function RegisterSecondStep() {
           </ul>
         </div>
         <div class="card-body">
-          <h5 class="card-title">Registro</h5>
+          <h5 class="card-title">Editar cadastro atual</h5>
           <div class="form-col">
             <div class="mt-4">
               <label for="validationServer01">Matrícula</label>
@@ -70,19 +68,6 @@ export default function RegisterSecondStep() {
                 id="validationServer02"
                 placeholder="Batalhão Atual"
                 onChange={(e) => setBatalhaoAtual(e.target.value)}
-<<<<<<< HEAD
-              ></input>
-              <input
-                className="placeholder"
-                placeholder="Batalhão de Interesse"
-                onChange={(e) => setBatalhaoInteresse(e.target.value)}
-              ></input>
-              <input 
-                className="placeholder"
-                placeholder="Orgão"
-                onChange={(e) => setOrgao(e.target.value)}
-              ></input>
-=======
                 required
               />
               <div class="valid-feedback">Ótimo!</div>
@@ -110,7 +95,6 @@ export default function RegisterSecondStep() {
           <div class="form-col mt-4">
             <div>
               <label for="validationServer03">Comportamento</label>
->>>>>>> 24e91f931fffe063102d602791e7afbdec319036
               <input
                 type="text"
                 class="form-control is-invalid"
@@ -140,7 +124,7 @@ export default function RegisterSecondStep() {
               Anterior
             </button>
           </Link>
-          <Link to="/registerthirdstep" onClick={(e) => handleSubmit(e)}>
+          <Link to="/editarcadastrothirdstep" onClick={(e) => handleSubmit(e)}>
             <button class="btn btn-primary ml-3" type="submit">
               Próximo
             </button>
