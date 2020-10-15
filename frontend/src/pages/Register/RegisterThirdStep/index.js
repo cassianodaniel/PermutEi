@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import api from '../../../services/api';
 import "./style.css";
 
@@ -7,31 +7,35 @@ export default function RegisterThirdStep() {
   const [login, setLogin] = useState("");
   const [senha, setSenha] = useState("");
 
+  const history = useHistory();
+  
   async function handleSubmit(e) {
-
-    const stepone = localStorage.getItem("stepone");
-    const steptwo = localStorage.getItem("steptwo");
-
-    const data = {
-      nome: stepone.nome,
-      sexo: stepone.sexo,
-      datanasc: stepone.dataNascimento,
-      endereco: stepone.endereco,
-      cpf: parseInt(stepone.cpf),
-      numero: parseInt(stepone.whatsapp),
-      matricula: parseInt(steptwo.matricula),
-      batalhao: steptwo.batalhaoAtual,
-      batalhaointeresse: steptwo.batalhaoInteresse,
-      disponibilidade: true,
-      orgao: steptwo.orgao,
-      comportamento: steptwo.comportamento,
-      login: login,
-      senha: senha
-    };
-
+    e.preventDefault();
+    
     try {
+      const stepone = JSON.parse(localStorage.getItem("stepone"));;
+      const steptwo = JSON.parse(localStorage.getItem("steptwo"));
+
+      const data = {
+        nome: stepone.nome,
+        sexo: stepone.sexo,
+        datanasc: stepone.dataNascimento,
+        endereco: stepone.endereco,
+        cpf: parseInt(stepone.cpf),
+        numero: parseInt(stepone.whatsapp),
+        matricula: parseInt(steptwo.matricula),
+        batalhao: steptwo.batalhaoAtual,
+        batalhaointeresse: steptwo.batalhaoInteresse,
+        disponibilidade: true,
+        orgao: steptwo.orgao,
+        comportamento: steptwo.comportamento,
+        login: login,
+        senha: senha
+      };
       await api.post('/users', data);
       alert("Cadastro realizado");
+      localStorage.setItem("login", login);
+      history.push('/hall');
     } catch (error) {
       alert(error);
     }
