@@ -7,7 +7,6 @@ export default function RegisterThirdStep() {
   const [login, setLogin] = useState("");
   const [senha, setSenha] = useState("");
 
-<<<<<<< HEAD
   async function handleSubmit(e) {
     console.log("SECOND STEP");
 
@@ -45,14 +44,6 @@ export default function RegisterThirdStep() {
       alert(error)
     }
 
-=======
-  function handleSubmit(e) {
-    const object = {
-      login: login,
-      senha: senha,
-    };
-    localStorage.setItem("stepthree", JSON.stringify(object));
->>>>>>> 24e91f931fffe063102d602791e7afbdec319036
   }
 
   return (
@@ -100,15 +91,6 @@ export default function RegisterThirdStep() {
                 id="validationServer02"
                 placeholder="Senha"
                 onChange={(e) => setSenha(e.target.value)}
-<<<<<<< HEAD
-              ></input>
-              <Link to="/" onClick={(e) => handleSubmit(e)}>
-                <button className="submit" type="submit">
-                  Registrar
-                </button>
-              </Link>
-            </form>
-=======
                 required
               />
               <div class="valid-feedback">Ótimo!</div>
@@ -134,7 +116,6 @@ export default function RegisterThirdStep() {
                 </text>
               </div>
             </div>
->>>>>>> 24e91f931fffe063102d602791e7afbdec319036
           </div>
           <Link to="/registersecondstep">
             <button class="btn btn-primary" type="submit">

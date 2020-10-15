@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 //pages
@@ -15,7 +15,7 @@ import EditarPerfilSecondStep from "./pages/EditarPerfil/EditarPerfilSecondStep"
 import EditarPerfilThirdStep from "./pages/EditarPerfil/EditarPerfilThirdStep";
 
 export default function Routes() {
-  const [registers, setRegisters] = useState("Initial state");
+  //const [registers, setRegisters] = useState("Initial state");
   return (
     <BrowserRouter>
       <Switch>

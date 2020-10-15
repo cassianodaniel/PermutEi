@@ -70,7 +70,6 @@ export default function RegisterSecondStep() {
                 id="validationServer02"
                 placeholder="Batalhão Atual"
                 onChange={(e) => setBatalhaoAtual(e.target.value)}
-<<<<<<< HEAD
               ></input>
               <input
                 className="placeholder"
@@ -82,35 +81,6 @@ export default function RegisterSecondStep() {
                 placeholder="Orgão"
                 onChange={(e) => setOrgao(e.target.value)}
               ></input>
-=======
-                required
-              />
-              <div class="valid-feedback">Ótimo!</div>
-            </div>
-
-            <div class="mt-4">
-              <label for="validationServerUsername">
-                Batalhão de Interesse
-              </label>
-
-              <div class="input-group">
-                <input
-                  type="text"
-                  class="form-control is-invalid"
-                  id="validationServerUsername"
-                  placeholder="Batalhão de Interesse"
-                  aria-describedby="inputGroupPrepend3"
-                  onChange={(e) => setBatalhaoInteresse(e.target.value)}
-                  required
-                />
-                <div class="invalid-feedback">Batalhão inválido!</div>
-              </div>
-            </div>
-          </div>
-          <div class="form-col mt-4">
-            <div>
-              <label for="validationServer03">Comportamento</label>
->>>>>>> 24e91f931fffe063102d602791e7afbdec319036
               <input
                 type="text"
                 class="form-control is-invalid"

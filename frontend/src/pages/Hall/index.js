@@ -8,7 +8,6 @@ import {
   Container,
   Button,
 } from "reactstrap";
-import { Link } from "react-router-dom";
 
 const Hall = () => {
   var personalData = JSON.parse(localStorage.getItem("stepone"));

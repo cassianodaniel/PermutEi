@@ -2,14 +2,35 @@ import React, { useState } from "react";
 
 import "./style.css";
 
-import { Link } from "react-router-dom";
+import { useHistory } from "react-router-dom";
+
+import api from '../../services/api';
 
 export default function Logon() {
-  const [login, setLogin] = useState([]);
-  const [password, setPassword] = useState([]);
+
+  const history = useHistory();
+
+  const [login, setLogin] = useState("");
+  const [senha, setSenha] = useState("");
+
+  async function handleLogin(e){
+    e.preventDefault();
+    try {
+      const response = await api.post('/login', {login, senha});
+      if (response) {
+        localStorage.setItem("login", login)
+        history.push('/hall');
+      } else {
+        alert("Login ou senha incorretos!");
+      }
+    } catch (error) {
+      alert(error)
+    }
+    
+  }
 
   return (
-    <form>
+    <form onSubmit={handleLogin}>
       <div class="card text-center m-3">
         <div class="card-header">
           <ul class="nav nav-tabs card-header-tabs">
@@ -31,6 +52,7 @@ export default function Logon() {
                 id="validationServer01"
                 placeholder="Login"
                 required
+                onChangeText={(e) => setLogin(e.target.value)}
               />
             </div>
             <div class="mt-4 mb-4">
@@ -41,14 +63,13 @@ export default function Logon() {
                 id="validationServer02"
                 placeholder="Senha"
                 required
+                onChangeText={(e) => setSenha(e)}
               />
             </div>
           </div>
-          <Link to="/hall">
             <button class="btn btn-primary" type="submit">
               Próximo
             </button>
-          </Link>
         </div>
       </div>
     </form>
