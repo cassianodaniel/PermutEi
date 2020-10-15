@@ -8,14 +8,6 @@ export default function RegisterThirdStep() {
   const [senha, setSenha] = useState("");
 
   async function handleSubmit(e) {
-    console.log("SECOND STEP");
-
-    /*const object = {
-      login: login,
-      senha: senha,
-    };
-
-    localStorage.setItem("stepthree", JSON.stringify(object));*/
 
     const stepone = localStorage.getItem("stepone");
     const steptwo = localStorage.getItem("steptwo");
@@ -38,16 +30,16 @@ export default function RegisterThirdStep() {
     };
 
     try {
-      await api.post('users', data);
-      alert("Cadastro realizado")
+      await api.post('/users', data);
+      alert("Cadastro realizado");
     } catch (error) {
-      alert(error)
+      alert(error);
     }
 
   }
 
   return (
-    <form>
+    <form onSubmit={handleSubmit}>
       <div class="card text-center m-3">
         <div class="card-header">
           <ul class="nav nav-tabs card-header-tabs">
@@ -122,11 +114,9 @@ export default function RegisterThirdStep() {
               Anterior
             </button>
           </Link>
-          <Link to="/logon" onClick={(e) => handleSubmit(e)}>
             <button class="btn btn-primary ml-3" type="submit">
               Confirmar
             </button>
-          </Link>
         </div>
       </div>
     </form>

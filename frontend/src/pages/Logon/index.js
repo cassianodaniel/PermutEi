@@ -16,9 +16,12 @@ export default function Logon() {
   async function handleLogin(e){
     e.preventDefault();
     try {
+      console.log(login);
+      console.log(senha);
       const response = await api.post('/login', {login, senha});
-      if (response) {
-        localStorage.setItem("login", login)
+      console.log(response.data);
+      if (response.data===true) {
+        localStorage.setItem("login", login);
         history.push('/hall');
       } else {
         alert("Login ou senha incorretos!");
@@ -52,7 +55,7 @@ export default function Logon() {
                 id="validationServer01"
                 placeholder="Login"
                 required
-                onChangeText={(e) => setLogin(e.target.value)}
+                onChange={(e) => setLogin(e.target.value)}
               />
             </div>
             <div class="mt-4 mb-4">
@@ -63,7 +66,7 @@ export default function Logon() {
                 id="validationServer02"
                 placeholder="Senha"
                 required
-                onChangeText={(e) => setSenha(e)}
+                onChange={(e) => setSenha(e.target.value)}
               />
             </div>
           </div>
