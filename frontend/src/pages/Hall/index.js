@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from "react";
+import {useHistory} from "react-router-dom";
 import "./style.css";
 import {
   Table,
@@ -13,11 +14,42 @@ import api from '../../services/api';
 
 const Hall = () => {
   
+  const history = useHistory();
+
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
-    api.get('users').then(response => {
-        setUsers(response.data);
+    const login = JSON.stringify(localStorage.getItem('login'));
+    console.log(login);
+    api.get('/users').then(response => {
+        const data = [];
+        const resp = response.data;
+        console.log(resp);
+        let userMaster = {};
+
+
+        
+        
+        if (login==="null") {
+          history.push("/logon");
+        }
+
+
+        resp.map((user) => {
+          console.log(user.login)
+          if (JSON.stringify(user.login) === login) {
+            userMaster = user;
+          }
+        })
+        console.log(userMaster);
+
+        resp.map((user) => {
+          if (user.orgao === userMaster.orgao && user.login!==userMaster.login) {
+            data.push(user);
+          }
+        })
+        console.log(data);
+        setUsers(data);
     })
 }, []);
 
@@ -86,7 +118,7 @@ const Hall = () => {
               <th>Matrícula</th>
               <th>Batalhão Atual</th>
               <th>Batalhão de Interesse</th>
-              <th>Endereco</th>
+              <th>Estado Atual</th>
               <th>Combinar permuta </th>
             </tr>
           </thead>
@@ -97,9 +129,9 @@ const Hall = () => {
                 <th scope="row">{user.id}</th>
                 <td>{user.nome}</td>
                 <td>{user.matricula}</td>
-                <td>{user.batalhao}</td>
-                <td>{user.batalhaointeresse}</td>
-                <td>{user.endereco}</td>
+                <td>{user.batalhaoAtual}</td>
+                <td>{user.batalhaoInteresse}</td>
+                <td>{user.estadoAtual}</td>
                 <Button
                   style={{
                     backgroundColor: "yellow",
