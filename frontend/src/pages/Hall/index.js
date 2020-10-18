@@ -58,6 +58,9 @@ const Hall = () => {
             <a link href="/editarperfil">
               Editar cadastro
             </a>
+            <button onClick={() => {}}>
+              Mudar disponibilidade
+            </button>
           </Container>
         </Jumbotron>
       </div>
@@ -77,6 +80,7 @@ const Hall = () => {
           <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
             Filtrar
           </button>
+
         </form>
         <Table responsive hover bordered className="bg-light">
           <thead>

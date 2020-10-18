@@ -72,15 +72,11 @@ export default function Register() {
             </div>
             <div class="mt-4">
               <label for="validationServer02">Sexo</label>
-              <input
-                type="text"
-                class="form-control is-valid"
-                id="validationServer02"
-                placeholder="Sexo"
-                onChange={(e) => setSexo(e.target.value)}
-                required
-              />
-              <div class="valid-feedback">Ótimo!</div>
+              <Input onChange={(e) => setSexo(e.target.value)} type="select" name="select" id="exampleSelect">
+                <option>Masculino</option>
+                <option>Feminino</option>
+                <option>Não declarante</option>
+              </Input>
             </div>
 
             <div class="mt-4">

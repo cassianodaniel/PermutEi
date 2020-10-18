@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./styles.css";
+import { Input } from 'reactstrap';
 
 export default function EditarPerfil() {
   function handleSubmit(e) {
@@ -39,7 +40,7 @@ export default function EditarPerfil() {
   const [orgao, setOrgao] = useState("");
   const [login, setLogin] = useState("");
   const [senha, setSenha] = useState("");
-  const [disponibilidade] = useState(true);
+  const [disponibilidade,setDisponibilidade] = useState("");
 
   return (
     <form onSubmit={() => handleSubmit()}>
@@ -63,9 +64,15 @@ export default function EditarPerfil() {
           
           <h5 class="card-title">Editar cadastro atual</h5>
           
+          <div className='custom-control custom-switch'>
           
+        </div>
+
           <div class="form-col">
             <div class="mt-4">
+              
+             
+
               <label for="validationServer01">Nome</label>
               <input
                 type="text"
@@ -79,15 +86,11 @@ export default function EditarPerfil() {
             </div>
             <div class="mt-4">
               <label for="validationServer02">Sexo</label>
-              <input
-                type="text"
-                class="form-control is-valid"
-                id="validationServer02"
-                placeholder="Sexo"
-                onChange={(e) => setSexo(e.target.value)}
-                required
-              />
-              <div class="valid-feedback">Ótimo!</div>
+              <Input onChange={(e) => setSexo(e.target.value)} type="select" name="select" id="exampleSelect">
+                <option>Masculino</option>
+                <option>Feminino</option>
+                <option>Não declarante</option>
+              </Input>
             </div>
 
             <div class="mt-4">
@@ -96,7 +99,7 @@ export default function EditarPerfil() {
               <div class="input-group">
                 <input
                   type="text"
-                  class="form-control is-invalid"
+                  class="form-control is-valid"
                   id="validationServerUsername"
                   placeholder="Data de Nascimento"
                   aria-describedby="inputGroupPrepend3"
@@ -115,7 +118,7 @@ export default function EditarPerfil() {
               <div class="input-group">
                 <input
                   type="text"
-                  class="form-control is-invalid"
+                  class="form-control is-valid"
                   id="validationServerUsername"
                   placeholder="Estado"
                   aria-describedby="inputGroupPrepend3"
@@ -130,25 +133,11 @@ export default function EditarPerfil() {
           </div>
 
           <div class="form-col mt-4">
-            <div>
-              <label for="validationServer03">CPF</label>
-              <input
-                type="text"
-                class="form-control is-invalid"
-                id="validationServer03"
-                placeholder="CPF"
-                onChange={(e) => setCpf(e.target.value)}
-                required
-              />
-              <div class="invalid-feedback">
-                Por favor, digite um CPF válido.
-              </div>
-            </div>
             <div class="mt-4">
               <label for="validationServer04">Número de Whatsapp</label>
               <input
                 type="text"
-                class="form-control is-invalid"
+                class="form-control is-valid"
                 id="validationServer04"
                 placeholder="Whatsapp"
                 onChange={(e) => setWhatsapp(e.target.value)}
@@ -203,7 +192,7 @@ export default function EditarPerfil() {
               <label for="validationServer07">Comportamento</label>
                 <input
                   type="text"
-                  class="form-control is-invalid"
+                  class="form-control is-valid"
                   id="validationServer08"
                   placeholder="Comportamento"
                   onChange={(e) => setComportamento(e.target.value)}
@@ -216,7 +205,7 @@ export default function EditarPerfil() {
                 <label for="validationServer08">Posto/graduação</label>
                 <input
                   type="text"
-                  class="form-control is-invalid"
+                  class="form-control is-valid"
                   id="validationServer05"
                   placeholder="Posto/graduação"
                   onChange={(e) => setPostoGraduacao(e.target.value)}
@@ -229,7 +218,7 @@ export default function EditarPerfil() {
               <label for="validationServer09">Órgão</label>
                 <input
                   type="text"
-                  class="form-control is-invalid"
+                  class="form-control is-valid"
                   id="validationServer09"
                   placeholder="Comportamento"
                   onChange={(e) => setOrgao(e.target.value)}
@@ -270,7 +259,7 @@ export default function EditarPerfil() {
             <div class="form-group mt-4">
               <div class="form-check mt-4">
                 <input
-                  class="form-check-input is-invalid"
+                  class="form-check-input is-valid"
                   type="checkbox"
                   value=""
                   id="invalidCheck3"
@@ -278,7 +267,7 @@ export default function EditarPerfil() {
                 />
                 <label class="form-check-label" for="invalidCheck3">
                   <text className="smallertextsizing">
-                    Aceito com os termos e condições
+                    Aceito os termos e condições
                   </text>
                 </label>
                 <div class="invalid-feedback">
@@ -297,54 +286,5 @@ export default function EditarPerfil() {
         </div>
       </div>
     </form>
-
-    /* <>
-      <Link to="/">
-        <button>Voltar</button>
-      </Link>
-      <div className="registerContainer">
-        <div className="placeholderContainer">
-          <form className="formPlaceholderContainer">
-            <input
-              className="placeholder"
-              placeholder="Nome"
-              onChange={(e) => setNome(e.target.value)}
-            ></input>
-            <input
-              className="placeholder"
-              placeholder="Sexo"
-              onChange={(e) => setSexo(e.target.value)}
-            ></input>
-            <input
-              className="placeholder"
-              placeholder="Data de Nascimento"
-              onChange={(e) => setDataNascimento(e.target.value)}
-            ></input>
-            <input
-              className="placeholder"
-              placeholder="Endereço"
-              onChange={(e) => setEndereco(e.target.value)}
-            ></input>
-            <input
-              className="placeholder"
-              placeholder="CPF"
-              onChange={(e) => setCpf(e.target.value)}
-            ></input>
-            <input
-              className="placeholder"
-              placeholder="Número de Whatsapp"
-              onChange={(e) => setWhatsapp(e.target.value)}
-            ></input>
-            <Link to="/RegisterSecondStep" onClick={(e) => handleSubmit(e)}>
-              <button className="submit" type="submit">
-                Próximo
-              </button>
-            </Link>
-          </form>
-        </div>
-        
-      </div>
-      
-    </> */
   );
 }
