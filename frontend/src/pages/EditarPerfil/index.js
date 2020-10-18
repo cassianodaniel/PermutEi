@@ -1,10 +1,14 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import "./styles.css";
 import { Input } from 'reactstrap';
 
+import api from '../../services/api';
+
 export default function EditarPerfil() {
   const user = JSON.parse(localStorage.getItem('user'));
+
+  const history = useHistory();
 
   const [nome, setNome] = useState("Inicial State");
   const [sexo, setSexo] = useState("Inicial State");
@@ -22,7 +26,7 @@ export default function EditarPerfil() {
   const [senha, setSenha] = useState("");
   const [disponibilidade] = useState(true);
 
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     const data = {
       nome: nome,
       sexo: sexo,

@@ -8,15 +8,31 @@ import {
   Jumbotron,
   Container,
   Button,
+  Input
 } from "reactstrap";
 
 import api from '../../services/api';
 
 const Hall = () => {
   
+  function handleEditar(e){
+
+    localStorage.setItem('user', JSON.stringify(userMaster));
+    //history.push('/editarperfil')
+  }
+
   const history = useHistory();
 
   const [users, setUsers] = useState([]);
+  const [userMaster, setUserMaster] = useState({});
+
+  const [search, setSearch] = useState("");
+
+  const handleSearchArray = (string) => {
+    return users.batalhaoInteresse.filter((item) => {
+      return item.batalhaoInteresse.toUpperCase().match(string.toUpperCase());
+    });
+  };
 
   useEffect(() => {
     const login = JSON.stringify(localStorage.getItem('login'));
@@ -39,6 +55,7 @@ const Hall = () => {
           console.log(user.login)
           if (JSON.stringify(user.login) === login) {
             userMaster = user;
+            setUserMaster(user);
           }
         })
         console.log(userMaster);
@@ -87,7 +104,7 @@ const Hall = () => {
               </a>{" "}
               ;)
             </p>
-            <a link href="/editarperfil">
+            <a link href="/editarperfil" onClick={handleEditar}>
               Editar cadastro
             </a>
             <br/>
@@ -104,19 +121,20 @@ const Hall = () => {
         <p className="text-success">
           Você pode buscar por qualquer categoria no campo abaixo
         </p>
-        <form class="form-inline mb-3">
-          <input
-            class="form-control mr-sm-2"
-            type="search"
-            placeholder="Buscar"
-            aria-label="Search"
-            style={{ width: "45.7vh" }}
+
+        <form onSubmit={() => handleSearchArray(search)} class="form-inline mb-3">
+          <Input
+            type="text"
+            onChange={(e) => setSearch(e.target.value)}
+            className="form-control bg-light w-25"
+            placeholder="Filtrar por batalhão de interesse"
+            font
           />
           <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
             Filtrar
           </button>
-
         </form>
+
         <Table responsive hover bordered className="bg-light">
           <thead>
             <tr>
