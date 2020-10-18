@@ -58,9 +58,12 @@ const Hall = () => {
             <a link href="/editarperfil">
               Editar cadastro
             </a>
-            <button onClick={() => {}}>
-              Mudar disponibilidade
-            </button>
+            <br/>
+            <br/>
+            <Button onClick={() => {}}>
+              {/* {user.disponibilidade ? "Ocultar minha permuta" : "Exibir disponibilidade de permuta"} */}
+              Ocultar minha permuta
+          </Button>
           </Container>
         </Jumbotron>
       </div>
