@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./styles.css";
+import { Input } from "reactstrap";
 
 export default function Register() {
   function handleSubmit(e) {
@@ -34,6 +35,7 @@ export default function Register() {
   const [matricula, setMatricula] = useState("");
   const [batalhaoAtual, setBatalhaoAtual] = useState("");
   const [batalhaoInteresse, setBatalhaoInteresse] = useState("");
+  
   const [comportamento, setComportamento] = useState("");
   const [postograduacao, setPostoGraduacao] = useState("");
   const [orgao, setOrgao] = useState("");
@@ -282,9 +284,6 @@ export default function Register() {
               </button>
           </div>
         </div>
-
-
-        
       </div>
       </div>
     </form>
