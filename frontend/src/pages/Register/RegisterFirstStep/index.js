@@ -8,7 +8,7 @@ export default function Register() {
       nome: nome,
       sexo: sexo,
       dataNascimento: dataNascimento,
-      endereco: endereco,
+      estado: estado,
       cpf: cpf,
       whatsapp: whatsapp,
     };
@@ -19,7 +19,7 @@ export default function Register() {
   const [nome, setNome] = useState("Inicial State");
   const [sexo, setSexo] = useState("Inicial State");
   const [dataNascimento, setDataNascimento] = useState("Inicial State");
-  const [endereco, setEndereco] = useState("Inicial State");
+  const [estado, setEstado] = useState("Inicial State");
   const [cpf, setCpf] = useState("Inicial State");
   const [whatsapp, setWhatsapp] = useState("Inicial State");
 
@@ -93,20 +93,20 @@ export default function Register() {
             </div>
 
             <div class="mt-4">
-              <label for="validationServerUsername">Endereço</label>
+              <label for="validationServerUsername">Estado</label>
 
               <div class="input-group">
                 <input
                   type="text"
                   class="form-control is-invalid"
                   id="validationServerUsername"
-                  placeholder="Endereço"
+                  placeholder="Estado"
                   aria-describedby="inputGroupPrepend3"
-                  onChange={(e) => setEndereco(e.target.value)}
+                  onChange={(e) => setEstado(e.target.value)}
                   required
                 />
                 <div class="invalid-feedback">
-                  Por favor, digite um endereço válido
+                  Por favor, digite um estado válido
                 </div>
               </div>
             </div>

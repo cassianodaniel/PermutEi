@@ -21,9 +21,9 @@ export default function RegisterSecondStep() {
   const [matricula, setMatricula] = useState("");
   const [batalhaoAtual, setBatalhaoAtual] = useState("");
   const [batalhaoInteresse, setBatalhaoInteresse] = useState("");
-  const [orgao, setOrgao] = useState("");
   const [comportamento, setComportamento] = useState("");
-  const [postograduacao, setPostograduacao] = useState("");
+  const [postograduacao, setPostoGraduacao] = useState("");
+  const [orgao, setOrgao] = useState("");
 
   return (
     <form>
@@ -62,6 +62,7 @@ export default function RegisterSecondStep() {
               />
               <div class="valid-feedback">Ótimo!</div>
             </div>
+
             <div class="mt-4">
               <label for="validationServer02">Batalhão Atual</label>
               <input
@@ -71,34 +72,53 @@ export default function RegisterSecondStep() {
                 placeholder="Batalhão Atual"
                 onChange={(e) => setBatalhaoAtual(e.target.value)}
               ></input>
+            </div>
+
+            <div class="mt-4">
+              <label for="validationServer03">Batalhão Interesse</label>
               <input
-                className="placeholder"
-                placeholder="Batalhão de Interesse"
+                type="text"
+                class="form-control is-valid"
+                id="validationServer03"
+                placeholder="Batalhão Atual"
                 onChange={(e) => setBatalhaoInteresse(e.target.value)}
               ></input>
-              <input 
-                className="placeholder"
-                placeholder="Orgão"
-                onChange={(e) => setOrgao(e.target.value)}
-              ></input>
+            </div>
+
+            <div class="mt-4">
+            <label for="validationServer04">Comportamento</label>
               <input
                 type="text"
                 class="form-control is-invalid"
-                id="validationServer03"
+                id="validationServer04"
                 placeholder="Comportamento"
                 onChange={(e) => setComportamento(e.target.value)}
                 required
               />
               <div class="valid-feedback">Ótimo!</div>
             </div>
+
             <div class="mt-4 mb-4">
-              <label for="validationServer04">Posto/graduação</label>
+              <label for="validationServer05">Posto/graduação</label>
               <input
                 type="text"
                 class="form-control is-invalid"
-                id="validationServer04"
+                id="validationServer05"
                 placeholder="Posto/graduação"
-                onChange={(e) => setPostograduacao(e.target.value)}
+                onChange={(e) => setPostoGraduacao(e.target.value)}
+                required
+              />
+              <div class="valid-feedback">Ótimo!</div>
+            </div>
+
+            <div class="mt-4">
+            <label for="validationServer05">Órgão</label>
+              <input
+                type="text"
+                class="form-control is-invalid"
+                id="validationServer05"
+                placeholder="Comportamento"
+                onChange={(e) => setOrgao(e.target.value)}
                 required
               />
               <div class="valid-feedback">Ótimo!</div>
@@ -106,12 +126,12 @@ export default function RegisterSecondStep() {
           </div>
 
           <Link to="/register">
-            <button class="btn btn-primary" type="submit">
+            <button class="btn btn-primary mt-4" type="submit">
               Anterior
             </button>
           </Link>
           <Link to="/registerthirdstep" onClick={(e) => handleSubmit(e)}>
-            <button class="btn btn-primary ml-3" type="submit">
+            <button class="btn btn-primary mt-4 ml-3" type="submit">
               Próximo
             </button>
           </Link>

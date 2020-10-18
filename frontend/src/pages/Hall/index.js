@@ -17,7 +17,7 @@ const Hall = () => {
 
   useEffect(() => {
     api.get('users').then(response => {
-        setUsers(response.data);
+      setUsers(response.data);
     })
 }, []);
 
@@ -83,11 +83,12 @@ const Hall = () => {
             <tr>
               <th>#</th>
               <th>Nome</th>
+              <th>Órgão</th>
               <th>Matrícula</th>
+              <th>Estado</th>
+              <th>Estado de Interesse</th>
               <th>Batalhão Atual</th>
               <th>Batalhão de Interesse</th>
-              <th>Endereco</th>
-              <th>Combinar permuta </th>
             </tr>
           </thead>
 
@@ -96,10 +97,13 @@ const Hall = () => {
               <tr>
                 <th scope="row">{user.id}</th>
                 <td>{user.nome}</td>
+                <td>{user.orgao}</td>
                 <td>{user.matricula}</td>
-                <td>{user.batalhao}</td>
-                <td>{user.batalhaointeresse}</td>
-                <td>{user.endereco}</td>
+                <td>{user.estado}</td>
+                <td>{user.estadoInteresse}</td>
+                <td>{user.batalhaoAtual}</td>
+                <td>{user.batalhaoInteresse}</td>
+                
                 <Button
                   style={{
                     backgroundColor: "yellow",
