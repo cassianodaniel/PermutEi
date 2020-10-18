@@ -13,7 +13,7 @@ import {
 
 import api from '../../services/api';
 
-const Hall = () => {
+const Filtrar = () => {
   
   function handleEditar(e){
 
@@ -36,41 +36,16 @@ const Hall = () => {
           match.push(item);
         };
     });
-    localStorage.setItem("vaikey", JSON.stringify(match));
-    history.push("/filtrar");
+    history.push( 
+    {pathname: '/filtrar',
+    state: {array: "match"}}
+    );
   };
 
   useEffect(() => {
-    const login = JSON.stringify(localStorage.getItem('login'));
-    console.log(login);
-    api.get('/users').then(response => {
-        const data = [];
-        const resp = response.data;
-        console.log(resp);
-        let userMaster = {};
-        
-        if (login==="null") {
-          history.push("/logon");
-        }
-
-        resp.map((user) => {
-          console.log(user.login)
-          if (JSON.stringify(user.login) === login) {
-            userMaster = user;
-            setUserMaster(user);
-          }
-        })
-        console.log(userMaster);
-
-        resp.map((user) => {
-          if (user.orgao === userMaster.orgao && user.login!==userMaster.login) {
-            data.push(user);
-          }
-        })
-        console.log(data);
-        setUsers(data);
-    })
-}, []);
+    const data = JSON.parse(localStorage.getItem("vaikey"));
+    setUsers(data);
+    }, []);
 
   function chamaNoZap(numero){
     const originalstringtowpp =
@@ -120,22 +95,7 @@ const Hall = () => {
       </div>
 
       <CardBody>
-        <p className="text-success">
-          Você pode buscar por qualquer categoria no campo abaixo
-        </p>
-
-        <form onSubmit={(e) => handleSearchArray(e, search)} class="form-inline mb-3">
-          <Input
-            type="text"
-            onChange={(e) => setSearch(e.target.value)}
-            className="form-control bg-light w-25"
-            placeholder="Filtrar por batalhão de interesse"
-            font
-          />
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
-            Filtrar
-          </button>
-        </form>
+          <Button onClick={() => history.push("/hall")} className="mb-4 bg-primary">Voltar</Button>
 
         <Table responsive hover bordered className="bg-light">
           <thead>
@@ -192,4 +152,4 @@ const Hall = () => {
   );
 };
 
-export default Hall;
+export default Filtrar;

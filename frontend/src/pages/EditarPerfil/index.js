@@ -79,13 +79,10 @@ export default function EditarPerfil() {
           <h5 class="card-title">Editar cadastro atual</h5>
           
           <div className='custom-control custom-switch'>
-          
+      
         </div>
-
           <div class="form-col">
             <div class="mt-4">
-              
-             
 
               <label for="validationServer01">Nome</label>
               <input
@@ -95,6 +92,7 @@ export default function EditarPerfil() {
                 placeholder="Nome"
                 onChange={(e) => setNome(e.target.value)}
                 required
+                defaultValue={user.nome}
               />
               <div class="valid-feedback">Ótimo!</div>
             </div>
@@ -117,6 +115,7 @@ export default function EditarPerfil() {
                   id="validationServerUsername"
                   placeholder="Data de Nascimento"
                   aria-describedby="inputGroupPrepend3"
+                  defaultValue={user.datanasc}
                   onChange={(e) => setDataNascimento(e.target.value)}
                   required
                 />
@@ -132,11 +131,12 @@ export default function EditarPerfil() {
               <div class="input-group">
                 <input
                   type="text"
-                  class="form-control is-invalid"
+                  class="form-control is-valid"
                   id="validationServerUsername"
                   placeholder="Estado"
                   aria-describedby="inputGroupPrepend3"
                   onChange={(e) => setEestadoAtual(e.target.value)}
+                  defaultValue={user.estadoAtual}
                   required
                 />
                 <div class="invalid-feedback">
@@ -152,11 +152,12 @@ export default function EditarPerfil() {
               <div class="input-group">
                 <input
                   type="text"
-                  class="form-control is-invalid"
+                  class="form-control is-valid"
                   id="validationServerUsername"
                   placeholder="Estado"
                   aria-describedby="inputGroupPrepend3"
                   onChange={(e) => setEstadoInteresse(e.target.value)}
+                  defaultValue={user.estadoInteresse}
                   required
                 />
                 <div class="invalid-feedback">
@@ -166,8 +167,8 @@ export default function EditarPerfil() {
             </div>
           </div>
 
-          <div class="form-col mt-4">
-            <div class="mt-4">
+          <div class="form-col mt-0">
+            <div class="mt-4 ml-3 mr-3">
               <label for="validationServer04">Número de Whatsapp</label>
               <input
                 type="text"
@@ -175,6 +176,7 @@ export default function EditarPerfil() {
                 id="validationServer04"
                 placeholder="Whatsapp"
                 onChange={(e) => setNumero(e.target.value)}
+                defaultValue={user.numero}
                 required
               />
               <div class="invalid-feedback">
@@ -182,9 +184,7 @@ export default function EditarPerfil() {
               </div>
             </div>
           </div>
-        </div>
-
-        <div class="card text-center border-0">
+          <div class="card text-center border-0">
           <div class="card-body">
             <div class="form-col">
               <div>
@@ -195,6 +195,7 @@ export default function EditarPerfil() {
                   id="validationServer05"
                   placeholder="Matrícula"
                   onChange={(e) => setMatricula(e.target.value)}
+                  defaultValue={user.matricula}
                   required
                 />
                 <div class="valid-feedback">Ótimo!</div>
@@ -208,6 +209,7 @@ export default function EditarPerfil() {
                   id="validationServer06"
                   placeholder="Batalhão Atual"
                   onChange={(e) => setBatalhaoAtual(e.target.value)}
+                  defaultValue={user.batalhaoAtual}
                 ></input>
               </div>
 
@@ -218,6 +220,7 @@ export default function EditarPerfil() {
                   class="form-control is-valid"
                   id="validationServer07"
                   placeholder="Batalhão Atual"
+                  defaultValue={user.batalhaoInteresse}
                   onChange={(e) => setBatalhaoInteresse(e.target.value)}
                 ></input>
               </div>
@@ -230,6 +233,7 @@ export default function EditarPerfil() {
                   id="validationServer08"
                   placeholder="Comportamento"
                   onChange={(e) => setComportamento(e.target.value)}
+                  defaultValue={user.comportamento}
                   required
                 />
                 <div class="valid-feedback">Ótimo!</div>
@@ -243,6 +247,7 @@ export default function EditarPerfil() {
                   id="validationServer05"
                   placeholder="Posto/graduação"
                   onChange={(e) => setPostoGraduacao(e.target.value)}
+                  defaultValue={user.postoGraduacao}
                   required
                 />
                 <div class="valid-feedback">Ótimo!</div>
@@ -256,6 +261,7 @@ export default function EditarPerfil() {
                   id="validationServer09"
                   placeholder="Comportamento"
                   onChange={(e) => setOrgao(e.target.value)}
+                  defaultValue={user.orgao}
                   required
                 />
                 <div class="valid-feedback">Ótimo!</div>
@@ -273,6 +279,7 @@ export default function EditarPerfil() {
                   id="validationServer10"
                   placeholder="Login"
                   onChange={(e) => setLogin(e.target.value)}
+                  defaultValue={user.login}
                   required
                 />
                 <div class="valid-feedback">Ótimo!</div>
@@ -286,6 +293,7 @@ export default function EditarPerfil() {
                   placeholder="Senha"
                   onChange={(e) => setSenha(e.target.value)}
                   required
+                  defaultValue={user.senha}
                 />
                 <div class="valid-feedback">Ótimo!</div>
               </div>
@@ -316,7 +324,7 @@ export default function EditarPerfil() {
               </button>
           </div>
         </div>
-
+        </div>
         </div>
     </form>
   );

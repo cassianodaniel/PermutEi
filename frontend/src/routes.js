@@ -7,6 +7,7 @@ import Register from "./pages/Cadastro";
 import Hall from "./pages/Hall";
 import ConfirmarPermuta from "./pages/ConfirmarPermuta";
 import EditarPerfil from './pages/EditarPerfil';
+import Filtrar from './pages/Filtrar';
 
 export default function Routes() {
   return (
@@ -18,6 +19,8 @@ export default function Routes() {
         <Route path="/hall" exact component={Hall} />
         <Route path="/confirmarpermuta" exact component={ConfirmarPermuta} />
         <Route path="/editarperfil" exact component={EditarPerfil} />
+        <Route path="/filtrar" exact component={Filtrar} />
+      
       </Switch>
     </BrowserRouter>
   );
