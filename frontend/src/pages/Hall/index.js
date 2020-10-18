@@ -87,9 +87,15 @@ const Hall = () => {
               </a>{" "}
               ;)
             </p>
-            <a link href="/editarcadastro">
+            <a link href="/editarperfil">
               Editar cadastro
             </a>
+            <br/>
+            <br/>
+            <Button onClick={() => {}}>
+              {/* {user.disponibilidade ? "Ocultar minha permuta" : "Exibir disponibilidade de permuta"} */}
+              Ocultar minha permuta
+          </Button>
           </Container>
         </Jumbotron>
       </div>
@@ -109,13 +115,17 @@ const Hall = () => {
           <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
             Filtrar
           </button>
+
         </form>
         <Table responsive hover bordered className="bg-light">
           <thead>
             <tr>
               <th>#</th>
               <th>Nome</th>
+              <th>Órgão</th>
               <th>Matrícula</th>
+              <th>Estado</th>
+              <th>Estado de Interesse</th>
               <th>Batalhão Atual</th>
               <th>Batalhão de Interesse</th>
               <th>Estado Atual</th>
@@ -128,10 +138,16 @@ const Hall = () => {
               <tr>
                 <th scope="row">{user.id}</th>
                 <td>{user.nome}</td>
+                <td>{user.orgao}</td>
                 <td>{user.matricula}</td>
+                <td>{user.estado}</td>
+                <td>{user.estadoInteresse}</td>
+                <td>{user.batalhaoAtual}</td>
+                <td>{user.batalhaoInteresse}</td>
                 <td>{user.batalhaoAtual}</td>
                 <td>{user.batalhaoInteresse}</td>
                 <td>{user.estadoAtual}</td>
+                
                 <Button
                   style={{
                     backgroundColor: "yellow",
