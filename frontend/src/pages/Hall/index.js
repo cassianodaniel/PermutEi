@@ -55,7 +55,7 @@ const Hall = () => {
               </a>{" "}
               ;)
             </p>
-            <a link href="/editarcadastro">
+            <a link href="/editarperfil">
               Editar cadastro
             </a>
           </Container>
