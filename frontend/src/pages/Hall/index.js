@@ -122,6 +122,7 @@ const Hall = () => {
             <a link href="/editarperfil" onClick={handleEditar}>
               Editar cadastro
             </a>
+            
             <br/>
             <br/>
             <Button onClick={() => {}}>
@@ -134,14 +135,14 @@ const Hall = () => {
 
       <CardBody>
         <p className="text-success">
-          Você pode buscar por qualquer categoria no campo abaixo
+          Você pode buscar pela categoria "Batalhão de interesse" no campo abaixo:
         </p>
 
         <form onSubmit={(e) => handleSearchArray(e, search)} class="form-inline mb-3">
           <Input
             type="text"
             onChange={(e) => setSearch(e.target.value)}
-            className="form-control bg-light w-25"
+            className="form-control bg-light w-50"
             placeholder="Filtrar por batalhão de interesse"
             font
           />
