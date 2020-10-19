@@ -11,7 +11,7 @@ export default function Register() {
   const [dataNascimento, setDataNascimento] = useState("Inicial State");
   const [cpf, setCpf] = useState("Inicial State");
   const [numero, setNumero] = useState("Inicial State");
-  const [estadoAtual, setEestadoAtual] = useState("Inicial State");
+  const [estadoAtual, setEstadoAtual] = useState("Inicial State");
   const [estadoInteresse, setEstadoInteresse] = useState("Inicial State");
   const [matricula, setMatricula] = useState("");
   const [batalhaoAtual, setBatalhaoAtual] = useState("");
@@ -115,30 +115,64 @@ export default function Register() {
             </div>
 
             <div class="mt-4">
-              <label for="validationServerUsername">Estado</label>
+              <label for="validationServerUsername">Estado Atual</label>
 
-              <div class="input-group">
+              {/* <div class="input-group">
                 <input
                   type="text"
                   class="form-control is-valid"
                   id="validationServerUsername"
                   placeholder="Estado"
                   aria-describedby="inputGroupPrepend3"
-                  onChange={(e) => setEestadoAtual(e.target.value)}
+                  onChange={(e) => setEstadoAtual(e.target.value)}
                   required
                 />
                 <div class="invalid-feedback">
                   Por favor, digite um estado válido
                 </div>
-              </div>
+              </div> */}
+
+                <Input
+                  type="select"
+                  id="estadoAtual"
+                  name="estadoAtual"
+                  onChange={(e) => setEstadoAtual(e.target.value)}
+                >
+                    <option value="AC">Acre</option>
+                    <option value="AL">Alagoas</option>
+                    <option value="AP">Amapá</option>
+                    <option value="AM">Amazonas</option>
+                    <option value="BA">Bahia</option>
+                    <option value="CE">Ceará</option>
+                    <option value="DF">Distrito Federal</option>
+                    <option value="ES">Espírito Santo</option>
+                    <option value="GO">Goiás</option>
+                    <option value="MA">Maranhão</option>
+                    <option value="MT">Mato Grosso</option>
+                    <option value="MS">Mato Grosso do Sul</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="PA">Pará</option>
+                    <option value="PB">Paraíba</option>
+                    <option value="PR">Paraná</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="PI">Piauí</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                    <option value="RO">Rondônia</option>
+                    <option value="RR">Roraima</option>
+                    <option value="SC">Santa Catarina</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="SE">Sergipe</option>
+                    <option value="TO">Tocantins</option>
+                </Input>
             </div>
           </div>
 
           <div class="mt-4">
               <label for="validationServerUsername">Estado de Interesse</label>
-
               <div class="input-group">
-                <input
+                {/* <input
                   type="text"
                   class="form-control is-invalid"
                   id="validationServerUsername"
@@ -147,15 +181,49 @@ export default function Register() {
                   onChange={(e) => setEstadoInteresse(e.target.value)}
                   required
                 />
+                
                 <div class="invalid-feedback">
                   Por favor, digite um estado válido
-                </div>
+                </div> */}
+
+                <Input
+                  type="select"
+                  id="estadoInteresse"
+                  name="estadoInteresse"
+                  onChange={(e) => setEstadoInteresse(e.target.value)}
+                >
+                    <option value="AC">Acre</option>
+                    <option value="AL">Alagoas</option>
+                    <option value="AP">Amapá</option>
+                    <option value="AM">Amazonas</option>
+                    <option value="BA">Bahia</option>
+                    <option value="CE">Ceará</option>
+                    <option value="DF">Distrito Federal</option>
+                    <option value="ES">Espírito Santo</option>
+                    <option value="GO">Goiás</option>
+                    <option value="MA">Maranhão</option>
+                    <option value="MT">Mato Grosso</option>
+                    <option value="MS">Mato Grosso do Sul</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="PA">Pará</option>
+                    <option value="PB">Paraíba</option>
+                    <option value="PR">Paraná</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="PI">Piauí</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                    <option value="RO">Rondônia</option>
+                    <option value="RR">Roraima</option>
+                    <option value="SC">Santa Catarina</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="SE">Sergipe</option>
+                    <option value="TO">Tocantins</option>
+                </Input>
+                
               </div>
             </div>
-          </div>
-
-          <div class="form-col mt-4">
-            <div>
+            <div className="mt-4">
               <label for="validationServer03">CPF</label>
               <input
                 type="text"
@@ -169,6 +237,7 @@ export default function Register() {
                 Por favor, digite um CPF válido.
               </div>
             </div>
+
             <div class="mt-4">
               <label for="validationServer04">Número de Whatsapp</label>
               <input
@@ -182,10 +251,10 @@ export default function Register() {
               <div class="invalid-feedback">
                 Por favor, digite um número válido.
               </div>
+              
             </div>
           </div>
-        </div>
-
+            
         <div class="card text-center border-0">
           <div class="card-body">
             <div class="form-col">
@@ -201,28 +270,290 @@ export default function Register() {
                 />
                 <div class="valid-feedback">Ótimo!</div>
               </div>
+              
 
+        {/*BATALHÃO ATUAL DE ACORDO COM ESTADOS*/}
+
+        {/* NORDESTE*/}
+
+              {estadoAtual === "RN" && 
               <div class="mt-4">
                 <label for="validationServer06">Batalhão Atual</label>
-                <input
-                  type="text"
-                  class="form-control is-valid"
-                  id="validationServer06"
-                  placeholder="Batalhão Atual"
-                  onChange={(e) => setBatalhaoAtual(e.target.value)}
-                ></input>
+               <Input 
+                  type="select"
+                  id="selectState"
+                  name="estadosBrasil"
+                  onChange={(e) => {setBatalhaoAtual(e.target.value)
+                  console.log(batalhaoAtual);
+                  }}
+                >
+                    <option value="decimoterceiro">13º BATALHÃO DA RN</option>
+                    <option value="decimoquarto">14º BATALHÃO DA RN</option>
+                </Input>
               </div>
+              }
 
+              {estadoAtual === "PB" && 
               <div class="mt-4">
-                <label for="validationServer03">Batalhão Interesse</label>
-                <input
-                  type="text"
-                  class="form-control is-valid"
-                  id="validationServer07"
-                  placeholder="Batalhão Atual"
-                  onChange={(e) => setBatalhaoInteresse(e.target.value)}
-                ></input>
+                <label for="validationServer06">Batalhão Atual</label>
+               <Input 
+                  type="select"
+                  id="selectState"
+                  name="estadosBrasil"
+                  onChange={(e) => {setBatalhaoAtual(e.target.value)
+                  console.log(batalhaoAtual);
+                  }}
+                >
+                    <option value="decimoterceiro">13º BATALHÃO DA PB</option>
+                    <option value="decimoquarto">14º BATALHÃO DA PB</option>
+                </Input>
               </div>
+              }
+
+              {estadoAtual === "PE" && 
+              <div class="mt-4">
+                <label for="validationServer06">Batalhão Atual</label>
+               <Input 
+                  type="select"
+                  id="selectState"
+                  name="estadosBrasil"
+                  onChange={(e) => {setBatalhaoAtual(e.target.value)
+                  console.log(batalhaoAtual);
+                  }}
+                >
+                    <option value="decimoterceiro">13º BATALHÃO DA PE</option>
+                    <option value="decimoquarto">14º BATALHÃO DA PE</option>
+                </Input>
+              </div>
+              }
+              
+              {estadoAtual === "PA" && 
+              <div class="mt-4">
+                <label for="validationServer06">Batalhão Atual</label>
+               <Input 
+                  type="select"
+                  id="selectState"
+                  name="estadosBrasil"
+                  onChange={(e) => {setBatalhaoAtual(e.target.value)
+                  console.log(batalhaoAtual);
+                  }}
+                >
+                    <option value="decimoterceiro">13º BATALHÃO DO PA</option>
+                    <option value="decimoquarto">14º BATALHÃO DO PA</option>
+                </Input>
+              </div>
+              }
+                            
+              {estadoAtual === "MA" && 
+              <div class="mt-4">
+                <label for="validationServer06">Batalhão Atual</label>
+               <Input 
+                  type="select"
+                  id="selectState"
+                  name="estadosBrasil"
+                  onChange={(e) => {setBatalhaoAtual(e.target.value)
+                  console.log(batalhaoAtual);
+                  }}
+                >
+                    <option value="decimoterceiro">13º BATALHÃO DO MA</option>
+                    <option value="decimoquarto">14º BATALHÃO DO MA</option>
+                </Input>
+              </div>
+              }
+        
+              {estadoAtual === "SE" && 
+              <div class="mt-4">
+                <label for="validationServer06">Batalhão Atual</label>
+               <Input 
+                  type="select"
+                  id="selectState"
+                  name="estadosBrasil"
+                  onChange={(e) => {setBatalhaoAtual(e.target.value)
+                  console.log(batalhaoAtual);
+                  }}
+                >
+                    <option value="decimoterceiro">13º BATALHÃO DE SE</option>
+                    <option value="decimoquarto">14º BATALHÃO DE SE</option>
+                </Input>
+              </div>
+              }
+        
+              {estadoAtual === "AL" && 
+              <div class="mt-4">
+                <label for="validationServer06">Batalhão Atual</label>
+               <Input 
+                  type="select"
+                  id="selectState"
+                  name="estadosBrasil"
+                  onChange={(e) => {setBatalhaoAtual(e.target.value)
+                  console.log(batalhaoAtual);
+                  }}
+                >
+                    <option value="decimoterceiro">13º BATALHÃO DE AL</option>
+                    <option value="decimoquarto">14º BATALHÃO DE AL</option>
+                </Input>
+              </div>
+              }
+            
+              {estadoAtual === "PI" && 
+              <div class="mt-4">
+                <label for="validationServer06">Batalhão Atual</label>
+               <Input 
+                  type="select"
+                  id="selectState"
+                  name="estadosBrasil"
+                  onChange={(e) => {setBatalhaoAtual(e.target.value)
+                  console.log(batalhaoAtual);
+                  }}
+                >
+                    <option value="decimoterceiro">13º BATALHÃO DO PI</option>
+                    <option value="decimoquarto">14º BATALHÃO DO PI</option>
+                </Input>
+              </div>
+              }
+
+          {/*FIM DOS BATALHÕES ATUAIS*/}
+
+
+          {/*INÍCIO TABELAS DE BATALHÃO DE INTERESSE*/}
+
+              {estadoInteresse === "RN" && 
+              <div class="mt-4">
+                <label for="validationServer06">Batalhão de Interesse</label>
+               <Input 
+                  type="select"
+                  id="selectState"
+                  name="estadosBrasil"
+                  onChange={(e) => {setBatalhaoInteresse(e.target.value)
+                  console.log(batalhaoInteresse);
+                  }}
+                >
+                    <option value="decimoterceiro">13º BATALHÃO DA RN</option>
+                    <option value="decimoquarto">14º BATALHÃO DA RN</option>
+                </Input>
+              </div>
+              }
+
+              {estadoInteresse === "PB" && 
+              <div class="mt-4">
+                <label for="validationServer06">Batalhão de Interesse</label>
+               <Input 
+                  type="select"
+                  id="selectState"
+                  name="estadosBrasil"
+                  onChange={(e) => {setBatalhaoInteresse(e.target.value)
+                  console.log(batalhaoInteresse);
+                  }}
+                >
+                    <option value="decimoterceiro">13º BATALHÃO DA PB</option>
+                    <option value="decimoquarto">14º BATALHÃO DA PB</option>
+                </Input>
+              </div>
+              }
+
+              {estadoInteresse === "PE" && 
+              <div class="mt-4">
+                <label for="validationServer06">Batalhão de Interesse</label>
+               <Input 
+                  type="select"
+                  id="selectState"
+                  name="estadosBrasil"
+                  onChange={(e) => {setBatalhaoInteresse(e.target.value)
+                  console.log(batalhaoInteresse);
+                  }}
+                >
+                    <option value="decimoterceiro">13º BATALHÃO DA PE</option>
+                    <option value="decimoquarto">14º BATALHÃO DA PE</option>
+                </Input>
+              </div>
+              }
+              
+              {estadoInteresse === "PA" && 
+              <div class="mt-4">
+                <label for="validationServer06">Batalhão de Interesse</label>
+               <Input 
+                  type="select"
+                  id="selectState"
+                  name="estadosBrasil"
+                  onChange={(e) => {setBatalhaoInteresse(e.target.value)
+                  console.log(batalhaoInteresse);
+                  }}
+                >
+                    <option value="decimoterceiro">13º BATALHÃO DO PA</option>
+                    <option value="decimoquarto">14º BATALHÃO DO PA</option>
+                </Input>
+              </div>
+              }
+                            
+              {estadoInteresse === "MA" && 
+              <div class="mt-4">
+                <label for="validationServer06">Batalhão de Interesse</label>
+               <Input 
+                  type="select"
+                  id="selectState"
+                  name="estadosBrasil"
+                  onChange={(e) => {setBatalhaoInteresse(e.target.value)
+                  console.log(batalhaoInteresse);
+                  }}
+                >
+                    <option value="decimoterceiro">13º BATALHÃO DO MA</option>
+                    <option value="decimoquarto">14º BATALHÃO DO MA</option>
+                </Input>
+              </div>
+              }
+        
+              {estadoInteresse === "SE" && 
+              <div class="mt-4">
+                <label for="validationServer06">Batalhão de Interesse</label>
+               <Input 
+                  type="select"
+                  id="selectState"
+                  name="estadosBrasil"
+                  onChange={(e) => {setBatalhaoInteresse(e.target.value)
+                  console.log(batalhaoInteresse);
+                  }}
+                >
+                    <option value="decimoterceiro">13º BATALHÃO DE SE</option>
+                    <option value="decimoquarto">14º BATALHÃO DE SE</option>
+                </Input>
+              </div>
+              }
+        
+              {estadoInteresse === "AL" && 
+              <div class="mt-4">
+                <label for="validationServer06">Batalhão de Interesse</label>
+               <Input 
+                  type="select"
+                  id="selectState"
+                  name="estadosBrasil"
+                  onChange={(e) => {setBatalhaoInteresse(e.target.value)
+                  console.log(batalhaoInteresse);
+                  }}
+                >
+                    <option value="decimoterceiro">13º BATALHÃO DE AL</option>
+                    <option value="decimoquarto">14º BATALHÃO DE AL</option>
+                </Input>
+              </div>
+              }
+            
+              {estadoInteresse === "PI" && 
+              <div class="mt-4">
+                <label for="validationServer06">Batalhão de Interesse</label>
+               <Input 
+                  type="select"
+                  id="selectState"
+                  name="estadosBrasil"
+                  onChange={(e) => {setBatalhaoInteresse(e.target.value)
+                  console.log(batalhaoInteresse);
+                  }}
+                >
+                    <option value="decimoterceiro">13º BATALHÃO DO PI</option>
+                    <option value="decimoquarto">14º BATALHÃO DO PI</option>
+                </Input>
+              </div>
+              }
+
+            {/*FIM TABELAS DE BATALHÃO DE INTERESSE*/}
 
               <div class="mt-4">
               <label for="validationServer07">Comportamento</label>
@@ -318,9 +649,7 @@ export default function Register() {
               </button>
           </div>
         </div>
-
-
-
+        </div>
       </div>
     </form>
   );

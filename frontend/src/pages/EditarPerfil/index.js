@@ -219,7 +219,7 @@ export default function EditarPerfil() {
                   type="text"
                   class="form-control is-valid"
                   id="validationServer07"
-                  placeholder="Batalhão Atual"
+                  placeholder="Batalhão de Interesse"
                   defaultValue={user.batalhaoInteresse}
                   onChange={(e) => setBatalhaoInteresse(e.target.value)}
                 ></input>
