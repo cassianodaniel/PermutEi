@@ -301,11 +301,14 @@ export default function Register() {
                   id="selectState"
                   name="estadosBrasil"
                   onChange={(e) => {setBatalhaoAtual(e.target.value)
-                  console.log(batalhaoAtual);
                   }}
                 >
-                    <option value="decimoterceiro">13º BATALHÃO DA PB</option>
-                    <option value="decimoquarto">14º BATALHÃO DA PB</option>
+                    <option onClick={(e) => {setBatalhaoAtual(e.target.value)}}
+                    value="decimoterceiro"
+                    >13º BATALHÃO DA PB</option>
+                    
+                    <option onClick={(e) => {setBatalhaoAtual(e.target.value)}}
+                    value="decimoquarto">14º BATALHÃO DA PB</option>
                 </Input>
               </div>
               }
