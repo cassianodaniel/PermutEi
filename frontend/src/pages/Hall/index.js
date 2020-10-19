@@ -98,6 +98,19 @@ const Hall = () => {
       <div>
         <Jumbotron fluid>
           <Container fluid>
+            <div 
+            style={{display: "flex",
+            flexDirection: "row",
+            justifyContent: "flex-end"
+            }}>
+                <Button className="bg-primary mr-4 border-0"
+                style={{position: "relative"}}
+                onClick={() => {localStorage.clear()
+                  history.push("/logon")
+                }}>
+                  Sair
+                </Button>
+            </div>
             <h1 className="display-4">Encontrou sua permuta?</h1>
             <p className="lead">
               Faça-nos uma doação{" "}

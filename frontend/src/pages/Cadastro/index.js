@@ -306,7 +306,6 @@ export default function Register() {
                     <option onClick={(e) => {setBatalhaoAtual(e.target.value)}}
                     value="decimoterceiro"
                     >13º BATALHÃO DA PB</option>
-                    
                     <option onClick={(e) => {setBatalhaoAtual(e.target.value)}}
                     value="decimoquarto">14º BATALHÃO DA PB</option>
                 </Input>
