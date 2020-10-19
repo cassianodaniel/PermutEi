@@ -408,8 +408,49 @@ export default function Register() {
                   console.log(batalhaoAtual);
                   }}
                 >
-                    <option value="decimoterceiro">13º BATALHÃO DO PI</option>
-                    <option value="decimoquarto">14º BATALHÃO DO PI</option>
+
+                  <option onClick={(e) => 
+                  {setBatalhaoAtual(e.target.value)}} 
+                  value="1º Batalhão de Polícia Militar">
+                    1º Batalhão de Polícia Militar
+                  </option>
+
+                  <option onClick={(e) => 
+                  {setBatalhaoAtual(e.target.value)}} 
+                  value="5º Batalhão de Polícia Militar">
+                    5º Batalhão de Polícia Militar
+                  </option>
+
+                  <option onClick={(e) => 
+                  {setBatalhaoAtual(e.target.value)}} 
+                  value="6º Batalhão de Polícia Militar">
+                    6º Batalhão de Polícia Militar
+                  </option>
+
+                  <option onClick={(e) => 
+                  {setBatalhaoAtual(e.target.value)}} 
+                  value="8º Batalhão de Polícia Militar">
+                    8º Batalhão de Polícia Militar
+                  </option>
+
+                  <option onClick={(e) => 
+                  {setBatalhaoAtual(e.target.value)}} 
+                  value="9º Batalhão de Polícia Militar">
+                    9º Batalhão de Polícia Militar
+                  </option>
+
+                  <option onClick={(e) => 
+                  {setBatalhaoAtual(e.target.value)}} 
+                  value="13º Batalhão de Polícia Militar">
+                    13º Batalhão de Polícia Militar
+                  </option>
+
+                  <option onClick={(e) => 
+                  {setBatalhaoAtual(e.target.value)}} 
+                  value="Batalhão de Polícia Rodoviária Estatual (BRPE)">
+                    Batalhão de Polícia Rodoviária Estatual (BRPE)
+                  </option>
+
                 </Input>
               </div>
               }
