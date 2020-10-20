@@ -303,11 +303,179 @@ export default function Register() {
                   onChange={(e) => {setBatalhaoAtual(e.target.value)
                   }}
                 >
-                    <option onClick={(e) => {setBatalhaoAtual(e.target.value)}}
-                    value="decimoterceiro"
-                    >13º BATALHÃO DA PB</option>
-                    <option onClick={(e) => {setBatalhaoAtual(e.target.value)}}
-                    value="decimoquarto">14º BATALHÃO DA PB</option>
+                    <option onClick={(e) => 
+                  {setBatalhaoAtual(e.target.value)}} 
+                  value="BP CHOQUE JOÃO PESSOA">
+                    BP CHOQUE JOÃO PESSOA
+                  </option>
+
+                  <option onClick={(e) => 
+                  {setBatalhaoAtual(e.target.value)}} 
+                  value="BPTRAN JOÃO PESSOA">
+                    BPTRAN JOÃO PESSOA
+                  </option>
+
+                  <option onClick={(e) => 
+                  {setBatalhaoAtual(e.target.value)}} 
+                  value="BP AMBIENTAL JOÃO PESSOA">
+                    BP AMBIENTAL JOÃO PESSOA
+                  </option>
+
+                  <option onClick={(e) => 
+                  {setBatalhaoAtual(e.target.value)}} 
+                  value="GATE JOÃO PESSOA">
+                    GATE JOÃO PESSOA
+                  </option>
+
+                  <option onClick={(e) => 
+                  {setBatalhaoAtual(e.target.value)}} 
+                  value="GEOSAC POCINHOS">
+                    GEOSAC POCINHOS
+                  </option>
+
+                  <option onClick={(e) => 
+                  {setBatalhaoAtual(e.target.value)}} 
+                  value="CPR M">
+                    CPR M
+                  </option>
+
+                  <option onClick={(e) => 
+                  {setBatalhaoAtual(e.target.value)}} 
+                  value="1 BPM JOÃO PESSOA">
+                    1 BPM JOÃO PESSOA
+                  </option>
+
+                  <option onClick={(e) => 
+                  {setBatalhaoAtual(e.target.value)}} 
+                  value="5 BPM JOÃO PESSOA">
+                    5 BPM JOÃO PESSOA
+                  </option>
+
+                  <option onClick={(e) => 
+                  {setBatalhaoAtual(e.target.value)}} 
+                  value="7 BPM SANTA RITA">
+                    7 BPM SANTA RITA
+                  </option>
+
+                  <option onClick={(e) => 
+                  {setBatalhaoAtual(e.target.value)}} 
+                  value="1 CIPM ALHANDA">
+                    1 CIPM ALHANDA
+                  </option>
+
+                  <option onClick={(e) => 
+                  {setBatalhaoAtual(e.target.value)}} 
+                  value="2 CIPM MAMANGUAPE">
+                    2 CIPM MAMANGUAPE
+                  </option>
+
+                  <option onClick={(e) => 
+                  {setBatalhaoAtual(e.target.value)}} 
+                  value="4 CIPM BAYEUX">
+                    4 CIPM BAYEUX
+                  </option>
+
+                  <option onClick={(e) => 
+                  {setBatalhaoAtual(e.target.value)}} 
+                  value="6 CIPM CABEDELO">
+                    6 CIPM CABEDELO
+                  </option>
+
+                  <option onClick={(e) => 
+                  {setBatalhaoAtual(e.target.value)}} 
+                  value="2 BPM CAMPINA GRANDE">
+                    2 BPM CAMPINA GRANDE
+                  </option>
+
+                  <option onClick={(e) => 
+                  {setBatalhaoAtual(e.target.value)}} 
+                  value="4 BPM GUARABIRA">
+                    4 BPM GUARABIRA
+                  </option>
+
+                  <option onClick={(e) => 
+                  {setBatalhaoAtual(e.target.value)}} 
+                  value="4 BPM GUARABIRA">
+                    4 BPM GUARABIRA
+                  </option>
+
+                  <option onClick={(e) => 
+                  {setBatalhaoAtual(e.target.value)}} 
+                  value="8 BPM ITABAIANA">
+                    8 BPM ITABAIANA
+                  </option>
+
+                  <option onClick={(e) => 
+                  {setBatalhaoAtual(e.target.value)}} 
+                  value="9 BPM PICUI">
+                    9 BPM PICUI
+                  </option>
+
+                  <option onClick={(e) => 
+                  {setBatalhaoAtual(e.target.value)}} 
+                  value="10 BPM CAMPINA GRANDE">
+                    10 BPM CAMPINA GRANDE
+                  </option>
+
+                  <option onClick={(e) => 
+                  {setBatalhaoAtual(e.target.value)}} 
+                  value="11 BPM MONTEIRO">
+                    11 BPM MONTEIRO
+                  </option>
+
+                  <option onClick={(e) => 
+                  {setBatalhaoAtual(e.target.value)}} 
+                  value="15 BPM ESPERANÇA">
+                    15 BPM ESPERANÇA
+                  </option>
+
+                  <option onClick={(e) => 
+                  {setBatalhaoAtual(e.target.value)}} 
+                  value="3 CIPM BOQUEIRÃO">
+                    3 CIPM BOQUEIRÃO
+                  </option>
+
+                  <option onClick={(e) => 
+                  {setBatalhaoAtual(e.target.value)}} 
+                  value="7 CIPM SOLANEA">
+                    7 CIPM SOLANEA
+                  </option>
+
+                  <option onClick={(e) => 
+                  {setBatalhaoAtual(e.target.value)}} 
+                  value="3 BPM PATOS">
+                    3 BPM PATOS
+                  </option>
+
+                  <option onClick={(e) => 
+                  {setBatalhaoAtual(e.target.value)}} 
+                  value="6 BPM CAJAZEIRAS">
+                    6 BPM CAJAZEIRAS
+                  </option>
+
+                  <option onClick={(e) => 
+                  {setBatalhaoAtual(e.target.value)}} 
+                  value="12 BPM C ROCHA">
+                    12 BPM C ROCHA
+                  </option>
+
+                  <option onClick={(e) => 
+                  {setBatalhaoAtual(e.target.value)}} 
+                  value="13 BPM ITAPORANGA">
+                    13 BPM ITAPORANGA
+                  </option>
+
+                  <option onClick={(e) => 
+                  {setBatalhaoAtual(e.target.value)}} 
+                  value="14 BPM SOUSA">
+                    14 BPM SOUSA
+                  </option>
+
+                  <option onClick={(e) => 
+                  {setBatalhaoAtual(e.target.value)}} 
+                  value="5 CIPM PRINCESA IZABEL">
+                    5 CIPM PRINCESA IZABEL
+                  </option>
                 </Input>
               </div>
               }
@@ -408,8 +576,49 @@ export default function Register() {
                   console.log(batalhaoAtual);
                   }}
                 >
-                    <option value="decimoterceiro">13º BATALHÃO DO PI</option>
-                    <option value="decimoquarto">14º BATALHÃO DO PI</option>
+
+                  <option onClick={(e) => 
+                  {setBatalhaoAtual(e.target.value)}} 
+                  value="1º Batalhão de Polícia Militar">
+                    1º Batalhão de Polícia Militar
+                  </option>
+
+                  <option onClick={(e) => 
+                  {setBatalhaoAtual(e.target.value)}} 
+                  value="5º Batalhão de Polícia Militar">
+                    5º Batalhão de Polícia Militar
+                  </option>
+
+                  <option onClick={(e) => 
+                  {setBatalhaoAtual(e.target.value)}} 
+                  value="6º Batalhão de Polícia Militar">
+                    6º Batalhão de Polícia Militar
+                  </option>
+
+                  <option onClick={(e) => 
+                  {setBatalhaoAtual(e.target.value)}} 
+                  value="8º Batalhão de Polícia Militar">
+                    8º Batalhão de Polícia Militar
+                  </option>
+
+                  <option onClick={(e) => 
+                  {setBatalhaoAtual(e.target.value)}} 
+                  value="9º Batalhão de Polícia Militar">
+                    9º Batalhão de Polícia Militar
+                  </option>
+
+                  <option onClick={(e) => 
+                  {setBatalhaoAtual(e.target.value)}} 
+                  value="13º Batalhão de Polícia Militar">
+                    13º Batalhão de Polícia Militar
+                  </option>
+
+                  <option onClick={(e) => 
+                  {setBatalhaoAtual(e.target.value)}} 
+                  value="Batalhão de Polícia Rodoviária Estatual (BRPE)">
+                    Batalhão de Polícia Rodoviária Estatual (BRPE)
+                  </option>
+
                 </Input>
               </div>
               }
@@ -430,8 +639,7 @@ export default function Register() {
                   console.log(batalhaoInteresse);
                   }}
                 >
-                    <option value="decimoterceiro">13º BATALHÃO DA RN</option>
-                    <option value="decimoquarto">14º BATALHÃO DA RN</option>
+                     
                 </Input>
               </div>
               }
