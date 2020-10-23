@@ -76,7 +76,7 @@ export default function Register() {
           <div class="form-col">
             <div class="mt-4">
               <label for="validationServer01">Nome</label>
-              <input
+              <Input
                 required
                 type="text"
                 class="form-control"
@@ -100,13 +100,13 @@ export default function Register() {
               <label for="validationServerUsername">Data de Nascimento</label>
 
               <div class="input-group">
-                <input
+                <Input
                   required
                   type="text"
                   class="form-control"
                   id="validationServerUsername"
                   placeholder="Data de Nascimento"
-                  aria-describedby="inputGroupPrepend3"
+                  aria-describedby="InputGroupPrepend3"
                   onChange={(e) => setDataNascimento(e.target.value)}
                 />
                 <div class="invalid-feedback">
@@ -119,13 +119,13 @@ export default function Register() {
               <label for="validationServerUsername">Estado Atual</label>
 
               {/* <div class="input-group">
-                <input
+                <Input
                   required
                   type="text"
                   class="form-control"
                   id="validationServerUsername"
                   placeholder="Estado"
-                  aria-describedby="inputGroupPrepend3"
+                  aria-describedby="InputGroupPrepend3"
                   onChange={(e) => setEstadoAtual(e.target.value)}
                   required
                 />
@@ -175,13 +175,13 @@ export default function Register() {
           <div class="mt-4">
               <label for="validationServerUsername">Estado de Interesse</label>
               <div class="input-group">
-                {/* <input
+                {/* <Input
                   required
                   type="text"
                   class="form-control is-invalid"
                   id="validationServerUsername"
                   placeholder="Estado"
-                  aria-describedby="inputGroupPrepend3"
+                  aria-describedby="InputGroupPrepend3"
                   onChange={(e) => setEstadoInteresse(e.target.value)}
                   required
                 />
@@ -230,7 +230,7 @@ export default function Register() {
             </div>
             <div className="mt-4">
               <label for="validationServer03">CPF</label>
-              <input
+              <Input
                 required
                 type="text"
                 class="form-control"
@@ -245,7 +245,7 @@ export default function Register() {
 
             <div class="mt-4">
               <label for="validationServer04">Número de Whatsapp</label>
-              <input
+              <Input
                 required
                 type="text"
                 class="form-control"
@@ -266,7 +266,7 @@ export default function Register() {
             <div class="form-col">
               <div>
                 <label for="validationServer05">Matrícula</label>
-                <input
+                <Input
                   type="text"
                   class="form-control"
                   id="validationServer05"
@@ -3956,7 +3956,7 @@ export default function Register() {
 
               <div class="mt-4">
               <label for="validationServer07">Comportamento</label>
-                <input
+                <Input
                   required
                   type="text"
                   class="form-control"
@@ -3970,7 +3970,7 @@ export default function Register() {
 
               <div class="mt-4 mb-4">
                 <label for="validationServer08">Posto/graduação</label>
-                <input
+                <Input
                   required
                   type="text"
                   class="form-control"
@@ -3984,12 +3984,12 @@ export default function Register() {
 
               <div class="mt-4">
               <label for="validationServer09">Órgão</label>
-                <input
+                <Input
                   required
                   type="text"
                   class="form-control"
                   id="validationServer09"
-                  placeholder="Comportamento"
+                  placeholder="Órgão"
                   onChange={(e) => setOrgao(e.target.value)}
                   
                 />
@@ -4002,7 +4002,7 @@ export default function Register() {
             <div class="form-col">
               <div>
                 <label for="validationServer01">Login</label>
-                <input
+                <Input
                   required
                   type="text"
                   class="form-control"
@@ -4015,7 +4015,7 @@ export default function Register() {
               </div>
               <div class="mt-4">
                 <label for="validationServer02">Senha</label>
-                <input
+                <Input
                   required
                   type="text"
                   class="form-control"
@@ -4029,9 +4029,9 @@ export default function Register() {
             </div>
             <div class="form-group mt-4">
               <div class="form-check mt-4">
-                <input
+                <Input
                   
-                  class="form-check-input"
+                  class="form-check-Input"
                   type="checkbox"
                   value=""
                   id="invalidCheck3"

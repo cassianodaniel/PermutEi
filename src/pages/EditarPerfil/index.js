@@ -94,7 +94,7 @@ export default function EditarPerfil() {
             <div class="mt-4">
 
               <label for="validationServer01">Nome</label>
-              <input required
+              <Input required
                 type="text"
                 class="form-control"
                 id="validationServer01"
@@ -116,13 +116,13 @@ export default function EditarPerfil() {
             <div class="mt-4">
               <label for="validationServerUsername">Data de Nascimento</label>
 
-              <div class="input-group">
-                <input required
+              <div class="Input-group">
+                <Input required
                   type="text"
                   class="form-control"
                   id="validationServerUsername"
                   placeholder="Data de Nascimento"
-                  aria-describedby="inputGroupPrepend3"
+                  aria-describedby="InputGroupPrepend3"
                   defaultValue={user.datanasc}
                   onChange={(e) => setDataNascimento(e.target.value)}
                   
@@ -136,13 +136,13 @@ export default function EditarPerfil() {
             <div class="mt-4">
               <label for="validationServerUsername">Estado Atual</label>
 
-              {/* <div class="input-group">
-                <input required
+              {/* <div class="Input-group">
+                <Input required
                   type="text"
                   class="form-control"
                   id="validationServerUsername"
                   placeholder="Estado"
-                  aria-describedby="inputGroupPrepend3"
+                  aria-describedby="InputGroupPrepend3"
                   onChange={(e) => setEstadoAtual(e.target.value)}
                   required
                 />
@@ -233,7 +233,7 @@ export default function EditarPerfil() {
           <div class="form-col mt-0">
             <div class="mt-4 ml-3 mr-3">
               <label for="validationServer04">Número de Whatsapp</label>
-              <input required
+              <Input required
                 type="text"
                 class="form-control"
                 id="validationServer04"
@@ -252,7 +252,7 @@ export default function EditarPerfil() {
             <div class="form-col">
               <div>
                 <label for="validationServer05">Matrícula</label>
-                <input required
+                <Input required
                   type="text"
                   class="form-control"
                   id="validationServer05"
@@ -3918,7 +3918,7 @@ export default function EditarPerfil() {
 
               <div class="mt-4">
               <label for="validationServer07">Comportamento</label>
-                <input required
+                <Input required
                   type="text"
                   class="form-control"
                   id="validationServer08"
@@ -3932,7 +3932,7 @@ export default function EditarPerfil() {
 
               <div class="mt-4 mb-4">
                 <label for="validationServer08">Posto/graduação</label>
-                <input 
+                <Input 
                   type="text"
                   class="form-control"
                   id="validationServer05"
@@ -3946,11 +3946,11 @@ export default function EditarPerfil() {
 
               <div class="mt-4">
               <label for="validationServer09">Órgão</label>
-                <input required
+                <Input required
                   type="text"
                   class="form-control"
                   id="validationServer09"
-                  placeholder="Comportamento"
+                  placeholder="Órgão"
                   onChange={(e) => setOrgao(e.target.value)}
                   defaultValue={user.orgao}
                   
@@ -3964,7 +3964,7 @@ export default function EditarPerfil() {
             <div class="form-col">
               <div>
                 <label for="validationServer01">Login</label>
-                <input required
+                <Input required
                   type="text"
                   class="form-control"
                   id="validationServer10"
@@ -3977,7 +3977,7 @@ export default function EditarPerfil() {
               </div>
               <div class="mt-4">
                 <label for="validationServer02">Senha</label>
-                <input required
+                <Input required
                   type="text"
                   class="form-control"
                   id="validationServer11"
@@ -3991,8 +3991,8 @@ export default function EditarPerfil() {
             </div>
             <div class="form-group mt-4">
               <div class="form-check mt-4">
-                <input required
-                  class="form-check-input"
+                <Input required
+                  class="form-check-Input"
                   type="checkbox"
                   value=""
                   id="invalidCheck3"
