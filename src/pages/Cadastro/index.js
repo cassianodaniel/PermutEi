@@ -79,7 +79,7 @@ export default function Register() {
               <input
                 required
                 type="text"
-                class="form-control is-valid"
+                class="form-control"
                 id="validationServer01"
                 placeholder="Nome"
                 onChange={(e) => setNome(e.target.value)}                
@@ -103,7 +103,7 @@ export default function Register() {
                 <input
                   required
                   type="text"
-                  class="form-control is-valid"
+                  class="form-control"
                   id="validationServerUsername"
                   placeholder="Data de Nascimento"
                   aria-describedby="inputGroupPrepend3"
@@ -122,7 +122,7 @@ export default function Register() {
                 <input
                   required
                   type="text"
-                  class="form-control is-valid"
+                  class="form-control"
                   id="validationServerUsername"
                   placeholder="Estado"
                   aria-describedby="inputGroupPrepend3"
@@ -233,7 +233,7 @@ export default function Register() {
               <input
                 required
                 type="text"
-                class="form-control is-valid"
+                class="form-control"
                 id="validationServer03"
                 placeholder="CPF"
                 onChange={(e) => setCpf(e.target.value)}
@@ -248,7 +248,7 @@ export default function Register() {
               <input
                 required
                 type="text"
-                class="form-control is-valid"
+                class="form-control"
                 id="validationServer04"
                 placeholder="Whatsapp"
                 onChange={(e) => setNumero(e.target.value)}
@@ -268,7 +268,7 @@ export default function Register() {
                 <label for="validationServer05">Matrícula</label>
                 <input
                   type="text"
-                  class="form-control is-valid"
+                  class="form-control"
                   id="validationServer05"
                   placeholder="Matrícula"
                   onChange={(e) => setMatricula(e.target.value)}
@@ -3959,7 +3959,7 @@ export default function Register() {
                 <input
                   required
                   type="text"
-                  class="form-control is-valid"
+                  class="form-control"
                   id="validationServer08"
                   placeholder="Comportamento"
                   onChange={(e) => setComportamento(e.target.value)}
@@ -3973,7 +3973,7 @@ export default function Register() {
                 <input
                   required
                   type="text"
-                  class="form-control is-valid"
+                  class="form-control"
                   id="validationServer05"
                   placeholder="Posto/graduação"
                   onChange={(e) => setPostoGraduacao(e.target.value)}
@@ -3987,7 +3987,7 @@ export default function Register() {
                 <input
                   required
                   type="text"
-                  class="form-control is-valid"
+                  class="form-control"
                   id="validationServer09"
                   placeholder="Comportamento"
                   onChange={(e) => setOrgao(e.target.value)}
@@ -4005,7 +4005,7 @@ export default function Register() {
                 <input
                   required
                   type="text"
-                  class="form-control is-valid"
+                  class="form-control"
                   id="validationServer10"
                   placeholder="Login"
                   onChange={(e) => setLogin(e.target.value)}
@@ -4018,7 +4018,7 @@ export default function Register() {
                 <input
                   required
                   type="text"
-                  class="form-control is-valid"
+                  class="form-control"
                   id="validationServer11"
                   placeholder="Senha"
                   onChange={(e) => setSenha(e.target.value)}
@@ -4031,7 +4031,7 @@ export default function Register() {
               <div class="form-check mt-4">
                 <input
                   
-                  class="form-check-input is-valid"
+                  class="form-check-input"
                   type="checkbox"
                   value=""
                   id="invalidCheck3"
