@@ -94,20 +94,19 @@ export default function EditarPerfil() {
             <div class="mt-4">
 
               <label for="validationServer01">Nome</label>
-              <input
+              <input required
                 type="text"
-                class="form-control is-valid"
+                class="form-control"
                 id="validationServer01"
                 placeholder="Nome"
                 onChange={(e) => setNome(e.target.value)}
-                required
                 defaultValue={user.nome}
               />
               <div class="valid-feedback">Ótimo!</div>
             </div>
             <div class="mt-4">
               <label for="validationServer02">Sexo</label>
-              <Input onChange={(e) => setSexo(e.target.value)} type="select" name="select" id="exampleSelect">
+              <Input required onChange={(e) => setSexo(e.target.value)} type="select" name="select" id="exampleSelect">
                 <option>Masculino</option>
                 <option>Feminino</option>
                 <option>Não declarante</option>
@@ -118,15 +117,15 @@ export default function EditarPerfil() {
               <label for="validationServerUsername">Data de Nascimento</label>
 
               <div class="input-group">
-                <input
+                <input required
                   type="text"
-                  class="form-control is-valid"
+                  class="form-control"
                   id="validationServerUsername"
                   placeholder="Data de Nascimento"
                   aria-describedby="inputGroupPrepend3"
                   defaultValue={user.datanasc}
                   onChange={(e) => setDataNascimento(e.target.value)}
-                  required
+                  
                 />
                 <div class="invalid-feedback">
                   Por favor, digite uma data no formato 'dd/mm/aaaa'
@@ -138,9 +137,9 @@ export default function EditarPerfil() {
               <label for="validationServerUsername">Estado Atual</label>
 
               {/* <div class="input-group">
-                <input
+                <input required
                   type="text"
-                  class="form-control is-valid"
+                  class="form-control"
                   id="validationServerUsername"
                   placeholder="Estado"
                   aria-describedby="inputGroupPrepend3"
@@ -152,7 +151,7 @@ export default function EditarPerfil() {
                 </div>
               </div> */}
 
-                <Input
+                <Input required
                   type="select"
                   id="estadoAtual"
                   name="estadoAtual"
@@ -191,7 +190,7 @@ export default function EditarPerfil() {
           
             <div class="mt-4">
             <label for="validationServerUsername">Estado de Interesse</label>
-                <Input
+                <Input required
                   type="select"
                   id="estadoInteresse"
                   name="estadoInteresse"
@@ -234,14 +233,14 @@ export default function EditarPerfil() {
           <div class="form-col mt-0">
             <div class="mt-4 ml-3 mr-3">
               <label for="validationServer04">Número de Whatsapp</label>
-              <input
+              <input required
                 type="text"
-                class="form-control is-valid"
+                class="form-control"
                 id="validationServer04"
                 placeholder="Whatsapp"
                 onChange={(e) => setNumero(e.target.value)}
                 defaultValue={user.numero}
-                required
+                
               />
               <div class="invalid-feedback">
                 Por favor, digite um número válido.
@@ -253,14 +252,14 @@ export default function EditarPerfil() {
             <div class="form-col">
               <div>
                 <label for="validationServer05">Matrícula</label>
-                <input
+                <input required
                   type="text"
-                  class="form-control is-valid"
+                  class="form-control"
                   id="validationServer05"
                   placeholder="Matrícula"
                   onChange={(e) => setMatricula(e.target.value)}
                   defaultValue={user.matricula}
-                  required
+                  
                 />
                 <div class="valid-feedback">Ótimo!</div>
               </div>
@@ -268,7 +267,7 @@ export default function EditarPerfil() {
               {estadoAtual === "RN" && 
               <div class="mt-4">
                 <label for="validationServer06">Batalhão Atual</label>
-               <Input 
+               <Input required 
                   type="select"
                   id="selectState"
                   name="estadosBrasil"
@@ -506,7 +505,7 @@ export default function EditarPerfil() {
               {estadoAtual === "PB" && 
               <div class="mt-4">
                 <label for="validationServer06">Batalhão Atual</label>
-               <Input 
+               <Input required 
                   type="select"
                   id="selectState"
                   name="estadosBrasil"
@@ -693,7 +692,7 @@ export default function EditarPerfil() {
               {estadoAtual === "PE" && 
               <div class="mt-4">
                 <label for="validationServer06">Batalhão Atual</label>
-               <Input 
+               <Input required 
                   type="select"
                   id="selectState"
                   name="estadosBrasil"
@@ -978,7 +977,7 @@ export default function EditarPerfil() {
               {estadoAtual === "MA" && 
               <div class="mt-4">
                 <label for="validationServer06">Batalhão Atual</label>
-               <Input 
+               <Input required 
                   type="select"
                   id="selectState"
                   name="estadosBrasil"
@@ -1239,7 +1238,7 @@ export default function EditarPerfil() {
               {estadoAtual === "SE" && 
               <div class="mt-4">
                 <label for="validationServer06">Batalhão Atual</label>
-               <Input 
+               <Input required 
                   type="select"
                   id="selectState"
                   name="estadosBrasil"
@@ -1380,7 +1379,7 @@ export default function EditarPerfil() {
               {estadoAtual === "BA" && 
               <div class="mt-4">
                 <label for="validationServer06">Batalhão Atual</label>
-               <Input 
+               <Input required 
                   type="select"
                   id="selectState"
                   name="estadosBrasil"
@@ -1849,7 +1848,7 @@ export default function EditarPerfil() {
                 {estadoAtual === "CE" && 
                 <div class="mt-4">
                   <label>Batalhão Atual</label>
-                  <Input 
+                  <Input required 
                   type="select"
                   id="selectState"
                   name="estadosBrasil"
@@ -1949,7 +1948,7 @@ export default function EditarPerfil() {
               {estadoAtual === "PI" && 
               <div class="mt-4">
                 <label for="validationServer06">Batalhão Atual</label>
-               <Input 
+               <Input required 
                   type="select"
                   id="selectState"
                   name="estadosBrasil"
@@ -2007,7 +2006,7 @@ export default function EditarPerfil() {
             {estadoAtual === "AL" && 
               <div class="mt-4">
                 <label for="validationServer06">Batalhão Atual</label>
-               <Input 
+               <Input required 
                   type="select"
                   id="selectState"
                   name="estadosBrasil"
@@ -2131,7 +2130,7 @@ export default function EditarPerfil() {
           {estadoInteresse === "RN" && 
               <div class="mt-4">
                 <label for="validationServer06">Batalhão de Interesse</label>
-               <Input 
+               <Input required 
                   type="select"
                   id="selectState"
                   name="estadosBrasil"
@@ -2369,7 +2368,7 @@ export default function EditarPerfil() {
               {estadoInteresse === "PB" && 
               <div class="mt-4">
                 <label for="validationServer06">Batalhão de Interesse</label>
-               <Input 
+               <Input required 
                   type="select"
                   id="selectState"
                   name="estadosBrasil"
@@ -2556,7 +2555,7 @@ export default function EditarPerfil() {
               {estadoInteresse === "PE" && 
               <div class="mt-4">
                 <label for="validationServer06">Batalhão de Interesse</label>
-               <Input 
+               <Input required 
                   type="select"
                   id="selectState"
                   name="estadosBrasil"
@@ -2841,7 +2840,7 @@ export default function EditarPerfil() {
               {estadoInteresse === "MA" && 
               <div class="mt-4">
                 <label for="validationServer06">Batalhão de Interesse</label>
-               <Input 
+               <Input required 
                   type="select"
                   id="selectState"
                   name="estadosBrasil"
@@ -3102,7 +3101,7 @@ export default function EditarPerfil() {
               {estadoInteresse === "SE" && 
               <div class="mt-4">
                 <label for="validationServer06">Batalhão de Interesse</label>
-               <Input 
+               <Input required 
                   type="select"
                   id="selectState"
                   name="estadosBrasil"
@@ -3243,7 +3242,7 @@ export default function EditarPerfil() {
               {estadoInteresse === "BA" && 
               <div class="mt-4">
                 <label for="validationServer06">Batalhão de Interesse</label>
-               <Input 
+               <Input required 
                   type="select"
                   id="selectState"
                   name="estadosBrasil"
@@ -3712,7 +3711,7 @@ export default function EditarPerfil() {
                 {estadoInteresse === "CE" && 
                 <div class="mt-4">
                   <label>Batalhão de Interesse</label>
-                  <Input 
+                  <Input required 
                   type="select"
                   id="selectState"
                   name="estadosBrasil"
@@ -3812,7 +3811,7 @@ export default function EditarPerfil() {
               {estadoInteresse === "PI" && 
               <div class="mt-4">
                 <label for="validationServer06">Batalhão de Interesse</label>
-               <Input 
+               <Input required 
                   type="select"
                   id="selectState"
                   name="estadosBrasil"
@@ -3870,7 +3869,7 @@ export default function EditarPerfil() {
             {estadoInteresse === "AL" && 
               <div class="mt-4">
                 <label for="validationServer06">Batalhão de Interesse</label>
-               <Input 
+               <Input required 
                   type="select"
                   id="selectState"
                   name="estadosBrasil"
@@ -3919,23 +3918,23 @@ export default function EditarPerfil() {
 
               <div class="mt-4">
               <label for="validationServer07">Comportamento</label>
-                <input
+                <input required
                   type="text"
-                  class="form-control is-valid"
+                  class="form-control"
                   id="validationServer08"
                   placeholder="Comportamento"
                   onChange={(e) => setComportamento(e.target.value)}
                   defaultValue={user.comportamento}
-                  required
+                  
                 />
                 <div class="valid-feedback">Ótimo!</div>
               </div>
 
               <div class="mt-4 mb-4">
                 <label for="validationServer08">Posto/graduação</label>
-                <input
+                <input 
                   type="text"
-                  class="form-control is-valid"
+                  class="form-control"
                   id="validationServer05"
                   placeholder="Posto/graduação"
                   onChange={(e) => setPostoGraduacao(e.target.value)}
@@ -3947,14 +3946,14 @@ export default function EditarPerfil() {
 
               <div class="mt-4">
               <label for="validationServer09">Órgão</label>
-                <input
+                <input required
                   type="text"
-                  class="form-control is-valid"
+                  class="form-control"
                   id="validationServer09"
                   placeholder="Comportamento"
                   onChange={(e) => setOrgao(e.target.value)}
                   defaultValue={user.orgao}
-                  required
+                  
                 />
                 <div class="valid-feedback">Ótimo!</div>
               </div>
@@ -3965,26 +3964,26 @@ export default function EditarPerfil() {
             <div class="form-col">
               <div>
                 <label for="validationServer01">Login</label>
-                <input
+                <input required
                   type="text"
-                  class="form-control is-valid"
+                  class="form-control"
                   id="validationServer10"
                   placeholder="Login"
                   onChange={(e) => setLogin(e.target.value)}
                   defaultValue={user.login}
-                  required
+                  
                 />
                 <div class="valid-feedback">Ótimo!</div>
               </div>
               <div class="mt-4">
                 <label for="validationServer02">Senha</label>
-                <input
+                <input required
                   type="text"
-                  class="form-control is-valid"
+                  class="form-control"
                   id="validationServer11"
                   placeholder="Senha"
                   onChange={(e) => setSenha(e.target.value)}
-                  required
+                  
                   defaultValue={user.senha}
                 />
                 <div class="valid-feedback">Ótimo!</div>
@@ -3992,12 +3991,12 @@ export default function EditarPerfil() {
             </div>
             <div class="form-group mt-4">
               <div class="form-check mt-4">
-                <input
-                  class="form-check-input is-valid"
+                <input required
+                  class="form-check-input"
                   type="checkbox"
                   value=""
                   id="invalidCheck3"
-                  required
+                  
                 />
                 <label class="form-check-label" for="invalidCheck3">
                   <text className="smallertextsizing">

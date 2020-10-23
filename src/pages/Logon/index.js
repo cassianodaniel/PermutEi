@@ -51,7 +51,7 @@ export default function Logon() {
               <label for="validationServer01">Login</label>
               <input
                 type="text"
-                class="form-control is-valid"
+                class="form-control"
                 id="validationServer01"
                 placeholder="Login"
                 required
@@ -62,7 +62,7 @@ export default function Logon() {
               <label for="validationServer02">Senha</label>
               <input
                 type="text"
-                class="form-control is-valid"
+                class="form-control"
                 id="validationServer02"
                 placeholder="Senha"
                 required

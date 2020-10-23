@@ -77,18 +77,19 @@ export default function Register() {
             <div class="mt-4">
               <label for="validationServer01">Nome</label>
               <input
+                required
                 type="text"
                 class="form-control is-valid"
                 id="validationServer01"
                 placeholder="Nome"
-                onChange={(e) => setNome(e.target.value)}
-                required
+                onChange={(e) => setNome(e.target.value)}                
               />
               <div class="valid-feedback">Ótimo!</div>
             </div>
             <div class="mt-4">
               <label for="validationServer02">Sexo</label>
-              <Input onChange={(e) => setSexo(e.target.value)} type="select" name="select" id="exampleSelect">
+              <Input
+                required onChange={(e) => setSexo(e.target.value)} type="select" name="select" id="exampleSelect">
                 <option>Masculino</option>
                 <option>Feminino</option>
                 <option>Não declarante</option>
@@ -100,13 +101,13 @@ export default function Register() {
 
               <div class="input-group">
                 <input
+                  required
                   type="text"
                   class="form-control is-valid"
                   id="validationServerUsername"
                   placeholder="Data de Nascimento"
                   aria-describedby="inputGroupPrepend3"
                   onChange={(e) => setDataNascimento(e.target.value)}
-                  required
                 />
                 <div class="invalid-feedback">
                   Por favor, digite uma data no formato 'dd/mm/aaaa'
@@ -119,6 +120,7 @@ export default function Register() {
 
               {/* <div class="input-group">
                 <input
+                  required
                   type="text"
                   class="form-control is-valid"
                   id="validationServerUsername"
@@ -133,6 +135,7 @@ export default function Register() {
               </div> */}
 
                 <Input
+                  required
                   type="select"
                   id="estadoAtual"
                   name="estadoAtual"
@@ -173,6 +176,7 @@ export default function Register() {
               <label for="validationServerUsername">Estado de Interesse</label>
               <div class="input-group">
                 {/* <input
+                  required
                   type="text"
                   class="form-control is-invalid"
                   id="validationServerUsername"
@@ -187,6 +191,7 @@ export default function Register() {
                 </div> */}
 
                 <Input
+                  required
                   type="select"
                   id="estadoInteresse"
                   name="estadoInteresse"
@@ -226,12 +231,12 @@ export default function Register() {
             <div className="mt-4">
               <label for="validationServer03">CPF</label>
               <input
+                required
                 type="text"
                 class="form-control is-valid"
                 id="validationServer03"
                 placeholder="CPF"
                 onChange={(e) => setCpf(e.target.value)}
-                required
               />
               <div class="invalid-feedback">
                 Por favor, digite um CPF válido.
@@ -241,12 +246,13 @@ export default function Register() {
             <div class="mt-4">
               <label for="validationServer04">Número de Whatsapp</label>
               <input
+                required
                 type="text"
                 class="form-control is-valid"
                 id="validationServer04"
                 placeholder="Whatsapp"
                 onChange={(e) => setNumero(e.target.value)}
-                required
+                
               />
               <div class="invalid-feedback">
                 Por favor, digite um número válido.
@@ -279,7 +285,8 @@ export default function Register() {
         {estadoAtual === "RN" && 
               <div class="mt-4">
                 <label for="validationServer06">Batalhão Atual</label>
-               <Input 
+               <Input
+                 required 
                   type="select"
                   id="selectState"
                   name="estadosBrasil"
@@ -517,7 +524,8 @@ export default function Register() {
               {estadoAtual === "PB" && 
               <div class="mt-4">
                 <label for="validationServer06">Batalhão Atual</label>
-               <Input 
+               <Input
+                 required 
                   type="select"
                   id="selectState"
                   name="estadosBrasil"
@@ -704,7 +712,8 @@ export default function Register() {
               {estadoAtual === "PE" && 
               <div class="mt-4">
                 <label for="validationServer06">Batalhão Atual</label>
-               <Input 
+               <Input
+                 required 
                   type="select"
                   id="selectState"
                   name="estadosBrasil"
@@ -989,7 +998,8 @@ export default function Register() {
               {estadoAtual === "MA" && 
               <div class="mt-4">
                 <label for="validationServer06">Batalhão Atual</label>
-               <Input 
+               <Input
+                 required 
                   type="select"
                   id="selectState"
                   name="estadosBrasil"
@@ -1250,7 +1260,8 @@ export default function Register() {
               {estadoAtual === "SE" && 
               <div class="mt-4">
                 <label for="validationServer06">Batalhão Atual</label>
-               <Input 
+               <Input
+                 required 
                   type="select"
                   id="selectState"
                   name="estadosBrasil"
@@ -1391,7 +1402,8 @@ export default function Register() {
               {estadoAtual === "BA" && 
               <div class="mt-4">
                 <label for="validationServer06">Batalhão Atual</label>
-               <Input 
+               <Input
+                 required 
                   type="select"
                   id="selectState"
                   name="estadosBrasil"
@@ -1860,7 +1872,8 @@ export default function Register() {
                 {estadoAtual === "CE" && 
                 <div class="mt-4">
                   <label>Batalhão Atual</label>
-                  <Input 
+                  <Input
+                    required 
                   type="select"
                   id="selectState"
                   name="estadosBrasil"
@@ -1960,7 +1973,8 @@ export default function Register() {
               {estadoAtual === "PI" && 
               <div class="mt-4">
                 <label for="validationServer06">Batalhão Atual</label>
-               <Input 
+               <Input
+                 required 
                   type="select"
                   id="selectState"
                   name="estadosBrasil"
@@ -2018,7 +2032,8 @@ export default function Register() {
             {estadoAtual === "AL" && 
               <div class="mt-4">
                 <label for="validationServer06">Batalhão Atual</label>
-               <Input 
+               <Input
+                 required 
                   type="select"
                   id="selectState"
                   name="estadosBrasil"
@@ -2142,7 +2157,8 @@ export default function Register() {
           {estadoInteresse === "RN" && 
               <div class="mt-4">
                 <label for="validationServer06">Batalhão de Interesse</label>
-               <Input 
+               <Input
+                 required 
                   type="select"
                   id="selectState"
                   name="estadosBrasil"
@@ -2380,7 +2396,8 @@ export default function Register() {
               {estadoInteresse === "PB" && 
               <div class="mt-4">
                 <label for="validationServer06">Batalhão de Interesse</label>
-               <Input 
+               <Input
+                 required 
                   type="select"
                   id="selectState"
                   name="estadosBrasil"
@@ -2567,7 +2584,8 @@ export default function Register() {
               {estadoInteresse === "PE" && 
               <div class="mt-4">
                 <label for="validationServer06">Batalhão de Interesse</label>
-               <Input 
+               <Input
+                 required 
                   type="select"
                   id="selectState"
                   name="estadosBrasil"
@@ -2852,7 +2870,8 @@ export default function Register() {
               {estadoInteresse === "MA" && 
               <div class="mt-4">
                 <label for="validationServer06">Batalhão de Interesse</label>
-               <Input 
+               <Input
+                 required 
                   type="select"
                   id="selectState"
                   name="estadosBrasil"
@@ -3113,7 +3132,8 @@ export default function Register() {
               {estadoInteresse === "SE" && 
               <div class="mt-4">
                 <label for="validationServer06">Batalhão de Interesse</label>
-               <Input 
+               <Input
+                 required 
                   type="select"
                   id="selectState"
                   name="estadosBrasil"
@@ -3254,7 +3274,8 @@ export default function Register() {
               {estadoInteresse === "BA" && 
               <div class="mt-4">
                 <label for="validationServer06">Batalhão de Interesse</label>
-               <Input 
+               <Input
+                 required 
                   type="select"
                   id="selectState"
                   name="estadosBrasil"
@@ -3723,7 +3744,8 @@ export default function Register() {
                 {estadoInteresse === "CE" && 
                 <div class="mt-4">
                   <label>Batalhão de Interesse</label>
-                  <Input 
+                  <Input
+                    required 
                   type="select"
                   id="selectState"
                   name="estadosBrasil"
@@ -3823,7 +3845,8 @@ export default function Register() {
               {estadoInteresse === "PI" && 
               <div class="mt-4">
                 <label for="validationServer06">Batalhão de Interesse</label>
-               <Input 
+               <Input
+                 required 
                   type="select"
                   id="selectState"
                   name="estadosBrasil"
@@ -3881,7 +3904,8 @@ export default function Register() {
             {estadoInteresse === "AL" && 
               <div class="mt-4">
                 <label for="validationServer06">Batalhão de Interesse</label>
-               <Input 
+               <Input
+                 required 
                   type="select"
                   id="selectState"
                   name="estadosBrasil"
@@ -3933,12 +3957,13 @@ export default function Register() {
               <div class="mt-4">
               <label for="validationServer07">Comportamento</label>
                 <input
+                  required
                   type="text"
                   class="form-control is-valid"
                   id="validationServer08"
                   placeholder="Comportamento"
                   onChange={(e) => setComportamento(e.target.value)}
-                  required
+                  
                 />
                 <div class="valid-feedback">Ótimo!</div>
               </div>
@@ -3946,12 +3971,13 @@ export default function Register() {
               <div class="mt-4 mb-4">
                 <label for="validationServer08">Posto/graduação</label>
                 <input
+                  required
                   type="text"
                   class="form-control is-valid"
                   id="validationServer05"
                   placeholder="Posto/graduação"
                   onChange={(e) => setPostoGraduacao(e.target.value)}
-                  required
+                  
                 />
                 <div class="valid-feedback">Ótimo!</div>
               </div>
@@ -3959,12 +3985,13 @@ export default function Register() {
               <div class="mt-4">
               <label for="validationServer09">Órgão</label>
                 <input
+                  required
                   type="text"
                   class="form-control is-valid"
                   id="validationServer09"
                   placeholder="Comportamento"
                   onChange={(e) => setOrgao(e.target.value)}
-                  required
+                  
                 />
                 <div class="valid-feedback">Ótimo!</div>
               </div>
@@ -3976,24 +4003,26 @@ export default function Register() {
               <div>
                 <label for="validationServer01">Login</label>
                 <input
+                  required
                   type="text"
                   class="form-control is-valid"
                   id="validationServer10"
                   placeholder="Login"
                   onChange={(e) => setLogin(e.target.value)}
-                  required
+                  
                 />
                 <div class="valid-feedback">Ótimo!</div>
               </div>
               <div class="mt-4">
                 <label for="validationServer02">Senha</label>
                 <input
+                  required
                   type="text"
                   class="form-control is-valid"
                   id="validationServer11"
                   placeholder="Senha"
                   onChange={(e) => setSenha(e.target.value)}
-                  required
+                  
                 />
                 <div class="valid-feedback">Ótimo!</div>
               </div>
@@ -4001,6 +4030,7 @@ export default function Register() {
             <div class="form-group mt-4">
               <div class="form-check mt-4">
                 <input
+                  
                   class="form-check-input is-valid"
                   type="checkbox"
                   value=""
