@@ -28,6 +28,9 @@ export default function Register() {
 
   async function handleSubmit(e) {
     e.preventDefault();
+
+    console.log(sexo);
+    
     const data = {
       nome: nome,
       sexo: sexo,
@@ -58,7 +61,7 @@ export default function Register() {
   }
 
   return (
-    <form onSubmit={() => handleSubmit}>
+    <form onSubmit={handleSubmit}>
       <div class="card text-center m-3">
         <div class="card-header ">
           <ul class="nav nav-tabs  card-header-tabs">
