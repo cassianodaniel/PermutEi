@@ -18,7 +18,6 @@ const Hall = () => {
   function handleEditar(e){
 
     localStorage.setItem('user', JSON.stringify(userMaster));
-    //history.push('/editarperfil')
   }
 
   const history = useHistory();
@@ -127,7 +126,7 @@ const Hall = () => {
             <h1 className="display-4">Encontrou sua permuta?</h1>
             <p className="lead">
               Faça-nos uma doação{" "}
-              <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=UV4KH7XC3U9ZQ&source=url">
+              <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=PVMJ2UAY9NSZ2&currency_code=BRL">
                 aqui!
               </a>{" "}
               ;)

@@ -15,29 +15,12 @@ const Filtrar = () => {
   function handleEditar(e){
 
     localStorage.setItem('user', JSON.stringify(userMaster));
-    //history.push('/editarperfil')
   }
 
   const history = useHistory();
 
   const [users, setUsers] = useState([]);
-  const [userMaster, setUserMaster] = useState({});
-
-  const [search, setSearch] = useState("");
-
-  const handleSearchArray = (e, string) => {
-    e.preventDefault();
-    let match = [];
-    users.map((item) => { 
-        if(item.nome.toUpperCase().includes(string.toUpperCase())){
-          match.push(item);
-        };
-    });
-    history.push( 
-    {pathname: '/filtrar',
-    state: {array: "match"}}
-    );
-  };
+  const [userMaster] = useState({});
 
   useEffect(() => {
     const response = JSON.parse(localStorage.getItem('vaikey'));

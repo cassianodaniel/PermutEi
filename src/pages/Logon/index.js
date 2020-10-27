@@ -61,7 +61,7 @@ export default function Logon() {
             <div class="mt-4 mb-4">
               <label for="validationServer02">Senha</label>
               <input
-                type="text"
+                type="password"
                 class="form-control"
                 id="validationServer02"
                 placeholder="Senha"

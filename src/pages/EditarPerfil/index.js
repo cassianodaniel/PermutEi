@@ -3978,7 +3978,7 @@ export default function EditarPerfil() {
               <div class="mt-4">
                 <label for="validationServer02">Senha</label>
                 <Input required
-                  type="text"
+                  type="password"
                   class="form-control"
                   id="validationServer11"
                   placeholder="Senha"
