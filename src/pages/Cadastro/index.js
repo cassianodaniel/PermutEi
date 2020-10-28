@@ -3,23 +3,23 @@ import { useHistory } from "react-router-dom";
 import "./styles.css";
 import { Input} from 'reactstrap';
 import api from "../../services/api";
+import InputMask from "react-input-mask";
 
 export default function Register() {
 
-  const [nome, setNome] = useState("Inicial State");
-  const [sexo, setSexo] = useState("Inicial State");
-  const [dataNascimento, setDataNascimento] = useState("Inicial State");
-  const [cpf, setCpf] = useState("Inicial State");
-  const [numero, setNumero] = useState("Inicial State");
-  const [estadoAtual, setEstadoAtual] = useState("Inicial State");
-  const [estadoInteresse, setEstadoInteresse] = useState("Inicial State");
+  const [nome, setNome] = useState("Usuário sem identificação");
+  const [sexo, setSexo] = useState("Masculino");
+  const [dataNascimento, setDataNascimento] = useState("");
+  const [cpf, setCpf] = useState("");
+  const [numero, setNumero] = useState("");
+  const [estadoAtual, setEstadoAtual] = useState("PB");
+  const [estadoInteresse, setEstadoInteresse] = useState("PB");
   const [matricula, setMatricula] = useState("");
-  const [batalhaoAtual, setBatalhaoAtual] = useState("");
-  const [batalhaoInteresse, setBatalhaoInteresse] = useState("");
-
+  const [batalhaoAtual, setBatalhaoAtual] = useState("BP CHOQUE JOAO PESSOA");
+  const [batalhaoInteresse, setBatalhaoInteresse] = useState("BP CHOQUE JOAO PESSOA");
   const [comportamento, setComportamento] = useState("");
   const [postograduacao, setPostoGraduacao] = useState("");
-  const [orgao, setOrgao] = useState("");
+  const [orgao, setOrgao] = useState("Civil");
   const [login, setLogin] = useState("");
   const [senha, setSenha] = useState("");
   const [disponibilidade] = useState(true);
@@ -28,8 +28,6 @@ export default function Register() {
 
   async function handleSubmit(e) {
     e.preventDefault();
-    alert('handleSubmit!');
-    
     const data = {
       nome: nome,
       sexo: sexo,
@@ -48,16 +46,18 @@ export default function Register() {
       login: login,
       senha: senha
     };
-
-    try {
-      console.log(data);
-      await api.post('/users', data);
-      alert("Cadastro realizado!");
-      history.push("/logon");
-    } catch (error) {
-      alert("Falha no cadastro, tente novamente " + error);
+      
+      try {
+        console.log(data);
+        await api.post('/users', data);
+        alert("Cadastro realizado!" + alert(JSON.stringify(data)));
+        history.push("/logon");
+      } catch (error) {
+        alert("Falha no cadastro, tente novamente " + error + alert(JSON.stringify(data)));
+      }
+      
     }
-  }
+  
 
   return (
     <form onSubmit={handleSubmit}>
@@ -79,6 +79,7 @@ export default function Register() {
             <div class="mt-4">
               <label for="validationServer01">Nome</label>
               <Input
+                minLength="2"
                 required
                 type="text"
                 class="form-control"
@@ -103,7 +104,7 @@ export default function Register() {
               <label for="validationServerUsername">Data de Nascimento</label>
 
               <div class="input-group">
-                <Input
+                <InputMask mask="99/99/9999"
                   required
                   type="text"
                   class="form-control"
@@ -144,7 +145,10 @@ export default function Register() {
                   name="estadoAtual"
                   onClick={(e) => setEstadoAtual(e.target.value)}
                 >
-                    <option value="AC">Acre</option>
+                    <option value="Sem Estado Atual">Selecionar</option>
+                    <option value="PB">Paraíba</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="PE">Pernambuco</option>
                     <option value="AL">Alagoas</option>
                     <option value="AP">Amapá</option>
                     <option value="AM">Amazonas</option>
@@ -158,12 +162,9 @@ export default function Register() {
                     <option value="MS">Mato Grosso do Sul</option>
                     <option value="MG">Minas Gerais</option>
                     <option value="PA">Pará</option>
-                    <option value="PB">Paraíba</option>
                     <option value="PR">Paraná</option>
-                    <option value="PE">Pernambuco</option>
                     <option value="PI">Piauí</option>
                     <option value="RJ">Rio de Janeiro</option>
-                    <option value="RN">Rio Grande do Norte</option>
                     <option value="RS">Rio Grande do Sul</option>
                     <option value="RO">Rondônia</option>
                     <option value="RR">Roraima</option>
@@ -171,6 +172,7 @@ export default function Register() {
                     <option value="SP">São Paulo</option>
                     <option value="SE">Sergipe</option>
                     <option value="TO">Tocantins</option>
+                    <option value="AC">Acre</option>
                 </Input>
             </div>
           </div>
@@ -199,7 +201,11 @@ export default function Register() {
                   id="estadoInteresse"
                   name="estadoInteresse"
                   onClick={(e) => setEstadoInteresse(e.target.value)}
-                >
+                >   
+                    <option value="Sem Estado de Interesse">Selecionar</option>
+                    <option value="PB">Paraíba</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="PE">Pernambuco</option>
                     <option value="AC">Acre</option>
                     <option value="AL">Alagoas</option>
                     <option value="AP">Amapá</option>
@@ -214,12 +220,9 @@ export default function Register() {
                     <option value="MS">Mato Grosso do Sul</option>
                     <option value="MG">Minas Gerais</option>
                     <option value="PA">Pará</option>
-                    <option value="PB">Paraíba</option>
                     <option value="PR">Paraná</option>
-                    <option value="PE">Pernambuco</option>
                     <option value="PI">Piauí</option>
                     <option value="RJ">Rio de Janeiro</option>
-                    <option value="RN">Rio Grande do Norte</option>
                     <option value="RS">Rio Grande do Sul</option>
                     <option value="RO">Rondônia</option>
                     <option value="RR">Roraima</option>
@@ -233,7 +236,8 @@ export default function Register() {
             </div>
             <div className="mt-4">
               <label for="validationServer03">CPF</label>
-              <Input
+              <InputMask
+                minLength="11"
                 required
                 type="text"
                 class="form-control"
@@ -241,26 +245,19 @@ export default function Register() {
                 placeholder="CPF"
                 onChange={(e) => setCpf(e.target.value)}
               />
-              <div class="invalid-feedback">
-                Por favor, digite um CPF válido.
-              </div>
             </div>
 
             <div class="mt-4">
               <label for="validationServer04">Número de Whatsapp</label>
-              <Input
+              <InputMask
                 required
+                minLength="11"
                 type="text"
                 class="form-control"
                 id="validationServer04"
-                placeholder="Whatsapp"
+                placeholder="83988887777"
                 onChange={(e) => setNumero(e.target.value)}
-                
-              />
-              <div class="invalid-feedback">
-                Por favor, digite um número válido.
-              </div>
-              
+              />              
             </div>
           </div>
             
@@ -269,7 +266,7 @@ export default function Register() {
             <div class="form-col">
               <div>
                 <label for="validationServer05">Matrícula</label>
-                <Input
+                <InputMask
                   type="text"
                   class="form-control"
                   id="validationServer05"
@@ -295,6 +292,7 @@ export default function Register() {
                   name="estadosBrasil"
                   onClick={(e) => {setBatalhaoAtual(e.target.value)}}
                 >
+                  <option value="Sem Estado de Interesse">Selecionar</option>
 
                   <option  
                   value="1 BPM BATALHÃO FELIPE CAMARÃO ZONA LESTE">
@@ -497,6 +495,7 @@ export default function Register() {
                   onClick={(e) => {setBatalhaoAtual(e.target.value)
                   }}
                 >
+                  <option value="Sem Estado de Interesse">Selecionar</option>
                     <option  
                   value="BP CHOQUE JOÃO PESSOA">
                     BP CHOQUE JOÃO PESSOA
@@ -662,7 +661,7 @@ export default function Register() {
                   console.log(batalhaoAtual);
                   }}
                 >
-
+                  <option value="Sem Estado de Interesse">Selecionar</option>
                   <option  
                   value="1 BPM OLINDA">
                     1 BPM OLINDA
@@ -903,6 +902,7 @@ export default function Register() {
                   console.log(batalhaoAtual);
                   }}
                 >
+                  <option value="Sem Estado de Interesse">Selecionar</option>
                     <option  
                   value="BOPE CAP PM DANIEL NUNES ESTEVES SÃO LUIS">
                     BOPE CAP PM DANIEL NUNES ESTEVES SÃO LUIS
@@ -1124,6 +1124,7 @@ export default function Register() {
                   console.log(batalhaoAtual);
                   }}
                 >
+                  <option value="Sem Estado de Interesse">Selecionar</option>
                     <option  
                   value="1 BATALHÃO DA POLICIA MILITAR">
                     1 BATALHÃO DA POLICIA MILITAR
@@ -1245,6 +1246,7 @@ export default function Register() {
                   console.log(batalhaoAtual);
                   }}
                 >
+                  <option value="Sem Estado de Interesse">Selecionar</option>
                   <option  
                   value="1 BEIC FEIRA DE SANTANA">
                     1 BEIC FEIRA DE SANTANA
@@ -1658,7 +1660,7 @@ export default function Register() {
                   onClick={(e) => {setBatalhaoAtual(e.target.value)
                   }}
                 >
-
+                    <option value="Sem Estado de Interesse">Selecionar</option>
                     <option value="CPC">CPC</option>
 
                     <option value="5 BPM JOSÉ BONIFÁCIO">5 BPM JOSÉ BONIFÁCIO</option>
@@ -1760,6 +1762,7 @@ export default function Register() {
                   console.log(batalhaoInteresse);
                   }}
                 >
+                  <option value="Sem Estado de Interesse">Selecionar</option>
                     <option value="1 BPM ">1 BPM </option>
 
                     <option value="5 BPM">5 BPM</option>
@@ -1818,7 +1821,7 @@ export default function Register() {
                   onClick={(e) => {setBatalhaoAtual(e.target.value)
                   }}
                 >
-
+                    <option value="Sem Estado de Interesse">Selecionar</option>
                     <option value="1 BPM MACEIÓ">1 BPM MACEIÓ</option>
 
                     <option value="2 BPM PALMARES">2 BPM PALMARES</option>
@@ -1860,78 +1863,6 @@ export default function Register() {
 
           {/*FIM DOS BATALHÕES ATUAIS*/}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
           {estadoInteresse === "RN" && 
               <div class="mt-4">
                 <label for="validationServer06">Batalhão de Interesse</label>
@@ -1943,7 +1874,7 @@ export default function Register() {
                   onClick={(e) => {setBatalhaoInteresse(e.target.value)
                   }}
                 >
-
+                  <option value="Sem Estado de Interesse">Selecionar</option>
                   <option 
                   value="1 BPM BATALHÃO FELIPE CAMARÃO ZONA LESTE">
                     1 BPM BATALHÃO FELIPE CAMARÃO ZONA LESTE
@@ -2144,7 +2075,8 @@ export default function Register() {
                   name="estadosBrasil"
                   onClick={(e) => {setBatalhaoInteresse(e.target.value)
                   }}
-                >
+                > 
+                  <option value="Sem Estado de Interesse">Selecionar</option>
                     <option 
                   value="BP CHOQUE JOÃO PESSOA">
                     BP CHOQUE JOÃO PESSOA
@@ -2310,7 +2242,7 @@ export default function Register() {
                   console.log(batalhaoAtual);
                   }}
                 >
-
+                  <option value="Sem Estado de Interesse">Selecionar</option>
                   <option 
                   value="1 BPM OLINDA">
                     1 BPM OLINDA
@@ -2551,6 +2483,7 @@ export default function Register() {
                   console.log(batalhaoAtual);
                   }}
                 >
+                  <option value="Sem Estado de Interesse">Selecionar</option>
                     <option 
                   value="BOPE CAP PM DANIEL NUNES ESTEVES SÃO LUIS">
                     BOPE CAP PM DANIEL NUNES ESTEVES SÃO LUIS
@@ -2772,6 +2705,7 @@ export default function Register() {
                   console.log(batalhaoAtual);
                   }}
                 >
+                  <option value="Sem Estado de Interesse">Selecionar</option>
                     <option 
                   value="1 BATALHÃO DA POLICIA MILITAR">
                     1 BATALHÃO DA POLICIA MILITAR
@@ -2893,6 +2827,7 @@ export default function Register() {
                   console.log(batalhaoAtual);
                   }}
                 >
+                  <option value="Sem Estado de Interesse">Selecionar</option>
                   <option 
                   value="1 BEIC FEIRA DE SANTANA">
                     1 BEIC FEIRA DE SANTANA
@@ -3306,7 +3241,7 @@ export default function Register() {
                   onClick={(e) => {setBatalhaoInteresse(e.target.value)
                   }}
                 >
-
+                    <option value="Sem Estado de Interesse">Selecionar</option>
                     <option value="CPC">CPC</option>
 
                     <option value="5 BPM JOSÉ BONIFÁCIO">5 BPM JOSÉ BONIFÁCIO</option>
@@ -3408,6 +3343,7 @@ export default function Register() {
                   console.log(batalhaoInteresse);
                   }}
                 >
+                  <option value="Sem Estado de Interesse">Selecionar</option>
                     <option value="1 BPM ">1 BPM </option>
 
                     <option value="5 BPM">5 BPM</option>
@@ -3466,7 +3402,7 @@ export default function Register() {
                   onClick={(e) => {setBatalhaoInteresse(e.target.value)
                   }}
                 >
-
+                    <option value="Sem Estado de Interesse">Selecionar</option>
                     <option value="1 BPM MACEIÓ">1 BPM MACEIÓ</option>
 
                     <option value="2 BPM PALMARES">2 BPM PALMARES</option>
@@ -3540,13 +3476,14 @@ export default function Register() {
               <label for="validationServer09">Órgão</label>
                 <Input
                   required
-                  type="text"
+                  type="select"
                   class="form-control"
                   id="validationServer09"
                   placeholder="Órgão"
-                  onChange={(e) => setOrgao(e.target.value)}
-                  
-                />
+                  onClick={(e) => setOrgao(e.target.value)}
+                >
+                  <option value="Civil">Civil</option>
+                </Input>
                 <div class="valid-feedback">Ótimo!</div>
               </div>
             </div>
