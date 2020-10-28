@@ -119,7 +119,7 @@ export default function EditarPerfil() {
 
               <div class="Input-group">
                 <InputMask 
-                  mask="99/99/9999"
+                  //mask="99/99/9999"
                   required
                   type="text"
                   class="form-control"

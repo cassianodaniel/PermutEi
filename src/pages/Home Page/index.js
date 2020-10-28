@@ -1,9 +1,14 @@
-import React from "react";
+import React, {useEffect} from "react";
 import "./style.css";
 import { Link } from "react-router-dom";
 import { Button } from "reactstrap";
 
 export default function HomePage() {
+
+  useEffect(() => {
+    localStorage.clear();
+  }, []);
+
   return (
     <div className="main">
       <div className="label">Facilite as suas permutas já!</div>
