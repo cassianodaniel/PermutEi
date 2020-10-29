@@ -50,7 +50,7 @@ export default function Register() {
       try {
         console.log(data);
         await api.post('/users', data);
-        alert("Cadastro realizado!" + alert(JSON.stringify(data)));
+        alert("Cadastro realizado!");
         history.push("/logon");
       } catch (error) {
         alert("Falha no cadastro, tente novamente " + error + alert(JSON.stringify(data)));
