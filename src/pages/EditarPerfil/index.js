@@ -20,20 +20,20 @@ export default function EditarPerfil() {
 
   const history = useHistory();
 
-  const [nome, setNome] = useState("Inicial State");
-  const [sexo, setSexo] = useState("Inicial State");
-  const [dataNascimento, setDataNascimento] = useState("Inicial State");
-  const [numero, setNumero] = useState("Inicial State");
-  const [estadoAtual, setEstadoAtual] = useState("Inicial State");
-  const [estadoInteresse, setEstadoInteresse] = useState("Inicial State");
-  const [matricula, setMatricula] = useState("");
-  const [batalhaoAtual, setBatalhaoAtual] = useState("");
-  const [batalhaoInteresse, setBatalhaoInteresse] = useState("");
-  const [comportamento, setComportamento] = useState("");
-  const [postograduacao, setPostoGraduacao] = useState("");
-  const [orgao, setOrgao] = useState("");
-  const [login, setLogin] = useState("");
-  const [senha, setSenha] = useState("");
+  const [nome, setNome] = useState(user.nome);
+  const [sexo, setSexo] = useState(user.sexo);
+  const [dataNascimento, setDataNascimento] = useState(user.datanasc);
+  const [numero, setNumero] = useState(user.numero);
+  const [estadoAtual, setEstadoAtual] = useState(user.estadoAtual);
+  const [estadoInteresse, setEstadoInteresse] = useState(user.estadoInteresse);
+  const [matricula, setMatricula] = useState(user.matricula);
+  const [batalhaoAtual, setBatalhaoAtual] = useState(user.batalhaoAtual);
+  const [batalhaoInteresse, setBatalhaoInteresse] = useState(user.batalhaoInteresse);
+  const [comportamento, setComportamento] = useState(user.comportamento);
+  const [postograduacao, setPostoGraduacao] = useState(user.postoGraduacao);
+  const [orgao, setOrgao] = useState(user.orgao);
+  const [login, setLogin] = useState(user.login);
+  const [senha, setSenha] = useState(user.senha);
   const [disponibilidade] = useState(true);
 
   async function handleSubmit(e) {
