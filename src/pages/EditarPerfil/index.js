@@ -45,33 +45,30 @@ export default function EditarPerfil() {
   async function handleSubmit(e) {
     e.preventDefault();
 
-    console.log("Useer: ");
-    console.log(user);
-
     const data = {
-      nome: user.nome,
-      sexo: user.sexo,
-      datanasc: user.datanasc,
+      nome: nome,
+      sexo: sexo,
+      datanasc: dataNascimento,
       cpf: user.cpf,
-      numero: user.numero,
-      estadoAtual: user.estadoAtual,
-      estadoInteresse: user.estadoInteresse,
-      matricula: user.matricula,
-      batalhaoAtual: user.batalhaoAtual,
-      batalhaoInteresse: user.batalhaoInteresse,
-      orgao: user.orgao,
-      comportamento: user.comportamento,
-      postoGraduacao: user.postoGraduacao,
-      disponibilidade: user.disponibilidade,
-      login: user.login,
-      senha: user.senha,
+      numero: numero,
+      estadoAtual: estadoAtual,
+      estadoInteresse: estadoInteresse,
+      matricula: matricula,
+      batalhaoAtual: batalhaoAtual,
+      batalhaoInteresse: batalhaoInteresse,
+      orgao: orgao,
+      comportamento: comportamento,
+      postoGraduacao: postograduacao,
+      disponibilidade: disponibilidade,
+      login: login,
+      senha: senha,
     };
 
     try {
-      //console.log(data);
       await api.post('/updateUser', data);
-      alert("Cadastro atualizado!");
-      history.push("/hall");
+      localStorage.clear();
+      alert("Seus dados foram alterados, precisará logar novamente.");
+      history.push("/logon");
     } catch (error) {
       alert("Falha na atualização, tente novamente "+ error);
     }
@@ -111,7 +108,7 @@ export default function EditarPerfil() {
                 class="form-control"
                 id="validationServer01"
                 placeholder="Nome"
-                onChange={(e) => setUser({nome: e.target.value})}
+                onChange={(e) => setNome(e.target.value)}
                 defaultValue={user.nome}
               />
               <div class="valid-feedback">Ótimo!</div>
@@ -153,7 +150,7 @@ export default function EditarPerfil() {
                   type="select"
                   id="estadoAtual"
                   name="estadoAtual"
-                  defaultValue={estadoAtual}
+                  defaultValue={user.estadoAtual}
                   onClick={(e) => setEstadoAtual(e.target.value)}
                 >
                     <option value={user.estadoAtual}>Selecione</option>
@@ -193,7 +190,7 @@ export default function EditarPerfil() {
                   type="select"
                   id="estadoInteresse"
                   name="estadoInteresse"
-                  defaultValue={estadoInteresse}
+                  defaultValue={user.estadoInteresse}
                   onClick={(e) => setEstadoInteresse(e.target.value)}
                 >
                   <option value={user.estadoInteresse}>Selecione</option>
@@ -269,8 +266,7 @@ export default function EditarPerfil() {
                   type="select"
                   id="selectState"
                   name="estadosBrasil"
-                  onClick={(e) => {setBatalhaoAtual(e.target.value)
-                  }}
+                  onClick={(e) => {setBatalhaoAtual(e.target.value)}}
                 >
                   <option value={user.batalhaoAtual}>{user.batalhaoAtual}</option>
 
@@ -631,7 +627,7 @@ export default function EditarPerfil() {
                   id="selectState"
                   name="estadosBrasil"
                   onClick={(e) => {setBatalhaoAtual(e.target.value)
-                  console.log(batalhaoAtual);
+                  //console.log(batalhaoAtual);
                   }}
                 >
                   <option value={user.batalhaoAtual}>{user.batalhaoAtual}</option>
@@ -3537,7 +3533,6 @@ export default function EditarPerfil() {
                   placeholder="Login"
                   onChange={(e) => setLogin(e.target.value)}
                   defaultValue={user.login}
-                  
                 />
                 <div class="valid-feedback">Ótimo!</div>
               </div>
