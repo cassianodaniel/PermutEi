@@ -16,8 +16,8 @@ import api from '../../services/api';
 const Hall = () => {
   
   function handleEditar(e){
-
     localStorage.setItem('user', JSON.stringify(userMaster));
+    history.push("/editarperfil");
   }
 
   const history = useHistory();
@@ -131,9 +131,9 @@ const Hall = () => {
               </a>{" "}
               ;)
             </p>
-            <a link href="/editarperfil" onClick={handleEditar}>
+            <Button onClick={handleEditar}>
               Editar cadastro
-            </a>
+            </Button>
             
             <br/>
             <br/>

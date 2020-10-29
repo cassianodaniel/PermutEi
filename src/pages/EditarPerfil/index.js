@@ -7,7 +7,15 @@ import InputMask from "react-input-mask";
 import api from '../../services/api';
 
 export default function EditarPerfil() {
+
+  const [user, setUser] = useState({});
+
+  const history = useHistory();
+
   useEffect(() => {
+
+    alert("Para mudar os batalhões você precisa selecionar um estado atual e um estado de interesse.");
+
     const response = JSON.parse(localStorage.getItem('user'));
     if (response===null) {
       history.push('/logon');
@@ -16,9 +24,7 @@ export default function EditarPerfil() {
     }
 
   }, []);
-  const [user, setUser] = useState({});
-
-  const history = useHistory();
+  
 
   const [nome, setNome] = useState(user.nome);
   const [sexo, setSexo] = useState(user.sexo);
@@ -37,27 +43,32 @@ export default function EditarPerfil() {
   const [disponibilidade] = useState(true);
 
   async function handleSubmit(e) {
+    e.preventDefault();
+
+    console.log("Useer: ");
+    console.log(user);
+
     const data = {
-      nome: nome,
-      sexo: sexo,
-      datanasc: dataNascimento,
+      nome: user.nome,
+      sexo: user.sexo,
+      datanasc: user.datanasc,
       cpf: user.cpf,
-      numero: numero,
-      estadoAtual: estadoAtual,
-      estadoInteresse: estadoInteresse,
-      matricula: matricula,
-      batalhaoAtual: batalhaoAtual,
-      batalhaoInteresse: batalhaoInteresse,
-      orgao: orgao,
-      comportamento: comportamento,
-      postoGraduacao: postograduacao,
-      disponibilidade: disponibilidade,
-      login: login,
-      senha: senha,
+      numero: user.numero,
+      estadoAtual: user.estadoAtual,
+      estadoInteresse: user.estadoInteresse,
+      matricula: user.matricula,
+      batalhaoAtual: user.batalhaoAtual,
+      batalhaoInteresse: user.batalhaoInteresse,
+      orgao: user.orgao,
+      comportamento: user.comportamento,
+      postoGraduacao: user.postoGraduacao,
+      disponibilidade: user.disponibilidade,
+      login: user.login,
+      senha: user.senha,
     };
 
     try {
-      console.log(data);
+      //console.log(data);
       await api.post('/updateUser', data);
       alert("Cadastro atualizado!");
       history.push("/hall");
@@ -67,7 +78,7 @@ export default function EditarPerfil() {
   }
 
   return (
-    <form onSubmit={() => handleSubmit()}>
+    <form onSubmit={handleSubmit}>
       <div class="card text-center m-3">
         <div class="card-header ">
           <ul class="nav nav-tabs  card-header-tabs">
@@ -100,14 +111,14 @@ export default function EditarPerfil() {
                 class="form-control"
                 id="validationServer01"
                 placeholder="Nome"
-                onChange={(e) => setNome(e.target.value)}
+                onChange={(e) => setUser({nome: e.target.value})}
                 defaultValue={user.nome}
               />
               <div class="valid-feedback">Ótimo!</div>
             </div>
             <div class="mt-4">
               <label for="validationServer02">Sexo</label>
-              <Input required onChange={(e) => setSexo(e.target.value)} type="select" name="select" id="exampleSelect">
+              <Input required onChange={(e) => setSexo(e.target.value)} defaultValue={user.sexo} type="select" name="select" id="exampleSelect">
                 <option>Masculino</option>
                 <option>Feminino</option>
                 <option>Não declarante</option>
@@ -145,7 +156,7 @@ export default function EditarPerfil() {
                   defaultValue={estadoAtual}
                   onClick={(e) => setEstadoAtual(e.target.value)}
                 >
-                    <option value="Sem Estado de Interesse">Selecionar</option>
+                    <option value={user.estadoAtual}>Selecione</option>
                     <option value="AC">Acre</option>
                     <option value="AL">Alagoas</option>
                     <option value="AP">Amapá</option>
@@ -185,7 +196,7 @@ export default function EditarPerfil() {
                   defaultValue={estadoInteresse}
                   onClick={(e) => setEstadoInteresse(e.target.value)}
                 >
-                  <option value="Sem Estado de Interesse">Selecionar</option>
+                  <option value={user.estadoInteresse}>Selecione</option>
                     <option value="AC">Acre</option>
                     <option value="AL">Alagoas</option>
                     <option value="AP">Amapá</option>
@@ -261,7 +272,7 @@ export default function EditarPerfil() {
                   onClick={(e) => {setBatalhaoAtual(e.target.value)
                   }}
                 >
-                  <option value="Sem Estado de Interesse">Selecionar</option>
+                  <option value={user.batalhaoAtual}>{user.batalhaoAtual}</option>
 
                   <option  
                   value="1 BPM BATALHÃO FELIPE CAMARÃO ZONA LESTE">
@@ -463,7 +474,7 @@ export default function EditarPerfil() {
                   onClick={(e) => {setBatalhaoAtual(e.target.value)
                   }}
                 >
-                  <option value="Sem Estado de Interesse">Selecionar</option>
+                  <option value={user.batalhaoAtual}>{user.batalhaoAtual}</option>
                     <option  
                   value="BP CHOQUE JOÃO PESSOA">
                     BP CHOQUE JOÃO PESSOA
@@ -623,7 +634,7 @@ export default function EditarPerfil() {
                   console.log(batalhaoAtual);
                   }}
                 >
-                  <option value="Sem Estado de Interesse">Selecionar</option>
+                  <option value={user.batalhaoAtual}>{user.batalhaoAtual}</option>
                   <option  
                   value="1 BPM OLINDA">
                     1 BPM OLINDA
@@ -868,7 +879,7 @@ export default function EditarPerfil() {
                   console.log(batalhaoAtual);
                   }}
                 >
-                  <option value="Sem Estado de Interesse">Selecionar</option>
+                  <option value={user.batalhaoAtual}>{user.batalhaoAtual}</option>
                     <option  
                   value="BOPE CAP PM DANIEL NUNES ESTEVES SÃO LUIS">
                     BOPE CAP PM DANIEL NUNES ESTEVES SÃO LUIS
@@ -1089,7 +1100,7 @@ export default function EditarPerfil() {
                   console.log(batalhaoAtual);
                   }}
                 >
-                  <option value="Sem Estado de Interesse">Selecionar</option>
+                  <option value={user.batalhaoAtual}>{user.batalhaoAtual}</option>
                     <option  
                   value="1 BATALHÃO DA POLICIA MILITAR">
                     1 BATALHÃO DA POLICIA MILITAR
@@ -1210,7 +1221,7 @@ export default function EditarPerfil() {
                   console.log(batalhaoAtual);
                   }}
                 >
-                  <option value="Sem Estado de Interesse">Selecionar</option>
+                  <option value={user.batalhaoAtual}>{user.batalhaoAtual}</option>
                   <option  
                   value="1 BEIC FEIRA DE SANTANA">
                     1 BEIC FEIRA DE SANTANA
@@ -1623,7 +1634,7 @@ export default function EditarPerfil() {
                   onClick={(e) => {setBatalhaoAtual(e.target.value)
                   }}
                 >
-                  <option value="Sem Estado de Interesse">Selecionar</option>
+                  <option value={user.batalhaoAtual}>{user.batalhaoAtual}</option>
 
                     <option value="CPC">CPC</option>
 
@@ -1725,7 +1736,7 @@ export default function EditarPerfil() {
                   console.log(batalhaoInteresse);
                   }}
                 >
-                  <option value="Sem Estado de Interesse">Selecionar</option>
+                  <option value={user.batalhaoAtual}>{user.batalhaoAtual}</option>
                     <option value="1 BPM ">1 BPM </option>
 
                     <option value="5 BPM">5 BPM</option>
@@ -1783,7 +1794,7 @@ export default function EditarPerfil() {
                   onClick={(e) => {setBatalhaoAtual(e.target.value)
                   }}
                 >
-                    <option value="Sem Estado de Interesse">Selecionar</option>
+                    <option value={user.batalhaoAtual}>{user.batalhaoAtual}</option>
                     <option value="1 BPM MACEIÓ">1 BPM MACEIÓ</option>
 
                     <option value="2 BPM PALMARES">2 BPM PALMARES</option>
@@ -1907,7 +1918,7 @@ export default function EditarPerfil() {
                   onClick={(e) => {setBatalhaoInteresse(e.target.value)
                   }}
                 >
-                  <option value="Sem Estado de Interesse">Selecionar</option>
+                  <option defaultValue={user.batalhaoInteresse}>{user.batalhaoInteresse}</option>
                   <option  
                   value="1 BPM BATALHÃO FELIPE CAMARÃO ZONA LESTE">
                     1 BPM BATALHÃO FELIPE CAMARÃO ZONA LESTE
@@ -2108,7 +2119,7 @@ export default function EditarPerfil() {
                   onClick={(e) => {setBatalhaoInteresse(e.target.value)
                   }}
                 >
-                    <option value="Sem Estado de Interesse">Selecionar</option>
+                    <option value={user.batalhaoInteresse}>{user.batalhaoInteresse}</option>
                     <option  
                   value="BP CHOQUE JOÃO PESSOA">
                     BP CHOQUE JOÃO PESSOA
@@ -2268,7 +2279,7 @@ export default function EditarPerfil() {
                   console.log(batalhaoAtual);
                   }}
                 >
-                  <option value="Sem Estado de Interesse">Selecionar</option>
+                  <option value={user.batalhaoInteresse}>{user.batalhaoInteresse}</option>
 
                   <option  
                   value="1 BPM OLINDA">
@@ -2514,7 +2525,7 @@ export default function EditarPerfil() {
                   console.log(batalhaoAtual);
                   }}
                 >
-                  <option value="Sem Estado de Interesse">Selecionar</option>
+                  <option value={user.batalhaoInteresse}>{user.batalhaoInteresse}</option>
                     <option  
                   value="BOPE CAP PM DANIEL NUNES ESTEVES SÃO LUIS">
                     BOPE CAP PM DANIEL NUNES ESTEVES SÃO LUIS
@@ -2735,7 +2746,7 @@ export default function EditarPerfil() {
                   console.log(batalhaoAtual);
                   }}
                 >
-                  <option value="Sem Estado de Interesse">Selecionar</option>
+                  <option value={user.batalhaoInteresse}>{user.batalhaoInteresse}</option>
                     <option  
                   value="1 BATALHÃO DA POLICIA MILITAR">
                     1 BATALHÃO DA POLICIA MILITAR
@@ -2856,7 +2867,7 @@ export default function EditarPerfil() {
                   console.log(batalhaoAtual);
                   }}
                 >
-                  <option value="Sem Estado de Interesse">Selecionar</option>
+                  <option value={user.batalhaoInteresse}>{user.batalhaoInteresse}</option>
                   <option  
                   value="1 BEIC FEIRA DE SANTANA">
                     1 BEIC FEIRA DE SANTANA
@@ -3269,7 +3280,7 @@ export default function EditarPerfil() {
                   onClick={(e) => {setBatalhaoInteresse(e.target.value)
                   }}
                 >
-                  <option value="Sem Estado de Interesse">Selecionar</option>
+                  <option value={user.batalhaoInteresse}>{user.batalhaoInteresse}</option>
 
                     <option value="CPC">CPC</option>
 
@@ -3371,7 +3382,7 @@ export default function EditarPerfil() {
                   console.log(batalhaoInteresse);
                   }}
                 >
-                  <option value="Sem Estado de Interesse">Selecionar</option>
+                  <option value={user.batalhaoInteresse}>{user.batalhaoInteresse}</option>
                     <option value="1 BPM ">1 BPM </option>
 
                     <option value="5 BPM">5 BPM</option>
@@ -3429,7 +3440,7 @@ export default function EditarPerfil() {
                   onClick={(e) => {setBatalhaoInteresse(e.target.value)
                   }}
                 >
-                    <option value="Sem Estado de Interesse">Selecionar</option>
+                    <option value={user.batalhaoInteresse}>{user.batalhaoInteresse}</option>
                     <option value="1 BPM MACEIÓ">1 BPM MACEIÓ</option>
 
                     <option value="2 BPM PALMARES">2 BPM PALMARES</option>
