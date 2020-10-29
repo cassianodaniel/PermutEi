@@ -502,11 +502,6 @@ export default function Register() {
                   </option>
 
                   <option  
-                  value="BPGd">
-                    BPGd
-                  </option>
-
-                  <option  
                   value="BPTRAN JOÃO PESSOA">
                     BPTRAN JOÃO PESSOA
                   </option>
@@ -665,6 +660,11 @@ export default function Register() {
                   <option  
                   value="1 BPM OLINDA">
                     1 BPM OLINDA
+                  </option>
+                  
+                  <option  
+                  value="BPGd">
+                    BPGd
                   </option>
 
                   <option  
@@ -2081,11 +2081,6 @@ export default function Register() {
                   value="BP CHOQUE JOÃO PESSOA">
                     BP CHOQUE JOÃO PESSOA
                   </option>
-                  
-                  <option  
-                  value="BPGd">
-                    BPGd
-                  </option>
 
                   <option 
                   value="BPTRAN JOÃO PESSOA">
@@ -2246,6 +2241,11 @@ export default function Register() {
                   <option 
                   value="1 BPM OLINDA">
                     1 BPM OLINDA
+                  </option>
+
+                  <option  
+                  value="BPGd">
+                    BPGd
                   </option>
 
                   <option 
@@ -3483,6 +3483,7 @@ export default function Register() {
                   onClick={(e) => setOrgao(e.target.value)}
                 >
                   <option value="Civil">Civil</option>
+                  <option value="PM">PM</option>
                 </Input>
                 <div class="valid-feedback">Ótimo!</div>
               </div>

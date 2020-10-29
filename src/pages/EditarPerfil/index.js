@@ -630,6 +630,11 @@ export default function EditarPerfil() {
                   </option>
 
                   <option  
+                  value="BPGD">
+                    BPGD
+                  </option>
+
+                  <option  
                   value="2 BPM NAZARÉ DA MATA">
                     2 BPM NAZARÉ DA MATA
                   </option>
@@ -2271,6 +2276,11 @@ export default function EditarPerfil() {
                   </option>
 
                   <option  
+                  value="BPGD">
+                    BPGD
+                  </option>
+
+                  <option  
                   value="2 BPM NAZARÉ DA MATA">
                     2 BPM NAZARÉ DA MATA
                   </option>
@@ -2386,8 +2396,8 @@ export default function EditarPerfil() {
                   </option>
 
                   <option  
-                  value="26 BPM ITAPISSUNA">
-                    26 BPM ITAPISSUNA
+                  value="26 BPM ITAPISSUMA">
+                    26 BPM ITAPISSUMA
                   </option>
 
                   <option  
@@ -3489,15 +3499,17 @@ export default function EditarPerfil() {
 
               <div class="mt-4">
               <label for="validationServer09">Órgão</label>
-                <Input required
-                  type="text"
+              <Input
+                  required
+                  type="select"
                   class="form-control"
                   id="validationServer09"
                   placeholder="Órgão"
-                  onChange={(e) => setOrgao(e.target.value)}
-                  defaultValue={user.orgao}
-                  
-                />
+                  onClick={(e) => setOrgao(e.target.value)}
+                >
+                  <option value="Civil">Civil</option>
+                  <option value="PM">PM</option>
+                </Input>
                 <div class="valid-feedback">Ótimo!</div>
               </div>
             </div>
