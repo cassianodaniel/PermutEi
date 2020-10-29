@@ -144,8 +144,7 @@ export default function EditarPerfil() {
             </div>
 
             <div class="mt-4">
-              <label for="validationServerUsername">Estado Atual</label>
-
+            <label for="validationServerUsername">Estado Atual</label>
                 <Input required
                   type="select"
                   id="estadoAtual"
@@ -153,7 +152,7 @@ export default function EditarPerfil() {
                   defaultValue={user.estadoAtual}
                   onClick={(e) => setEstadoAtual(e.target.value)}
                 >
-                    <option value={user.estadoAtual}>Selecione</option>
+                  <option value={user.estadoAtual}>Selecione</option>
                     <option value="AC">Acre</option>
                     <option value="AL">Alagoas</option>
                     <option value="AP">Amapá</option>
@@ -181,8 +180,8 @@ export default function EditarPerfil() {
                     <option value="SP">São Paulo</option>
                     <option value="SE">Sergipe</option>
                     <option value="TO">Tocantins</option>
-                </Input>
-            </div>
+            </Input>
+          </div>
           
             <div class="mt-4">
             <label for="validationServerUsername">Estado de Interesse</label>
@@ -268,7 +267,7 @@ export default function EditarPerfil() {
                   name="estadosBrasil"
                   onClick={(e) => {setBatalhaoAtual(e.target.value)}}
                 >
-                  <option value={user.batalhaoAtual}>{user.batalhaoAtual}</option>
+                  <option value={user.batalhaoAtual}>Selecionar</option>
 
                   <option  
                   value="1 BPM BATALHÃO FELIPE CAMARÃO ZONA LESTE">
@@ -470,7 +469,7 @@ export default function EditarPerfil() {
                   onClick={(e) => {setBatalhaoAtual(e.target.value)
                   }}
                 >
-                  <option value={user.batalhaoAtual}>{user.batalhaoAtual}</option>
+                  <option value={user.batalhaoAtual}>Selecionar</option>
                     <option  
                   value="BP CHOQUE JOÃO PESSOA">
                     BP CHOQUE JOÃO PESSOA
@@ -630,7 +629,7 @@ export default function EditarPerfil() {
                   //console.log(batalhaoAtual);
                   }}
                 >
-                  <option value={user.batalhaoAtual}>{user.batalhaoAtual}</option>
+                  <option value={user.batalhaoAtual}>Selecionar</option>
                   <option  
                   value="1 BPM OLINDA">
                     1 BPM OLINDA
@@ -875,7 +874,7 @@ export default function EditarPerfil() {
                   console.log(batalhaoAtual);
                   }}
                 >
-                  <option value={user.batalhaoAtual}>{user.batalhaoAtual}</option>
+                  <option value={user.batalhaoAtual}>Selecionar</option>
                     <option  
                   value="BOPE CAP PM DANIEL NUNES ESTEVES SÃO LUIS">
                     BOPE CAP PM DANIEL NUNES ESTEVES SÃO LUIS
@@ -1096,7 +1095,7 @@ export default function EditarPerfil() {
                   console.log(batalhaoAtual);
                   }}
                 >
-                  <option value={user.batalhaoAtual}>{user.batalhaoAtual}</option>
+                  <option value={user.batalhaoAtual}>Selecionar</option>
                     <option  
                   value="1 BATALHÃO DA POLICIA MILITAR">
                     1 BATALHÃO DA POLICIA MILITAR
@@ -1217,7 +1216,7 @@ export default function EditarPerfil() {
                   console.log(batalhaoAtual);
                   }}
                 >
-                  <option value={user.batalhaoAtual}>{user.batalhaoAtual}</option>
+                  <option value={user.batalhaoAtual}>Selecionar</option>
                   <option  
                   value="1 BEIC FEIRA DE SANTANA">
                     1 BEIC FEIRA DE SANTANA
@@ -1630,7 +1629,7 @@ export default function EditarPerfil() {
                   onClick={(e) => {setBatalhaoAtual(e.target.value)
                   }}
                 >
-                  <option value={user.batalhaoAtual}>{user.batalhaoAtual}</option>
+                  <option value={user.batalhaoAtual}>Selecionar</option>
 
                     <option value="CPC">CPC</option>
 
@@ -1732,7 +1731,7 @@ export default function EditarPerfil() {
                   console.log(batalhaoInteresse);
                   }}
                 >
-                  <option value={user.batalhaoAtual}>{user.batalhaoAtual}</option>
+                  <option value={user.batalhaoAtual}>Selecionar</option>
                     <option value="1 BPM ">1 BPM </option>
 
                     <option value="5 BPM">5 BPM</option>
@@ -1790,7 +1789,7 @@ export default function EditarPerfil() {
                   onClick={(e) => {setBatalhaoAtual(e.target.value)
                   }}
                 >
-                    <option value={user.batalhaoAtual}>{user.batalhaoAtual}</option>
+                    <option value={user.batalhaoAtual}>Selecionar</option>
                     <option value="1 BPM MACEIÓ">1 BPM MACEIÓ</option>
 
                     <option value="2 BPM PALMARES">2 BPM PALMARES</option>
@@ -2115,7 +2114,7 @@ export default function EditarPerfil() {
                   onClick={(e) => {setBatalhaoInteresse(e.target.value)
                   }}
                 >
-                    <option value={user.batalhaoInteresse}>{user.batalhaoInteresse}</option>
+                    <option value={user.batalhaoInteresse}>Selecionar</option>
                     <option  
                   value="BP CHOQUE JOÃO PESSOA">
                     BP CHOQUE JOÃO PESSOA
@@ -2275,7 +2274,7 @@ export default function EditarPerfil() {
                   console.log(batalhaoAtual);
                   }}
                 >
-                  <option value={user.batalhaoInteresse}>{user.batalhaoInteresse}</option>
+                  <option value={user.batalhaoInteresse}>Selecionar</option>
 
                   <option  
                   value="1 BPM OLINDA">
@@ -2521,7 +2520,7 @@ export default function EditarPerfil() {
                   console.log(batalhaoAtual);
                   }}
                 >
-                  <option value={user.batalhaoInteresse}>{user.batalhaoInteresse}</option>
+                  <option value={user.batalhaoInteresse}>Selecionar</option>
                     <option  
                   value="BOPE CAP PM DANIEL NUNES ESTEVES SÃO LUIS">
                     BOPE CAP PM DANIEL NUNES ESTEVES SÃO LUIS
@@ -2742,7 +2741,7 @@ export default function EditarPerfil() {
                   console.log(batalhaoAtual);
                   }}
                 >
-                  <option value={user.batalhaoInteresse}>{user.batalhaoInteresse}</option>
+                  <option value={user.batalhaoInteresse}>Selecionar</option>
                     <option  
                   value="1 BATALHÃO DA POLICIA MILITAR">
                     1 BATALHÃO DA POLICIA MILITAR
@@ -2863,7 +2862,7 @@ export default function EditarPerfil() {
                   console.log(batalhaoAtual);
                   }}
                 >
-                  <option value={user.batalhaoInteresse}>{user.batalhaoInteresse}</option>
+                  <option value={user.batalhaoInteresse}>Selecionar</option>
                   <option  
                   value="1 BEIC FEIRA DE SANTANA">
                     1 BEIC FEIRA DE SANTANA
@@ -3276,7 +3275,7 @@ export default function EditarPerfil() {
                   onClick={(e) => {setBatalhaoInteresse(e.target.value)
                   }}
                 >
-                  <option value={user.batalhaoInteresse}>{user.batalhaoInteresse}</option>
+                  <option value={user.batalhaoInteresse}>Selecionar</option>
 
                     <option value="CPC">CPC</option>
 
@@ -3378,7 +3377,7 @@ export default function EditarPerfil() {
                   console.log(batalhaoInteresse);
                   }}
                 >
-                  <option value={user.batalhaoInteresse}>{user.batalhaoInteresse}</option>
+                  <option value={user.batalhaoInteresse}>Selecionar</option>
                     <option value="1 BPM ">1 BPM </option>
 
                     <option value="5 BPM">5 BPM</option>
@@ -3436,7 +3435,7 @@ export default function EditarPerfil() {
                   onClick={(e) => {setBatalhaoInteresse(e.target.value)
                   }}
                 >
-                    <option value={user.batalhaoInteresse}>{user.batalhaoInteresse}</option>
+                    <option value={user.batalhaoInteresse}>Selecionar</option>
                     <option value="1 BPM MACEIÓ">1 BPM MACEIÓ</option>
 
                     <option value="2 BPM PALMARES">2 BPM PALMARES</option>
