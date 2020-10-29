@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import "./style.css";
 
@@ -12,6 +12,10 @@ export default function Logon() {
 
   const [login, setLogin] = useState("");
   const [senha, setSenha] = useState("");
+
+  useEffect(() => {
+    localStorage.clear();
+  }, []);
 
   async function handleLogin(e){
     e.preventDefault();
