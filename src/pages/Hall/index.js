@@ -44,7 +44,7 @@ const Hall = () => {
     e.preventDefault();
     let match = [];
     users.map((item) => { 
-        if(item.nome.toUpperCase().includes(string.toUpperCase())){
+        if(item.batalhaoAtual.toUpperCase().includes(string.toUpperCase())){
           match.push(item);
         };
     });
@@ -140,6 +140,8 @@ const Hall = () => {
             <Button onClick={handleOcultarPermuta}>
               { userMaster.disponibilidade ? "Ocultar minha permuta" : "Exibir disponibilidade de permuta" }
           </Button>
+          <p className="text-info" style={{position: "relative", top: 20, fontSize: 12}}>Não encontrou seu batalhão ou deseja reportar algo?</p>
+          <p className="text-info" style={{position: "relative", top: 20, fontSize: 12}}>Entre em contato já! <strong>permutei@outlook.com</strong></p>
           </Container>
         </Jumbotron>
       </div>
@@ -154,7 +156,7 @@ const Hall = () => {
             type="text"
             onChange={(e) => setSearch(e.target.value)}
             className="form-control bg-light w-50"
-            placeholder="Filtrar por batalhão de interesse"
+            placeholder="Filtre por um batalhão de seu interesse"
             font
           />
           <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
@@ -167,12 +169,11 @@ const Hall = () => {
             <tr>
               <th>Nome</th>
               <th>Órgão</th>
-              <th>Matrícula</th>
-              <th>Estado</th>
+              <th>Estado Atual</th>
               <th>Estado de Interesse</th>
               <th>Batalhão Atual</th>
               <th>Batalhão de Interesse</th>
-              <th>Estado Atual</th>
+              <th>Matrícula</th>
               <th>Combinar permuta </th>
             </tr>
           </thead>
@@ -182,12 +183,11 @@ const Hall = () => {
               <tr>
                 <td>{user.nome}</td>
                 <td>{user.orgao}</td>
-                <td>{user.matricula}</td>
                 <td>{user.estadoAtual}</td>
                 <td>{user.estadoInteresse}</td>
                 <td>{user.batalhaoAtual}</td>
                 <td>{user.batalhaoInteresse}</td>
-                <td>{user.estadoAtual}</td>
+                <td>{user.matricula}</td>
                 
                 <Button
                   style={{

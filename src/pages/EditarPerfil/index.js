@@ -150,7 +150,7 @@ export default function EditarPerfil() {
                   id="estadoAtual"
                   name="estadoAtual"
                   defaultValue={user.estadoAtual}
-                  onClick={(e) => setEstadoAtual(e.target.value)}
+                  onChange={(e) => setEstadoAtual(e.target.value)}
                 >
                   <option value={user.estadoAtual}>Selecione</option>
                     <option value="AC">Acre</option>
@@ -190,7 +190,7 @@ export default function EditarPerfil() {
                   id="estadoInteresse"
                   name="estadoInteresse"
                   defaultValue={user.estadoInteresse}
-                  onClick={(e) => setEstadoInteresse(e.target.value)}
+                  onChange={(e) => setEstadoInteresse(e.target.value)}
                 >
                   <option value={user.estadoInteresse}>Selecione</option>
                     <option value="AC">Acre</option>
@@ -265,7 +265,7 @@ export default function EditarPerfil() {
                   type="select"
                   id="selectState"
                   name="estadosBrasil"
-                  onClick={(e) => {setBatalhaoAtual(e.target.value)}}
+                  onChange={(e) => {setBatalhaoAtual(e.target.value)}}
                 >
                   <option value={user.batalhaoAtual}>Selecionar</option>
 
@@ -466,7 +466,7 @@ export default function EditarPerfil() {
                   type="select"
                   id="selectState"
                   name="estadosBrasil"
-                  onClick={(e) => {setBatalhaoAtual(e.target.value)
+                  onChange={(e) => {setBatalhaoAtual(e.target.value)
                   }}
                 >
                   <option value={user.batalhaoAtual}>Selecionar</option>
@@ -625,7 +625,7 @@ export default function EditarPerfil() {
                   type="select"
                   id="selectState"
                   name="estadosBrasil"
-                  onClick={(e) => {setBatalhaoAtual(e.target.value)
+                  onChange={(e) => {setBatalhaoAtual(e.target.value)
                   //console.log(batalhaoAtual);
                   }}
                 >
@@ -870,7 +870,7 @@ export default function EditarPerfil() {
                   type="select"
                   id="selectState"
                   name="estadosBrasil"
-                  onClick={(e) => {setBatalhaoAtual(e.target.value)
+                  onChange={(e) => {setBatalhaoAtual(e.target.value)
                   console.log(batalhaoAtual);
                   }}
                 >
@@ -1091,7 +1091,7 @@ export default function EditarPerfil() {
                   type="select"
                   id="selectState"
                   name="estadosBrasil"
-                  onClick={(e) => {setBatalhaoAtual(e.target.value)
+                  onChange={(e) => {setBatalhaoAtual(e.target.value)
                   console.log(batalhaoAtual);
                   }}
                 >
@@ -1212,7 +1212,7 @@ export default function EditarPerfil() {
                   type="select"
                   id="selectState"
                   name="estadosBrasil"
-                  onClick={(e) => {setBatalhaoAtual(e.target.value)
+                  onChange={(e) => {setBatalhaoAtual(e.target.value)
                   console.log(batalhaoAtual);
                   }}
                 >
@@ -1626,7 +1626,7 @@ export default function EditarPerfil() {
                   type="select"
                   id="selectState"
                   name="estadosBrasil"
-                  onClick={(e) => {setBatalhaoAtual(e.target.value)
+                  onChange={(e) => {setBatalhaoAtual(e.target.value)
                   }}
                 >
                   <option value={user.batalhaoAtual}>Selecionar</option>
@@ -1727,7 +1727,7 @@ export default function EditarPerfil() {
                   type="select"
                   id="selectState"
                   name="estadosBrasil"
-                  onClick={(e) => {setBatalhaoAtual(e.target.value)
+                  onChange={(e) => {setBatalhaoAtual(e.target.value)
                   console.log(batalhaoInteresse);
                   }}
                 >
@@ -1786,7 +1786,7 @@ export default function EditarPerfil() {
                   type="select"
                   id="selectState"
                   name="estadosBrasil"
-                  onClick={(e) => {setBatalhaoAtual(e.target.value)
+                  onChange={(e) => {setBatalhaoAtual(e.target.value)
                   }}
                 >
                     <option value={user.batalhaoAtual}>Selecionar</option>
@@ -1910,7 +1910,7 @@ export default function EditarPerfil() {
                   type="select"
                   id="selectState"
                   name="estadosBrasil"
-                  onClick={(e) => {setBatalhaoInteresse(e.target.value)
+                  onChange={(e) => {setBatalhaoInteresse(e.target.value)
                   }}
                 >
                   <option defaultValue={user.batalhaoInteresse}>{user.batalhaoInteresse}</option>
@@ -2111,7 +2111,7 @@ export default function EditarPerfil() {
                   type="select"
                   id="selectState"
                   name="estadosBrasil"
-                  onClick={(e) => {setBatalhaoInteresse(e.target.value)
+                  onChange={(e) => {setBatalhaoInteresse(e.target.value)
                   }}
                 >
                     <option value={user.batalhaoInteresse}>Selecionar</option>
@@ -2270,7 +2270,7 @@ export default function EditarPerfil() {
                   type="select"
                   id="selectState"
                   name="estadosBrasil"
-                  onClick={(e) => {setBatalhaoInteresse(e.target.value)
+                  onChange={(e) => {setBatalhaoInteresse(e.target.value)
                   console.log(batalhaoAtual);
                   }}
                 >
@@ -2516,7 +2516,7 @@ export default function EditarPerfil() {
                   type="select"
                   id="selectState"
                   name="estadosBrasil"
-                  onClick={(e) => {setBatalhaoInteresse(e.target.value)
+                  onChange={(e) => {setBatalhaoInteresse(e.target.value)
                   console.log(batalhaoAtual);
                   }}
                 >
@@ -2737,7 +2737,7 @@ export default function EditarPerfil() {
                   type="select"
                   id="selectState"
                   name="estadosBrasil"
-                  onClick={(e) => {setBatalhaoInteresse(e.target.value)
+                  onChange={(e) => {setBatalhaoInteresse(e.target.value)
                   console.log(batalhaoAtual);
                   }}
                 >
@@ -2858,7 +2858,7 @@ export default function EditarPerfil() {
                   type="select"
                   id="selectState"
                   name="estadosBrasil"
-                  onClick={(e) => {setBatalhaoInteresse(e.target.value)
+                  onChange={(e) => {setBatalhaoInteresse(e.target.value)
                   console.log(batalhaoAtual);
                   }}
                 >
@@ -3272,7 +3272,7 @@ export default function EditarPerfil() {
                   type="select"
                   id="selectState"
                   name="estadosBrasil"
-                  onClick={(e) => {setBatalhaoInteresse(e.target.value)
+                  onChange={(e) => {setBatalhaoInteresse(e.target.value)
                   }}
                 >
                   <option value={user.batalhaoInteresse}>Selecionar</option>
@@ -3373,7 +3373,7 @@ export default function EditarPerfil() {
                   type="select"
                   id="selectState"
                   name="estadosBrasil"
-                  onClick={(e) => {setBatalhaoInteresse(e.target.value)
+                  onChange={(e) => {setBatalhaoInteresse(e.target.value)
                   console.log(batalhaoInteresse);
                   }}
                 >
@@ -3432,7 +3432,7 @@ export default function EditarPerfil() {
                   type="select"
                   id="selectState"
                   name="estadosBrasil"
-                  onClick={(e) => {setBatalhaoInteresse(e.target.value)
+                  onChange={(e) => {setBatalhaoInteresse(e.target.value)
                   }}
                 >
                     <option value={user.batalhaoInteresse}>Selecionar</option>
@@ -3511,10 +3511,10 @@ export default function EditarPerfil() {
                   class="form-control"
                   id="validationServer09"
                   placeholder="Órgão"
-                  onClick={(e) => setOrgao(e.target.value)}
+                  onChange={(e) => setOrgao(e.target.value)}
                 >
-                  <option value="Civil">Civil</option>
                   <option value="PM">PM</option>
+                  <option value="Civil">Civil</option>
                 </Input>
                 <div class="valid-feedback">Ótimo!</div>
               </div>

@@ -19,7 +19,7 @@ export default function Register() {
   const [batalhaoInteresse, setBatalhaoInteresse] = useState("BP CHOQUE JOAO PESSOA");
   const [comportamento, setComportamento] = useState("");
   const [postograduacao, setPostoGraduacao] = useState("");
-  const [orgao, setOrgao] = useState("Civil");
+  const [orgao, setOrgao] = useState("PM");
   const [login, setLogin] = useState("");
   const [senha, setSenha] = useState("");
   const [disponibilidade] = useState(true);
@@ -93,7 +93,7 @@ export default function Register() {
               <label for="validationServer02">Sexo</label>
               <Input
                 required 
-                onClick={(e) => setSexo(e.target.value)} type="select" name="select" id="exampleSelect">
+                onChange={(e) => setSexo(e.target.value)} type="select" name="select" id="exampleSelect">
                 <option>Masculino</option>
                 <option>Feminino</option>
                 <option>Não declarante</option>
@@ -130,7 +130,7 @@ export default function Register() {
                   id="validationServerUsername"
                   placeholder="Estado"
                   aria-describedby="InputGroupPrepend3"
-                  onClick={(e) => setEstadoAtual(e.target.value)}
+                  onChange={(e) => setEstadoAtual(e.target.value)}
                   required
                 />
                 <div class="invalid-feedback">
@@ -143,7 +143,7 @@ export default function Register() {
                   type="select"
                   id="estadoAtual"
                   name="estadoAtual"
-                  onClick={(e) => setEstadoAtual(e.target.value)}
+                  onChange={(e) => setEstadoAtual(e.target.value)}
                 >
                     <option value="Sem Estado Atual">Selecionar</option>
                     <option value="PB">Paraíba</option>
@@ -187,7 +187,7 @@ export default function Register() {
                   id="validationServerUsername"
                   placeholder="Estado"
                   aria-describedby="InputGroupPrepend3"
-                  onClick={(e) => setEstadoInteresse(e.target.value)}
+                  onChange={(e) => setEstadoInteresse(e.target.value)}
                   required
                 />
                 
@@ -200,7 +200,7 @@ export default function Register() {
                   type="select"
                   id="estadoInteresse"
                   name="estadoInteresse"
-                  onClick={(e) => setEstadoInteresse(e.target.value)}
+                  onChange={(e) => setEstadoInteresse(e.target.value)}
                 >   
                     <option value="Sem Estado de Interesse">Selecionar</option>
                     <option value="PB">Paraíba</option>
@@ -290,7 +290,7 @@ export default function Register() {
                   type="select"
                   id="selectState"
                   name="estadosBrasil"
-                  onClick={(e) => {setBatalhaoAtual(e.target.value)}}
+                  onChange={(e) => {setBatalhaoAtual(e.target.value)}}
                 >
                   <option value="Sem Estado de Interesse">Selecionar</option>
 
@@ -492,7 +492,7 @@ export default function Register() {
                   type="select"
                   id="selectState"
                   name="estadosBrasil"
-                  onClick={(e) => {setBatalhaoAtual(e.target.value)
+                  onChange={(e) => {setBatalhaoAtual(e.target.value)
                   }}
                 >
                   <option value="Sem Estado de Interesse">Selecionar</option>
@@ -652,7 +652,7 @@ export default function Register() {
                   type="select"
                   id="selectState"
                   name="estadosBrasil"
-                  onClick={(e) => {setBatalhaoAtual(e.target.value)
+                  onChange={(e) => {setBatalhaoAtual(e.target.value)
                   console.log(batalhaoAtual);
                   }}
                 >
@@ -898,7 +898,7 @@ export default function Register() {
                   type="select"
                   id="selectState"
                   name="estadosBrasil"
-                  onClick={(e) => {setBatalhaoAtual(e.target.value)
+                  onChange={(e) => {setBatalhaoAtual(e.target.value)
                   console.log(batalhaoAtual);
                   }}
                 >
@@ -1120,7 +1120,7 @@ export default function Register() {
                   type="select"
                   id="selectState"
                   name="estadosBrasil"
-                  onClick={(e) => {setBatalhaoAtual(e.target.value)
+                  onChange={(e) => {setBatalhaoAtual(e.target.value)
                   console.log(batalhaoAtual);
                   }}
                 >
@@ -1242,7 +1242,7 @@ export default function Register() {
                   type="select"
                   id="selectState"
                   name="estadosBrasil"
-                  onClick={(e) => {setBatalhaoAtual(e.target.value)
+                  onChange={(e) => {setBatalhaoAtual(e.target.value)
                   console.log(batalhaoAtual);
                   }}
                 >
@@ -1657,7 +1657,7 @@ export default function Register() {
                   type="select"
                   id="selectState"
                   name="estadosBrasil"
-                  onClick={(e) => {setBatalhaoAtual(e.target.value)
+                  onChange={(e) => {setBatalhaoAtual(e.target.value)
                   }}
                 >
                     <option value="Sem Estado de Interesse">Selecionar</option>
@@ -1758,7 +1758,7 @@ export default function Register() {
                   type="select"
                   id="selectState"
                   name="estadosBrasil"
-                  onClick={(e) => {setBatalhaoAtual(e.target.value)
+                  onChange={(e) => {setBatalhaoAtual(e.target.value)
                   console.log(batalhaoInteresse);
                   }}
                 >
@@ -1818,7 +1818,7 @@ export default function Register() {
                   type="select"
                   id="selectState"
                   name="estadosBrasil"
-                  onClick={(e) => {setBatalhaoAtual(e.target.value)
+                  onChange={(e) => {setBatalhaoAtual(e.target.value)
                   }}
                 >
                     <option value="Sem Estado de Interesse">Selecionar</option>
@@ -1871,7 +1871,7 @@ export default function Register() {
                   type="select"
                   id="selectState"
                   name="estadosBrasil"
-                  onClick={(e) => {setBatalhaoInteresse(e.target.value)
+                  onChange={(e) => {setBatalhaoInteresse(e.target.value)
                   }}
                 >
                   <option value="Sem Estado de Interesse">Selecionar</option>
@@ -2073,7 +2073,7 @@ export default function Register() {
                   type="select"
                   id="selectState"
                   name="estadosBrasil"
-                  onClick={(e) => {setBatalhaoInteresse(e.target.value)
+                  onChange={(e) => {setBatalhaoInteresse(e.target.value)
                   }}
                 > 
                   <option value="Sem Estado de Interesse">Selecionar</option>
@@ -2233,7 +2233,7 @@ export default function Register() {
                   type="select"
                   id="selectState"
                   name="estadosBrasil"
-                  onClick={(e) => {setBatalhaoInteresse(e.target.value)
+                  onChange={(e) => {setBatalhaoInteresse(e.target.value)
                   console.log(batalhaoAtual);
                   }}
                 >
@@ -2479,7 +2479,7 @@ export default function Register() {
                   type="select"
                   id="selectState"
                   name="estadosBrasil"
-                  onClick={(e) => {setBatalhaoInteresse(e.target.value)
+                  onChange={(e) => {setBatalhaoInteresse(e.target.value)
                   console.log(batalhaoAtual);
                   }}
                 >
@@ -2701,7 +2701,7 @@ export default function Register() {
                   type="select"
                   id="selectState"
                   name="estadosBrasil"
-                  onClick={(e) => {setBatalhaoInteresse(e.target.value)
+                  onChange={(e) => {setBatalhaoInteresse(e.target.value)
                   console.log(batalhaoAtual);
                   }}
                 >
@@ -2823,7 +2823,7 @@ export default function Register() {
                   type="select"
                   id="selectState"
                   name="estadosBrasil"
-                  onClick={(e) => {setBatalhaoInteresse(e.target.value)
+                  onChange={(e) => {setBatalhaoInteresse(e.target.value)
                   console.log(batalhaoAtual);
                   }}
                 >
@@ -3238,7 +3238,7 @@ export default function Register() {
                   type="select"
                   id="selectState"
                   name="estadosBrasil"
-                  onClick={(e) => {setBatalhaoInteresse(e.target.value)
+                  onChange={(e) => {setBatalhaoInteresse(e.target.value)
                   }}
                 >
                     <option value="Sem Estado de Interesse">Selecionar</option>
@@ -3339,7 +3339,7 @@ export default function Register() {
                   type="select"
                   id="selectState"
                   name="estadosBrasil"
-                  onClick={(e) => {setBatalhaoInteresse(e.target.value)
+                  onChange={(e) => {setBatalhaoInteresse(e.target.value)
                   console.log(batalhaoInteresse);
                   }}
                 >
@@ -3399,7 +3399,7 @@ export default function Register() {
                   type="select"
                   id="selectState"
                   name="estadosBrasil"
-                  onClick={(e) => {setBatalhaoInteresse(e.target.value)
+                  onChange={(e) => {setBatalhaoInteresse(e.target.value)
                   }}
                 >
                     <option value="Sem Estado de Interesse">Selecionar</option>
@@ -3480,10 +3480,10 @@ export default function Register() {
                   class="form-control"
                   id="validationServer09"
                   placeholder="Órgão"
-                  onClick={(e) => setOrgao(e.target.value)}
+                  onChange={(e) => setOrgao(e.target.value)}
                 >
-                  <option value="Civil">Civil</option>
                   <option value="PM">PM</option>
+                  <option value="Civil">Civil</option>
                 </Input>
                 <div class="valid-feedback">Ótimo!</div>
               </div>
