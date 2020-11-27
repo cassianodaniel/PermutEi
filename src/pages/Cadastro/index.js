@@ -22,41 +22,47 @@ export default function Register() {
   const [orgao, setOrgao] = useState("PM");
   const [login, setLogin] = useState("");
   const [senha, setSenha] = useState("");
+  const [secSenha, setSecSenha] = useState("");
   const [disponibilidade] = useState(true);
 
   const history = useHistory();
 
   async function handleSubmit(e) {
     e.preventDefault();
-    const data = {
-      nome: nome,
-      sexo: sexo,
-      datanasc: dataNascimento,
-      cpf: parseInt(cpf),
-      numero: numero,
-      estadoAtual: estadoAtual,
-      estadoInteresse: estadoInteresse,
-      matricula: matricula,
-      batalhaoAtual: batalhaoAtual,
-      batalhaoInteresse: batalhaoInteresse,
-      orgao: orgao,
-      comportamento: comportamento,
-      postoGraduacao: postograduacao,
-      disponibilidade: disponibilidade,
-      login: login,
-      senha: senha
-    };
-      
-      try {
-        console.log(data);
-        await api.post('/users', data);
-        alert("Cadastro realizado!");
-        history.push("/logon");
-      } catch (error) {
-        alert("Falha no cadastro, tente novamente " + error + alert(JSON.stringify(data)));
-      }
-      
+
+    if (senha===secSenha) {
+      const data = {
+        nome: nome,
+        sexo: sexo,
+        datanasc: dataNascimento,
+        cpf: parseInt(cpf),
+        numero: numero,
+        estadoAtual: estadoAtual,
+        estadoInteresse: estadoInteresse,
+        matricula: matricula,
+        batalhaoAtual: batalhaoAtual,
+        batalhaoInteresse: batalhaoInteresse,
+        orgao: orgao,
+        comportamento: comportamento,
+        postoGraduacao: postograduacao,
+        disponibilidade: disponibilidade,
+        login: login,
+        senha: senha
+      };
+        
+        try {
+          console.log(data);
+          await api.post('/users', data);
+          alert("Cadastro realizado!");
+          history.push("/logon");
+        } catch (error) {
+          alert("Falha no cadastro, tente novamente " + error + alert(JSON.stringify(data)));
+        }
+    }else{
+      alert("Senhas incompatíveis!")
     }
+        
+  }
   
 
   return (
@@ -3514,6 +3520,18 @@ export default function Register() {
                   id="validationServer11"
                   placeholder="Senha"
                   onChange={(e) => setSenha(e.target.value)}
+                />
+                <div class="valid-feedback">Ótimo!</div>
+              </div>
+              <div class="mt-4">
+                <label for="validationServer02">Senha</label>
+                <Input
+                  required
+                  type="password"
+                  class="form-control"
+                  id="validationServer11"
+                  placeholder="Confirme sua senha"
+                  onChange={(e) => setSecSenha(e.target.value)}
                 />
                 <div class="valid-feedback">Ótimo!</div>
               </div>
